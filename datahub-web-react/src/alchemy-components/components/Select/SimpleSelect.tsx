@@ -246,7 +246,7 @@ export const SimpleSelect = ({
                                                             size="md"
                                                             color={
                                                                 selectedValues.includes(option.value)
-                                                                    ? 'violet'
+                                                                    ? 'yellow'
                                                                     : 'gray'
                                                             }
                                                         >

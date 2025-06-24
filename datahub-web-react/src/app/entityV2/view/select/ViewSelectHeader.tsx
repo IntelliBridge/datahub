@@ -12,7 +12,7 @@ import { ANTD_GRAY, REDESIGN_COLORS } from '@app/entityV2/shared/constants';
 import { colors } from '@src/alchemy-components';
 import { useShowNavBarRedesign } from '@src/app/useShowNavBarRedesign';
 
-const StyledInput = styled(Input)<{ $isShowNavBarRedesign?: boolean }>`
+const StyledInput = styled(Input) <{ $isShowNavBarRedesign?: boolean }>`
     ${(props) => !props.$isShowNavBarRedesign && 'max-width: 330px;'}
     background-color: ${(props) =>
         props.$isShowNavBarRedesign ? 'white' : REDESIGN_COLORS.BACKGROUND_OVERLAY_BLACK_SEARCH};
@@ -69,7 +69,7 @@ const ViewHeader = styled.div<{ $isShowNavBarRedesign?: boolean }>`
             color: ${(props) => (props.$isShowNavBarRedesign ? colors.gray[1800] : REDESIGN_COLORS.BLACK)};
             display: flex;
             gap: 0.5rem;
-            background: ${(props) => (props.$isShowNavBarRedesign ? colors.white : ANTD_GRAY[1])};
+            background: ${(props) => (props.$isShowNavBarRedesign ? colors.secondary[70] : ANTD_GRAY[1])};
             border-radius: 30px;
             padding: ${(props) => (props.$isShowNavBarRedesign ? '4px' : '2px')};
             > div {
@@ -80,7 +80,7 @@ const ViewHeader = styled.div<{ $isShowNavBarRedesign?: boolean }>`
                 cursor: pointer;
                 &.active {
                     background: ${(props) => props.theme.styles['primary-color']};
-                    color: ${ANTD_GRAY[1]};
+                    color: black;
                 }
             }
         }
@@ -102,15 +102,15 @@ const ViewHeader = styled.div<{ $isShowNavBarRedesign?: boolean }>`
     }
 `;
 
-const GridViewIconStyle = styled(GridViewIcon)<{ $isShowNavBarRedesign?: boolean }>`
+const GridViewIconStyle = styled(GridViewIcon) <{ $isShowNavBarRedesign?: boolean }>`
     font-size: ${(props) => (props.$isShowNavBarRedesign ? '14px' : '13px')} !important;
 `;
 
-const LockOutlinedIconStyle = styled(LockOutlinedIcon)<{ $isShowNavBarRedesign?: boolean }>`
+const LockOutlinedIconStyle = styled(LockOutlinedIcon) <{ $isShowNavBarRedesign?: boolean }>`
     font-size: ${(props) => (props.$isShowNavBarRedesign ? '14px' : '13px')} !important;
 `;
 
-const PublicIconStyle = styled(PublicIcon)<{ $isShowNavBarRedesign?: boolean }>`
+const PublicIconStyle = styled(PublicIcon) <{ $isShowNavBarRedesign?: boolean }>`
     font-size: ${(props) => (props.$isShowNavBarRedesign ? '14px' : '13px')} !important;
 `;
 

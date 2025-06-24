@@ -51,8 +51,8 @@ export const TextAreaContainer = styled.div(
         color: colors.gray[400], // first icon color
 
         '&:focus-within': {
-            borderColor: colors.violet[200],
-            outline: `${borders['1px']} ${colors.violet[200]}`,
+            borderColor: colors.primary[30],
+            outline: `${borders['1px']} ${colors.primary[30]}`,
         },
     },
 );

@@ -1,9 +1,10 @@
-import { Button, Form, Modal, Typography } from 'antd';
+import { Form, Modal, Typography } from 'antd';
 import React, { useState } from 'react';
 import styled from 'styled-components';
 
 import { ANTD_GRAY } from '@app/entityV2/shared/constants';
 import { Editor } from '@app/entityV2/shared/tabs/Documentation/components/editor/Editor';
+import { Button } from '@src/alchemy-components/components/Button/Button';
 
 const FormLabel = styled(Typography.Text)`
     font-size: 10px;
@@ -53,17 +54,18 @@ export default function UpdateDescriptionModal({
             onCancel={onClose}
             okText={isAddDesc ? 'Submit' : 'Update'}
             footer={
-                <>
+                <div style={{ display: "flex", gap: "8px", justifyContent: "end" }}>
                     <Button onClick={onClose}>Cancel</Button>
                     <Button
-                        type="primary"
+                        variant="filled"
+                        color="yellow"
                         onClick={() => onSubmit(updatedDesc)}
-                        disabled={updatedDesc === description}
+                        isDisabled={updatedDesc === description}
                         data-testid="description-modal-update-button"
                     >
                         Publish
                     </Button>
-                </>
+                </div>
             }
         >
             <Form layout="vertical">

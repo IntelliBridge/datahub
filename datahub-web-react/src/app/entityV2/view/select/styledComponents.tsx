@@ -28,6 +28,7 @@ export const ViewContainer = styled.div<{ $selected?: boolean; $isShowNavBarRede
     `}
     cursor: pointer;
     align-items: center;
+    background-color: ${colors.secondary[70]};
 
     ${(props) =>
         props.$isShowNavBarRedesign &&
@@ -35,12 +36,11 @@ export const ViewContainer = styled.div<{ $selected?: boolean; $isShowNavBarRede
         padding: 8px;
         border-radius: 8px;
         display: flex;
-        background-color: white;
         gap: 8px;
         width: 100%;
         width: 260px;
         height: 64px;
-        border: 1px solid ${props.$selected ? props.theme.styles['primary-color'] : colors.gray[100]};
+        border: 1px solid ${props.$selected ? props.theme.styles['primary-color'] : REDESIGN_COLORS.BORDER_1};
 
         :hover {
             border: 1px solid ${props.theme.styles['primary-color']};
@@ -89,7 +89,7 @@ export const ViewContent = styled.div<{ $isShowNavBarRedesign?: boolean }>`
 `;
 
 export const ViewLabel = styled.div<{ $isShowNavBarRedesign?: boolean }>`
-    ${(props) => props.$isShowNavBarRedesign && `color: ${colors.gray[600]};`}
+    color: white;
     font-size: 14px;
     font-weight: 400;
     white-space: nowrap;
@@ -101,7 +101,7 @@ export const ViewLabel = styled.div<{ $isShowNavBarRedesign?: boolean }>`
 export const ViewDescription = styled.div<{ $isShowNavBarRedesign?: boolean }>`
     font-weight: 400;
     ${(props) => !props.$isShowNavBarRedesign && 'opacity: 0.5;'}
-    ${(props) => props.$isShowNavBarRedesign && `color: ${colors.gray[1700]};`}
+    ${(props) => props.$isShowNavBarRedesign && `color: ${colors.gray[1900]};`}
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;

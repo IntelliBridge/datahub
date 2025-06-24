@@ -14,6 +14,7 @@ import useSearchViewAll from '@app/searchV2/useSearchViewAll';
 import { useAppConfig } from '@app/useAppConfig';
 import { useShowNavBarRedesign } from '@app/useShowNavBarRedesign';
 import { EntityRegistry } from '@src/entityRegistryContext';
+import colors from '@src/alchemy-components/theme/foundations/colors';
 
 import { AutoCompleteResultForEntity } from '@types';
 
@@ -32,6 +33,7 @@ const getStyles = ($isShowNavBarRedesign?: boolean) => {
             justifyContent: 'center',
             width: $isShowNavBarRedesign ? '648px' : '620px',
             minWidth: '400px',
+            background: null,
         },
     };
 };
@@ -47,7 +49,7 @@ const Wrapper = styled.div<{ $isShowNavBarRedesign?: boolean }>`
     `}
 `;
 
-const Header = styled(Layout)<{ $isNavBarCollapsed?: boolean; $isShowNavBarRedesign?: boolean }>`
+const Header = styled(Layout) <{ $isNavBarCollapsed?: boolean; $isShowNavBarRedesign?: boolean }>`
     background-color: transparent;
     height: ${(props) => (props.$isShowNavBarRedesign ? '56px' : '72px')};
     display: flex;

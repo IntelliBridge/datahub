@@ -182,9 +182,9 @@ export const SearchBarV2 = ({
                     boxShadow: BOX_SHADOW,
                     ...(isShowNavBarRedesign
                         ? {
-                              padding: spacing.xsm,
-                              borderRadius: `${radius.none} ${radius.none} ${radius.lg} ${radius.lg}`,
-                          }
+                            padding: spacing.xsm,
+                            borderRadius: `${radius.none} ${radius.none} ${radius.lg} ${radius.lg}`,
+                        }
                         : {}),
                 }}
                 onDropdownVisibleChange={onDropdownVisibilityChangeHandler}

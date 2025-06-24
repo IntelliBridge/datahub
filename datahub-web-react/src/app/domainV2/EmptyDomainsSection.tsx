@@ -1,9 +1,9 @@
-import { PlusOutlined } from '@ant-design/icons';
-import { Button, Empty, Typography } from 'antd';
+import { Empty, Typography } from 'antd';
 import React from 'react';
 import styled from 'styled-components/macro';
 
 import { ANTD_GRAY } from '@app/entity/shared/constants';
+import { Button } from '@src/alchemy-components/components/Button/Button';
 
 const EmptyDomainContainer = styled.div`
     display: flex;
@@ -31,7 +31,7 @@ const StyledEmpty = styled(Empty)`
 `;
 
 const StyledButton = styled(Button)`
-    margin: 18px 8px 0 0;
+    margin: 18px auto 0 auto;
 `;
 
 const IconContainer = styled.span`
@@ -59,8 +59,13 @@ function EmptyDomainsSection(props: Props) {
                     </>
                 }
             >
-                <StyledButton onClick={() => setIsCreatingDomain(true)}>
-                    <PlusOutlined /> Create Domain
+                <StyledButton
+                    variant="filled"
+                    color="yellow"
+                    onClick={() => setIsCreatingDomain(true)}
+                    icon={{ icon: 'Add' }}
+                >
+                    Create Domain
                 </StyledButton>
             </StyledEmpty>
         </EmptyDomainContainer>

@@ -54,8 +54,9 @@ const SkeletonButton = styled(Skeleton.Button)`
 const AutoCompleteContainer = styled.div<{ viewsEnabled?: boolean; $isShowNavBarRedesign?: boolean }>`
     padding: 0 30px;
     align-items: center;
-    border: ${(props) => (props.$isShowNavBarRedesign ? `2px solid ${colors.secondary[50]}` : '2px solid transparent')};
+    // border: ${(props) => (props.$isShowNavBarRedesign ? `2px solid ${colors.secondary[50]}` : '2px solid transparent')};
     ${(props) => props.$isShowNavBarRedesign && 'box-shadow: 0px 1px 2px 0px rgba(33, 23, 95, 0.07)'};
+    background-color: ${colors.secondary[50]} !important;
 
     transition: border-color 0.3s ease;
 
@@ -64,8 +65,7 @@ const AutoCompleteContainer = styled.div<{ viewsEnabled?: boolean; $isShowNavBar
         `
         border-radius: 8px;
         &:focus-within {
-            border-color: ${props.$isShowNavBarRedesign ? props.theme.styles['primary-color'] : props.theme.styles['primary-color']
-        };
+            border: 1px solid ${props.$isShowNavBarRedesign ? props.theme.styles['primary-color'] : props.theme.styles['primary-color']};
         }
     `}
 `;

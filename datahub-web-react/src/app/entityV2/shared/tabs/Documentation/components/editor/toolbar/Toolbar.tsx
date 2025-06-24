@@ -53,7 +53,7 @@ const StyledInfoPopover = styled(InfoPopover)`
 
 const PopoverContent = () => (
     <PopoverContainer>
-        <span>
+        <span style={{ color: 'white' }}>
             Reference users and assets using the <strong>@</strong> symbol.
         </span>
     </PopoverContainer>

@@ -3,8 +3,8 @@ import React, { useEffect } from 'react';
 import styled from 'styled-components';
 
 import { useUserContext } from '@app/context/useUserContext';
-import { ANTD_GRAY } from '@app/entityV2/shared/constants';
 import { ViewTypeLabel } from '@app/entityV2/view/ViewTypeLabel';
+import colors from '@src/alchemy-components/theme/foundations/colors';
 import { ViewDefinitionBuilder } from '@app/entityV2/view/builder/ViewDefinitionBuilder';
 import { ViewBuilderMode } from '@app/entityV2/view/builder/types';
 import { ViewBuilderState } from '@app/entityV2/view/types';
@@ -95,10 +95,10 @@ export const ViewBuilderForm = ({ urn, mode, state, updateState }: Props) => {
                             disabled={!canManageGlobalViews || isEditing || mode === ViewBuilderMode.PREVIEW}
                         >
                             <Select.Option value={DataHubViewType.Personal}>
-                                <ViewTypeLabel type={DataHubViewType.Personal} color={ANTD_GRAY[9]} />
+                                <ViewTypeLabel type={DataHubViewType.Personal} color={colors.primary[30]} />
                             </Select.Option>
                             <Select.Option value={DataHubViewType.Global}>
-                                <ViewTypeLabel type={DataHubViewType.Global} color={ANTD_GRAY[9]} />
+                                <ViewTypeLabel type={DataHubViewType.Global} color={colors.primary[30]} />
                             </Select.Option>
                         </Select>
                     </Form.Item>

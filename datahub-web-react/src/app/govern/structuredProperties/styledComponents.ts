@@ -192,187 +192,188 @@ export const StyledLabel = styled.div`
 `;
 
 export const DescriptionContainer = styled.div`
-display: flex;
-flex - direction: column;
+    display: flex;
+    flex-direction: column;
 `;
 
 export const FlexContainer = styled.div`
-display: flex;
-align - items: center;
-gap: 4px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    color: white;
 `;
 
 export const StyledDrawer = styled(Drawer)`
-    .ant - drawer - body {
-    padding: 16px;
-}
+    .ant-drawer-body {
+        padding: 16px;
+    }
 
-    .ant - drawer - header {
-    padding: 16px;
-}
+    .ant-drawer-header {
+        padding: 16px;
+    }
 `;
 
 export const StyledCollapse = styled(Collapse)`
-    .ant - collapse - header {
-    padding: 0!important;
-}
+    .ant-collapse-header {
+        padding: 0 !important;
+    }
 
-    .ant - collapse - content - box {
-    padding: 12px 0!important;
-}
+    .ant-collapse-content-box {
+        padding: 12px 0 !important;
+    }
 
-    .ant - collapse - arrow {
-    right: 0!important;
-}
+    .ant-collapse-arrow {
+        right: 0 !important;
+    }
 `;
 
 export const CollapseHeader = styled.div`
-border - top: 1px solid ${colors.gray[1400]};
-padding: 16px 0;
-margin - left: -16px;
-width: calc(100 % + 32px);
-padding: 16px;
-margin - top: 12px;
+    border-top: 1px solid ${colors.gray[1400]};
+    padding: 16px 0;
+    margin-left: -16px;
+    width: calc(100% + 32px);
+    padding: 16px;
+    margin-top: 12px;
 `;
 
 export const TogglesContainer = styled.div`
-display: flex;
-flex - direction: column;
-gap: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
 `;
 
 export const StyledSpin = styled(Spin)`
-max - height: 100 % !important;
-color: ${(props) => props.theme.styles['primary-color']};
+    max-height: 100% !important;
+    color: ${(props) => props.theme.styles['primary-color']};
 `;
 
 export const CreatedByContainer = styled.div`
-display: inline - flex;
-align - items: center;
-gap: 4px;
-padding: 3px 6px 3px 4px;
-border - radius: 20px;
-border: 1px solid ${colors.gray[1400]};
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 3px 6px 3px 4px;
+    border-radius: 20px;
+    border: 1px solid ${colors.gray[1400]};
 
     :hover {
-    cursor: pointer;
-}
+        cursor: pointer;
+    }
 `;
 
 export const SubTextContainer = styled.div`
-display: flex;
-align - items: center;
-gap: 4px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
 
     p {
-    margin: 0;
-}
+        margin: 0;
+    }
 `;
 
 export const ValueListContainer = styled.div`
-margin - bottom: 24px;
-display: flex;
-align - items: center;
-gap: 4px;
-font - size: 14px;
-color: ${colors.gray[500]};
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 14px;
+    color: ${colors.gray[500]};
 
     svg {
         :hover {
-        cursor: pointer;
+            cursor: pointer;
+        }
     }
-}
 `;
 
 export const ValueType = styled.div`
-background - color: ${colors.gray[100]};
-border - radius: 4px;
-padding: 2px 4px;
+    background-color: ${colors.gray[100]};
+    border-radius: 4px;
+    padding: 2px 4px;
 `;
 
 export const StyledModal = styled(Modal)`
-font - family: Mulish;
+    font-family: Mulish;
 
-    &&& .ant - modal - content {
-    box - shadow: 0px 4px 12px 0px rgba(9, 1, 61, 0.12);
-    border - radius: 12px;
-    width: 452px;
-}
+    &&& .ant-modal-content {
+        box-shadow: 0px 4px 12px 0px rgba(9, 1, 61, 0.12);
+        border-radius: 12px;
+        width: 452px;
+    }
 
-    .ant - modal - header {
-    border - top - left - radius: 12px!important;
-    border - top - right - radius: 12px!important;
-    padding: 20px 20px 8px 20px;
-}
+    .ant-modal-header {
+        border-top-left-radius: 12px !important;
+        border-top-right-radius: 12px !important;
+        padding: 20px 20px 8px 20px;
+    }
 
-    .ant - modal - body {
-    padding: 0;
-}
+    .ant-modal-body {
+        padding: 0;
+    }
 `;
 
 export const FieldGroupContainer = styled.div`
-display: grid;
-margin - bottom: 8px;
+    display: grid;
+    margin-bottom: 8px;
 `;
 
 export const DeleteIconContainer = styled.div`
-display: flex;
-margin - top: -16px;
-justify - self: end;
+    display: flex;
+    margin-top: -16px;
+    justify-self: end;
 
     :hover {
-    cursor: pointer;
-}
+        cursor: pointer;
+    }
 `;
 
 export const ValuesContainer = styled.div<{ height: number }>`
-max - height: ${(props) => `calc(${props.height}px - 200px)`};
-overflow: auto;
-padding: 20px;
+    max-height: ${(props) => `calc(${props.height}px - 200px)`};
+    overflow: auto;
+    padding: 20px;
 `;
 
 export const ValuesList = styled.div`
-font - size: 14px;
-color: ${colors.gray[500]};
-display: flex;
-flex: 1;
-align - items: center;
-flex - wrap: wrap;
+    font-size: 14px;
+    color: ${colors.gray[500]};
+    display: flex;
+    flex: 1;
+    align-items: center;
+    flex-wrap: wrap;
 
     p {
-    line - height: 24px;
-}
+        line-height: 24px;
+    }
 `;
 
 export const ItemsList = styled.div`
-font - size: 14px;
-display: flex;
-align - items: center;
-flex - wrap: wrap;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
 `;
 
 export const ItemsContainer = styled.div`
-display: flex;
-align - items: center;
-gap: 16px;
-width: fit - content;
-margin: 0 24px 24px 0;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    width: fit-content;
+    margin: 0 24px 24px 0;
 `;
 
 export const AddButtonContainer = styled.div`
-display: flex;
-margin: 10px 20px 0 0;
-justify - self: end;
+    display: flex;
+    margin: 10px 20px 0 0;
+    justify-self: end;
 `;
 
 export const FormContainer = styled.div`
-display: grid;
+    display: grid;
 `;
 
 export const ModalFooter = styled.div`
-display: flex;
-gap: 16px;
-justify - content: end;
+    display: flex;
+    gap: 16px;
+    justify-content: end;
 `;
 
 export const VerticalDivider = styled(Divider)`
@@ -382,51 +383,51 @@ width: 2px;
 `;
 
 export const StyledSelect = styled(Select)`
-font - family: ${typography.fonts.body};
+    font-family: ${typography.fonts.body};
 
-    .ant - select - selector {
-    height: 50px!important;
-    border - radius: 8px!important;
-    outline: 2px solid transparent!important;
+    .ant-select-selector {
+        height: 50px !important;
+        border-radius: 8px !important;
+        outline: 2px solid transparent !important;
 
-        &: hover,
-        &: focus - within {
-        border: 1px solid ${colors.violet[200]} !important;
-        outline: 2px solid ${colors.violet[200]} !important;
-        box - shadow: none!important;
+        &:hover,
+        &:focus-within {
+            border: 1px solid ${colors.primary[30]} !important;
+            outline: 2px solid ${colors.primary[30]} !important;
+            box-shadow: none !important;
+        }
     }
-}
 
-    .ant - select - selection - item {
+    .ant-select-selection-item {
         p {
-        text - overflow: ellipsis;
-        white - space: nowrap;
-        overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+        }
     }
-}
 
-    .ant - select - selection - placeholder {
-    display: flex;
-    align - items: center;
-    font - size: 14px;
-    color: ${colors.gray[400]};
-}
+    .ant-select-selection-placeholder {
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+        color: ${colors.gray[400]};
+    }
 `;
 
 export const CustomDropdown = styled.div`
-    .ant - select - item - option - content {
-    white - space: normal;
-}
+    .ant-select-item-option-content {
+        white-space: normal;
+    }
 `;
 
 export const SelectOptionContainer = styled.div`
-display: flex;
-flex - direction: column;
-padding: 4px 0;
+    display: flex;
+    flex-direction: column;
+    padding: 4px 0;
 
     p {
-    line - height: 20px;
-}
+        line-height: 20px;
+    }
 `;
 
 export const StyledDivider = styled(Divider)`
@@ -435,18 +436,18 @@ margin: 16px 0;
 `;
 
 export const ViewDivider = styled(Divider)`
-color: ${colors.gray[1400]};
-margin: 16px 0 0 - 16px;
-width: calc(100 % + 32px);
+    color: ${colors.gray[1400]};
+    margin: 16px 0 0 -16px;
+    width: calc(100% + 32px);
 `;
 
 export const EmptyContainer = styled.div`
 display: flex;
-flex - direction: column;
-align - items: center;
-justify - content: center;
-height: 100 %;
-width: 100 %;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+height: 100%;
+width: 100%;
 gap: 16px;
 
     svg {
@@ -456,19 +457,20 @@ gap: 16px;
 `;
 
 export const CardIcons = styled.div`
-display: flex;
-justify - content: end;
-gap: 12px;
+    display: flex;
+    justify-content: end;
+    gap: 12px;
 
     div {
-    border: 1px solid $E9EAEE;
-    border - radius: 20px;
-    width: 28px;
-    height: 28px;
-    padding: 4px;
-    color: #8088a3;
+        border: 1px solid #E9EAEE;
+        border-radius: 20px;
+        width: 28px;
+        height: 28px;
+        padding: 4px;
+        color: #8088a3;
+        
         :hover {
-        cursor: pointer;
+            cursor: pointer;
+        }
     }
-}
 `;

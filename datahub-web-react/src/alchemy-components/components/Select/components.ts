@@ -29,7 +29,7 @@ export const SelectBase = styled.div<SelectStyleProps>(
         alignItems: 'center',
         overflow: 'auto',
         textWrapMode: 'nowrap',
-        backgroundColor: isDisabled ? colors.gray[1500] : colors.white,
+        backgroundColor: isDisabled ? colors.gray[1500] : colors.secondary[50],
         width: width === 'full' ? '100%' : 'max-content',
     }),
 );
@@ -107,7 +107,7 @@ export const DropdownContainer = styled.div<{ ignoreMaxHeight?: boolean }>(({ ig
 // Styled components for SelectValue (Selected value display)
 export const SelectValue = styled.span({
     ...inputValueTextStyles(),
-    color: colors.gray[600],
+    color: colors.primary[30],
 });
 
 export const Placeholder = styled.span({

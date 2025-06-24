@@ -18,6 +18,7 @@ import { useEnterKeyListener } from '@app/shared/useEnterKeyListener';
 import { useEntityRegistry } from '@app/useEntityRegistry';
 import { Button } from '@src/alchemy-components';
 import { getModalDomContainer } from '@utils/focus';
+import colors from '@src/alchemy-components/theme/foundations/colors';
 
 import {
     useBatchAddTagsMutation,
@@ -61,7 +62,7 @@ export const BrowserWrapper = styled.div<{
     minWidth?: number;
     maxWidth?: number;
 }>`
-    background-color: white;
+    background-color: ${colors.secondary[50]}
     border-radius: 5px;
     box-shadow:
         0 3px 6px -4px rgb(0 0 0 / 12%),

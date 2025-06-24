@@ -9,12 +9,13 @@ import { EntityLink } from '@app/homeV2/reference/sections/EntityLink';
 import { EntityLinkListSkeleton } from '@app/homeV2/reference/sections/EntityLinkListSkeleton';
 import OnboardingContext from '@app/onboarding/OnboardingContext';
 import { useEntityRegistryV2 } from '@src/app/useEntityRegistry';
+import { colors } from '@src/alchemy-components/theme';
 
 import { Entity, EntityType } from '@types';
 
 const Title = styled.div<{ hasAction: boolean }>`
     ${(props) => props.hasAction && `:hover { cursor: pointer; }`}
-    color: #403d5c;
+    color: ${colors.primary[10]};
     font-weight: 600;
     font-size: 16px;
     margin-bottom: 8px;

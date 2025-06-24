@@ -57,6 +57,7 @@ import { useEntityRegistry } from '@app/useEntityRegistry';
 import { PageRoutes } from '@conf/Global';
 import useEntityState from '@src/app/entity/shared/useEntityState';
 import { useShowNavBarRedesign } from '@src/app/useShowNavBarRedesign';
+import colors from '@src/alchemy-components/theme/foundations/colors';
 
 import { EntityType, Exact } from '@types';
 
@@ -133,7 +134,7 @@ const Header = styled.div<{ $isShowNavBarRedesign?: boolean }>`
 `;
 
 const HeaderContent = styled.div<{ $isShowNavBarRedesign?: boolean }>`
-    background-color: #ffffff;
+    background-color: ${colors.secondary[50]};
     border-radius: ${(props) =>
         props.$isShowNavBarRedesign ? props.theme.styles['border-radius-navbar-redesign'] : '8px'};
     box-shadow: ${(props) =>
@@ -155,7 +156,7 @@ const Body = styled.div<{ $isShowNavBarRedesign?: boolean }>`
 `;
 
 const BodyContent = styled.div<{ $isShowNavBarRedesign?: boolean }>`
-    background-color: #ffffff;
+    background-color: ${colors.secondary[50]};
     border-radius: ${(props) =>
         props.$isShowNavBarRedesign ? props.theme.styles['border-radius-navbar-redesign'] : '8px'};
     display: flex;

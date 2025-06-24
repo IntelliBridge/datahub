@@ -17,8 +17,6 @@ const SelectWrapper = styled.span`
         margin: 0px;
     }
     .ant-select-selection-item {
-        // !important is necessary because updating Select styles for antd is impossible
-        color: ${ANTD_GRAY[8]} !important;
         font-weight: 700;
     }
 

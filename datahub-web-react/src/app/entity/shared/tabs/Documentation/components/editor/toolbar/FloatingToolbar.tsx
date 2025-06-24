@@ -12,7 +12,7 @@ import React, { useMemo, useState } from 'react';
 import { createMarkPositioner } from 'remirror/extensions';
 import styled from 'styled-components';
 
-import { ANTD_GRAY } from '@app/entity/shared/constants';
+import colors from '@src/alchemy-components/theme/foundations/colors';
 import { CommandButton } from '@app/entity/shared/tabs/Documentation/components/editor/toolbar/CommandButton';
 import { CodeIcon } from '@app/entity/shared/tabs/Documentation/components/editor/toolbar/Icons';
 import { LinkModal } from '@app/entity/shared/tabs/Documentation/components/editor/toolbar/LinkModal';
@@ -23,7 +23,7 @@ export const ToolbarContainer = styled.span`
     display: flex;
     align-items: center;
     padding: 2px;
-    background-color: ${ANTD_GRAY[1]};
+    background-color: ${colors.secondary[90]};
     border-radius: 4px;
     box-shadow:
         0 3px 6px -4px #0000001f,

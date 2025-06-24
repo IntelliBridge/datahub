@@ -20,7 +20,7 @@ const sacConfig: SourceConfig = {
     type: SAC,
     placeholderRecipe,
     displayName: 'SAP Analytics Cloud',
-    docsUrl: 'https://docs.datahub.com/docs/generated/ingestion/sources/sac/',
+    docsUrl: 'https://docs.governance.workforce.ai/docs/generated/ingestion/sources/sac/',
     logoUrl: sacLogo,
 };
 

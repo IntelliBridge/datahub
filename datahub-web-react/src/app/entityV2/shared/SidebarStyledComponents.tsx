@@ -253,7 +253,7 @@ export const UserInfo = styled(Row)`
     display: flex;
     gap: 1rem;
     padding: 10px 10px;
-    background: ${ANTD_GRAY_V2['14']};
+    background: ${colors.secondary[90]};
     border-radius: 10px;
     justify-content: center;
     @media only screen and (min-width: 1200px) {
@@ -268,7 +268,7 @@ export const GroupInfo = styled.div`
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    background: ${ANTD_GRAY_V2['14']};
+    background: ${colors.secondary[90]};
     border-radius: 10px;
     overflow: hidden;
 `;

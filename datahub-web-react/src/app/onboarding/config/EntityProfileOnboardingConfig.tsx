@@ -128,7 +128,7 @@ export const EntityProfileOnboardingConfig: OnboardingStep[] = [
                 </p>
                 <p>
                     Learn more about <strong>Tags</strong>{' '}
-                    <a target="_blank" rel="noreferrer noopener" href="https://docs.datahub.com/docs/tags">
+                    <a target="_blank" rel="noreferrer noopener" href="https://docs.governance.workforce.ai/docs/tags">
                         {' '}
                         here.{' '}
                     </a>
@@ -155,7 +155,7 @@ export const EntityProfileOnboardingConfig: OnboardingStep[] = [
                     <a
                         target="_blank"
                         rel="noreferrer noopener"
-                        href="https://docs.datahub.com/docs/glossary/business-glossary"
+                        href="https://docs.governance.workforce.ai/docs/glossary/business-glossary"
                     >
                         {' '}
                         here.
@@ -179,7 +179,7 @@ export const EntityProfileOnboardingConfig: OnboardingStep[] = [
                 </p>
                 <p>
                     Learn more about <strong>Domains</strong>{' '}
-                    <a target="_blank" rel="noreferrer noopener" href="https://docs.datahub.com/docs/domains">
+                    <a target="_blank" rel="noreferrer noopener" href="https://docs.governance.workforce.ai/docs/domains">
                         {' '}
                         here.
                     </a>

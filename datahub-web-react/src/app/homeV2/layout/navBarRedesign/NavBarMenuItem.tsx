@@ -21,17 +21,18 @@ const StyledMenuItem = styled(Menu.Item)<{ isCollapsed?: boolean }>`
         display: flex;
         align-items: center;
         ${(props) => props.isCollapsed && 'width: 36px;'}
+        background: transparent;
     }
 
     && svg {
-        color: ${colors.gray[1800]};
+        color: ${colors.gray[0]};
         width: 20px;
         height: 20px;
     }
 
     && .ant-menu-title-content {
         width: 100%;
-        color: ${colors.gray[1700]};
+        color: ${colors.gray[0]};
         font-family: Mulish;
         font-size: 14px;
         font-style: normal;
@@ -44,25 +45,22 @@ const StyledMenuItem = styled(Menu.Item)<{ isCollapsed?: boolean }>`
         line-height: 24px;
     }
 
-    &:hover,
-    &.ant-menu-item-active {
-        background: linear-gradient(
-            180deg,
-            rgba(243, 244, 246, 0.5) -3.99%,
-            rgba(235, 236, 240, 0.5) 53.04%,
-            rgba(235, 236, 240, 0.5) 100%
-        );
-        box-shadow: 0px 0px 0px 1px rgba(139, 135, 157, 0.08);
+    &&&:not(.ant-menu-item-selected):hover,
+    &&&:not(.ant-menu-item-selected).ant-menu-item-active {
+        background: #ECBD00;
+        color: ${colors.primary[40]};
+        border-radius: 8px;
+        box-shadow: none;
+        & svg {
+            color: ${colors.primary[40]};
+        }
     }
 
     &&.ant-menu-item-selected {
-        background: linear-gradient(
-            180deg,
-            rgba(83, 63, 209, 0.04) -3.99%,
-            rgba(112, 94, 228, 0.04) 53.04%,
-            rgba(112, 94, 228, 0.04) 100%
-        );
-        box-shadow: 0px 0px 0px 1px rgba(108, 71, 255, 0.08);
+        background: ${colors.primary[30]};
+        color: ${colors.primary[40]};
+        border-radius: 8px;
+        box-shadow: none;
     }
 `;
 
@@ -73,25 +71,18 @@ const Icon = styled.div<{ $isSelected?: boolean; $size?: number }>`
     && svg {
         ${(props) =>
             props.$isSelected
-                ? `fill: url(#menu-item-selected-gradient) ${props.theme.styles['primary-color']};`
-                : 'color: #8088a3;'}
+                ? `color: ${colors.primary[40]};`
+                : `color: ${colors.gray[0]};`}
         width: ${(props) => props.$size ?? 20}px;
         height: ${(props) => props.$size ?? 20}px;
     }
 `;
 
-const StyledText = styled(Text)<{ $isSelected?: boolean }>`
-    ${(props) =>
-        props.$isSelected &&
-        `
-        background: linear-gradient(${getColor('primary', 300, props.theme)} 1%, ${getColor(
-            'primary',
-            500,
-            props.theme,
-        )} 99%);
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
-    `}
+const StyledText = styled(Text)<{ $isSelected?: boolean; $isHovered?: boolean }>`
+    color: ${(props) =>
+        props.$isSelected || props.$isHovered
+            ? colors.primary[40] // Black text when selected or hovered
+            : colors.gray[0]};
 `;
 
 const ItemTitleContentWrapper = styled.div`
@@ -121,6 +112,8 @@ type Props = {
 export default function NavBarMenuItem({ item, isCollapsed, isSelected, iconSize, ...props }: Props) {
     const history = useHistory();
 
+    const [isHovered, setIsHovered] = React.useState(false);
+
     const onClick = () => {
         if (item.link) return history.push(item.link);
         if (item.onClick) return item.onClick();
@@ -135,6 +128,8 @@ export default function NavBarMenuItem({ item, isCollapsed, isSelected, iconSize
                 aria-label={item.title}
                 {...props}
                 data-testid={item.dataTestId}
+                onMouseEnter={() => setIsHovered(true)}
+                onMouseLeave={() => setIsHovered(false)}
             >
                 {item.icon || item.selectedIcon ? (
                     <Icon $size={iconSize} $isSelected={isSelected}>
@@ -145,7 +140,7 @@ export default function NavBarMenuItem({ item, isCollapsed, isSelected, iconSize
                     <>{item?.badge?.show && <PillDot />}</>
                 ) : (
                     <ItemTitleContentWrapper>
-                        <StyledText size="md" type="div" weight="semiBold" $isSelected={isSelected}>
+                        <StyledText size="md" type="div" weight="semiBold" $isSelected={isSelected} $isHovered={isHovered && !isSelected}>
                             {item.title}
                         </StyledText>
                         {item?.badge?.show && <Badge count={item.badge.count} clickable={false} color="primary" />}

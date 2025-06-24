@@ -4,6 +4,7 @@ import styled from 'styled-components';
 
 import { ANTD_GRAY } from '@app/entity/shared/constants';
 import { REDESIGN_COLORS } from '@app/entityV2/shared/constants';
+import colors from '@src/alchemy-components/theme/foundations/colors';
 import { getFilterIconAndLabel } from '@app/searchV2/filters/utils';
 import {
     BrowseProvider,
@@ -34,7 +35,7 @@ const Count = styled(Typography.Text)<{ $isPlatformBrowse: boolean; isOpen: bool
     padding: 2px 8px;
     margin-left: 8px;
     ${(props) => props.$isPlatformBrowse && `border-radius: 8px;`}
-    ${(props) => props.$isPlatformBrowse && `background-color: ${props.isOpen ? '#fff' : ANTD_GRAY[3]};`}
+    ${(props) => props.$isPlatformBrowse && `background-color: ${props.isOpen ? colors.secondary[50] : ANTD_GRAY[3]};`}
 `;
 
 type Props = {
@@ -89,9 +90,9 @@ const PlatformNode = ({ iconSize = 20, hasOnlyOnePlatform = false, toggleCollaps
     const nodeStyle = {
         padding: '4px',
         margin: '0px',
-        background: collapsed ? '#fff' : isOpen && REDESIGN_COLORS.BACKGROUND_GRAY_4,
-        borderLeft: isOpen && '1px solid #fff',
-        borderRight: isOpen && '1px solid #fff',
+        background: collapsed ? colors.secondary[50] : isOpen && REDESIGN_COLORS.BACKGROUND_GRAY_4,
+        borderLeft: isOpen && `1px solid ${colors.secondary[50]}`,
+        borderRight: isOpen && `1px solid ${colors.secondary[50]}`,
         justifyContent: collapsed ? 'center' : 'start',
         display: 'flex',
         flexDirection: 'column',

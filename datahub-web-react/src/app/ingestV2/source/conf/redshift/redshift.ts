@@ -30,7 +30,7 @@ const redshiftConfig: SourceConfig = {
     type: REDSHIFT,
     placeholderRecipe,
     displayName: 'Redshift',
-    docsUrl: 'https://docs.datahub.com/docs/generated/ingestion/sources/redshift/',
+    docsUrl: 'https://docs.governance.workforce.ai/docs/generated/ingestion/sources/redshift/',
     logoUrl: redshiftLogo,
 };
 

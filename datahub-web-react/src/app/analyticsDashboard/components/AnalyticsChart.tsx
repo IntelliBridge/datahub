@@ -9,6 +9,8 @@ import { TimeSeriesChart } from '@app/analyticsDashboard/components/TimeSeriesCh
 
 import { AnalyticsChart as AnalyticsChartType } from '@types';
 
+const DEFAULT_AXIS_COLOR = '#fff';
+
 type Props = {
     chartData: AnalyticsChartType;
     width: number;
@@ -21,7 +23,7 @@ export const AnalyticsChart = ({ chartData, width, height }: Props) => {
 
     switch (chartData.__typename) {
         case 'TimeSeriesChart':
-            chartSection = <TimeSeriesChart insertBlankPoints chartData={chartData} width={width} height={height} />;
+            chartSection = <TimeSeriesChart insertBlankPoints chartData={chartData} width={width} height={height} style={{ axisColor: DEFAULT_AXIS_COLOR }} />;
             break;
         case 'BarChart':
             chartSection = <BarChart chartData={chartData} width={width} height={height} />;
@@ -37,9 +39,10 @@ export const AnalyticsChart = ({ chartData, width, height }: Props) => {
         <ChartCard $shouldScroll={isTable}>
             <ChartContainer>
                 <div>
-                    <Typography.Title level={5}>{chartData.title}</Typography.Title>
+                    <Typography.Title level={4}>{chartData.title}</Typography.Title>
                 </div>
                 {chartSection}
+                <div>{chartData.__typename}</div>
             </ChartContainer>
         </ChartCard>
     );

@@ -14,7 +14,7 @@ const StyledTabs = styled(AntTabs)`
     .ant-tabs-tab {
         padding: 8px 0;
         font-size: 14px;
-        color: ${colors.gray[600]};
+        color: ${colors.gray[100]};
     }
 
     .ant-tabs-tab + .ant-tabs-tab {
@@ -54,7 +54,7 @@ function TabView({ tab }: { tab: Tab }) {
         <Tooltip title={tab.tooltip}>
             <TabViewWrapper id={tab.id}>
                 {tab.name}
-                {!!tab.count && <Pill label={`${tab.count}`} size="xs" color="violet" />}
+                {!!tab.count && <Pill label={`${tab.count}`} size="xs" color="yellow" />}
             </TabViewWrapper>
         </Tooltip>
     );

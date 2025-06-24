@@ -25,7 +25,7 @@ const Container = styled.div`
     position: sticky;
     top: 0;
     z-index: 99;
-    background-color: white;
+    background-color: ${colors.secondary[50]};
     border-top-left-radius: 12px;
     border-top-right-radius: 12px;
     padding: 8px !important;

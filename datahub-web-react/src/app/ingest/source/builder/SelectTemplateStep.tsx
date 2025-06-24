@@ -10,6 +10,7 @@ import { IngestionSourceBuilderStep } from '@app/ingest/source/builder/steps';
 import { SourceBuilderState, SourceConfig, StepProps } from '@app/ingest/source/builder/types';
 import useGetSourceLogoUrl from '@app/ingest/source/builder/useGetSourceLogoUrl';
 import { Button } from '@src/alchemy-components';
+import colors from '@src/alchemy-components/theme/foundations/colors';
 
 const Container = styled.div`
     max-height: 82vh;
@@ -32,7 +33,7 @@ const SearchBarContainer = styled.div`
 `;
 
 const StyledSearchBar = styled(Input)`
-    background-color: white;
+    background-color: ${colors.secondary[50]};
     border-radius: 8px;
     box-shadow: 0px 0px 30px 0px rgb(239 239 239);
     border: 1px solid #e0e0e0;

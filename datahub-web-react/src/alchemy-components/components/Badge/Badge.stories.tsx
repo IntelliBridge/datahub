@@ -84,7 +84,7 @@ export const sizes = () => (
 export const colors = () => (
     <GridList>
         <Badge count={100} />
-        <Badge count={100} color="violet" />
+        <Badge count={100} color="yellow" />
         <Badge count={100} color="green" />
         <Badge count={100} color="red" />
         <Badge count={100} color="blue" />

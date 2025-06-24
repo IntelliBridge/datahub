@@ -5,7 +5,7 @@ import { ANTD_GRAY } from '@app/entity/shared/constants';
 
 const Text = styled.div`
     font-size: 14px;
-    color: ${ANTD_GRAY[7]};
+    color: ${ANTD_GRAY[6]};
 `;
 
 export const EmptyAssetsYouOwn = () => {
@@ -13,7 +13,7 @@ export const EmptyAssetsYouOwn = () => {
         <Text>
             You do not own any assets yet.
             <br />
-            <a target="_blank" rel="noreferrer noopener" href="https://docs.datahub.com/docs/ownership/ownership-types">
+            <a target="_blank" rel="noreferrer noopener" href="https://docs.governance.workforce.ai/docs/ownership/ownership-types">
                 Learn more
             </a>{' '}
             about ownership.

@@ -3,6 +3,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import { REDESIGN_COLORS } from '@app/entity/shared/constants';
+import colors from '@src/alchemy-components/theme/foundations/colors';
 
 const Container = styled(Button)`
     padding: 32px;
@@ -13,10 +14,10 @@ const Container = styled(Button)`
     align-items: start;
     flex-direction: column;
     border: 1px solid #e0e0e0;
-    background-color: #ffffff;
+    background-color: ${colors.secondary[50]};
     &&:hover {
         border: 1px solid ${REDESIGN_COLORS.BLUE};
-        background-color: #ffffff;
+        background-color: ${colors.secondary[50]};
     }
     white-space: unset;
 `;

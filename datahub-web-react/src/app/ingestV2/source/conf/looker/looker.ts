@@ -21,7 +21,7 @@ const lookerConfig: SourceConfig = {
     type: LOOKER,
     placeholderRecipe,
     displayName: 'Looker',
-    docsUrl: 'https://docs.datahub.com/docs/generated/ingestion/sources/looker/',
+    docsUrl: 'https://docs.governance.workforce.ai/docs/generated/ingestion/sources/looker/',
     logoUrl: lookerLogo,
 };
 

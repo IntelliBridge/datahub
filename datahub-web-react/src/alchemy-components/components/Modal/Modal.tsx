@@ -80,11 +80,11 @@ export function Modal({
             hasChildren={!!children}
             title={
                 <HeaderContainer hasChildren={!!children}>
-                    <Heading type="h1" color="gray" colorLevel={600} weight="bold" size="lg">
+                    <Heading type="h1" color="white" colorLevel={600} weight="bold" size="lg">
                         {title}
                     </Heading>
                     {!!subtitle && (
-                        <Text type="span" color="gray" colorLevel={1700} weight="medium">
+                        <Text type="span" color="white" colorLevel={1700} weight="medium">
                             {subtitle}
                         </Text>
                     )}
@@ -96,6 +96,7 @@ export function Modal({
                         {buttons.map(({ text, variant, onClick, ...buttonProps }, index) => (
                             <Button
                                 key={text}
+                                color="white"
                                 data-testid={dataTestId && `${dataTestId}-${variant}-${index}`}
                                 variant={variant}
                                 onClick={onClick}

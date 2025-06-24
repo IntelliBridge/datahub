@@ -526,7 +526,7 @@ function NodeContents(props: Props & LineageEntity & DisplayedColumns) {
     );
 
     if (isGhost) {
-        const message = entity?.status?.removed ? 'has been deleted' : 'does not exist in DataHub';
+        const message = entity?.status?.removed ? 'has been deleted' : 'does not exist in Governance';
         return (
             <Tooltip title={`This entity ${message}`} mouseEnterDelay={0.3}>
                 {contents}

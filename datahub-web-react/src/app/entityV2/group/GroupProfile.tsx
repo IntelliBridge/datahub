@@ -85,7 +85,7 @@ export default function GroupProfile({ urn }: Props) {
 
     const groupMemberRelationships = data?.corpGroup?.relationships as EntityRelationshipsResult;
     const isExternalGroup: boolean = data?.corpGroup?.origin?.type === OriginType.External;
-    const externalGroupType: string = data?.corpGroup?.origin?.externalType || 'outside DataHub';
+    const externalGroupType: string = data?.corpGroup?.origin?.externalType || 'outside Governance';
     const groupName = data?.corpGroup ? entityRegistry.getDisplayName(EntityType.CorpGroup, data.corpGroup) : undefined;
 
     const finalTabs = [

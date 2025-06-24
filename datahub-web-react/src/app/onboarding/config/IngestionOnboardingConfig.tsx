@@ -23,7 +23,7 @@ export const IngestionOnboardingConfig: OnboardingStep[] = [
                     <a
                         target="_blank"
                         rel="noreferrer noopener"
-                        href="https://docs.datahub.com/docs/metadata-ingestion"
+                        href="https://docs.governance.workforce.ai/docs/metadata-ingestion"
                     >
                         {' '}
                         here.

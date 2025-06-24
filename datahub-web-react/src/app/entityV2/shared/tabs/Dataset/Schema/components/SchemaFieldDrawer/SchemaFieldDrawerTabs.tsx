@@ -3,6 +3,8 @@ import { Tabs } from 'antd';
 import React from 'react';
 import styled from 'styled-components/macro';
 
+import themeColors from '@src/alchemy-components/theme/foundations/colors';
+
 import { EntitySidebarTab } from '@app/entityV2/shared/types';
 
 export const TABS_WIDTH = 64;
@@ -13,7 +15,7 @@ const UnborderedTabs = styled(Tabs).attrs({ className: 'schema-field-drawer-tabs
     box-sizing: border-box;
     user-select: none;
     overflow: visible;
-    background-color: #ffffff;
+    background-color: ${themeColors.secondary[50]};
 
     .ant-tabs-nav {
         margin: 0;

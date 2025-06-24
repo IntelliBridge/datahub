@@ -2,6 +2,8 @@ import { ReadOutlined } from '@ant-design/icons';
 import React from 'react';
 import styled from 'styled-components';
 
+import colors from '@src/alchemy-components/theme/foundations/colors';
+
 import EmptyDomainDescription from '@app/domainV2/EmptyDomainDescription';
 import EmptyDomainsSection from '@app/domainV2/EmptyDomainsSection';
 import useListDomains from '@app/domainV2/useListDomains';
@@ -21,7 +23,7 @@ const ResultWrapper = styled.div`
     margin-bottom: 12px;
     display: flex;
     align-items: center;
-    background-color: #ffffff;
+    background-color: ${colors.secondary[50]};
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0px 1px 2px 0px rgba(33, 23, 95, 0.07);

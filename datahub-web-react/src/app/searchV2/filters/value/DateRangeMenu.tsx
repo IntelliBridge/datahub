@@ -3,6 +3,8 @@ import moment from 'moment';
 import React, { useCallback, useRef, useState } from 'react';
 import styled from 'styled-components';
 
+import colors from '@src/alchemy-components/theme/foundations/colors';
+
 import { FilterField } from '@app/searchV2/filters/types';
 import { useFilterDisplayName } from '@app/searchV2/filters/utils';
 import useDateRangeFilterValues from '@app/searchV2/filters/value/useDateRangeFilterValues';
@@ -14,7 +16,7 @@ const { RangePicker } = DatePicker;
 
 const Container = styled.div`
     padding: 16px;
-    background-color: #ffffff;
+    background-color: ${colors.secondary[50]};
     box-shadow:
         0 3px 6px -4px rgba(0, 0, 0, 0.12),
         0 6px 16px 0 rgba(0, 0, 0, 0.08),

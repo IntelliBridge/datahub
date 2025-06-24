@@ -4,17 +4,56 @@ const colors = {
     white: '#FFFFFF',
     black: '#000000', // do not use black, use grays 600 for primary text and 1700 for secondary
 
+    // Workforce Base: Primary
+    primary: {
+        10: '#FFFFFF', // white
+        20: '#F0F1F2',
+        30: '#FFD600',
+        40: '#181616',
+    },
+
+    // Workforce Base: Buttons
+    button: {
+        25: '#FAF1BA',
+        30: '#FFD600',
+        32: '#EBDD00',
+        34: '#B18F00',
+    },
+
+    // Workforce Base: Secondary
+    secondary: {
+        45: '#979CA4',
+        50: '#25323F',
+        70: '#141B22',
+        80: '#000000',
+        90: '#3E4550',
+    },
+
+    // AI Process Status Chip Colors
+    status: {
+        idle: '#6B6C6F',
+        processing: '#26A2F0',
+        approvalRequired: '#FFA67',
+        error: '#FF6A52',
+        complete: '#2EB540',
+        queued: '#6B9ECC',
+        retrying: '#E89105',
+        cancelled: '#D6D7D9',
+        paused: '#FFBC3F',
+        stopped: '#A4A4AA',
+    },
+
+    // For compatibility with existing gray usage, map to closest Workforce Base
     gray: {
-        0: '#FFFFFF', // white
-        100: '#EBECF0', // border
-        200: '#CFD1DA', // should be deprecated
-        300: '#A9ADBD', // should be deprecated
-        400: '#81879F', // should be deprecated
-        500: '#5B6282', // should be deprecated
-        600: '#374066', // primary text
-        700: '#2F3657', // should be deprecated
-        800: '#272D48', // should be deprecated
-        900: '#231A58', // should be deprecated
+        0: '#FFFFFF',
+        100: '#F0F1F2',
+        200: '#FAF1BA',
+        300: '#FFD600',
+        400: '#B18F00',
+        500: '#979CA4',
+        600: '#25323F',
+        800: '#141B22',
+        900: '#000000',
         1000: '#F1F3FD', // violet 0
         1100: '#F1FBFE', // blue 0
         1200: '#FBF3EF', // red 0
@@ -37,22 +76,6 @@ const colors = {
         400: '#7565DA',
         500: '#533FD1',
         600: '#4C39BE', // primary value
-        700: '#3B2D94',
-        800: '#2E2373',
-        900: '#231A58',
-        1000: '#E5E2F8',
-        1100: '#E5E2F8',
-    },
-
-    // by default, our primary pallette is the same as our violet pallette
-    primary: {
-        0: '#F1F3FD',
-        100: '#CAC3F1',
-        200: '#B0A7EA',
-        300: '#8C7EE0',
-        400: '#7565DA',
-        500: '#533FD1', // primary value
-        600: '#4C39BE',
         700: '#3B2D94',
         800: '#2E2373',
         900: '#231A58',

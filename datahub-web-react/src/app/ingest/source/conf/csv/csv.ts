@@ -16,7 +16,7 @@ const csvConfig: SourceConfig = {
     type: 'csv-enricher',
     placeholderRecipe,
     displayName: 'CSV',
-    docsUrl: 'https://docs.datahub.com/docs/generated/ingestion/sources/csv-enricher',
+    docsUrl: 'https://docs.governance.workforce.ai/docs/generated/ingestion/sources/csv-enricher',
     logoUrl: csvLogo,
 };
 

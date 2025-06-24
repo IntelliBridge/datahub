@@ -2,6 +2,8 @@
 import React, { useContext, useState } from 'react';
 import styled from 'styled-components';
 
+import colors from '@src/alchemy-components/theme/foundations/colors';
+
 import { EntityMenuItems } from '@app/entityV2/shared/EntityDropdown/EntityMenuActions';
 import { EntitySidebarTabs } from '@app/entityV2/shared/containers/profile/sidebar/EntitySidebarTabs';
 import SidebarCollapsibleHeader from '@app/entityV2/shared/containers/profile/sidebar/SidebarCollapsibleHeader';
@@ -42,7 +44,7 @@ export const StyledEntitySidebarContainer = styled.div<{
 `;
 
 export const StyledSidebar = styled.div<{ isCard: boolean; isFocused?: boolean; $isShowNavBarRedesign?: boolean }>`
-    background-color: #ffffff;
+    background-color: ${colors.secondary[50]};
     box-shadow: ${(props) => (props.isCard ? '0px 0px 5px rgba(0, 0, 0, 0.08)' : 'none')};
     border-radius: ${(props) => {
         if (!props.isCard) return 'none';

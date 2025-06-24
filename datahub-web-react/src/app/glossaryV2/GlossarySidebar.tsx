@@ -1,6 +1,7 @@
 import { Button, Tooltip } from '@components';
 import React, { useState } from 'react';
 import styled from 'styled-components/macro';
+import colors from '@src/alchemy-components/theme/foundations/colors';
 
 import { useUserContext } from '@app/context/useUserContext';
 import CreateGlossaryEntityModal from '@app/entityV2/shared/EntityDropdown/CreateGlossaryEntityModal';
@@ -36,7 +37,7 @@ const SidebarTitleWrapper = styled.div`
 const GlossaryTitle = styled.div`
     font-size: 16px;
     font-weight: bold;
-    color: #374066;
+    color: ${colors.primary[10]};
 `;
 
 const StyledButton = styled(Button)`
@@ -75,7 +76,7 @@ export default function GlossarySidebar({ isEntityProfile }: Props) {
                     <Tooltip title="Create Glossary" placement="left" showArrow={false}>
                         <StyledButton
                             variant="filled"
-                            color="violet"
+                            color="yellow"
                             isCircle
                             icon={{ icon: 'Plus', source: 'phosphor' }}
                             onClick={() => setIsCreateNodeModalVisible(true)}

@@ -17,10 +17,11 @@ import {
 } from '@app/onboarding/config/IngestionOnboardingConfig';
 import { useAppConfig } from '@app/useAppConfig';
 import { useShowNavBarRedesign } from '@app/useShowNavBarRedesign';
+import colors from '@src/alchemy-components/theme/foundations/colors';
 
 const PageContainer = styled.div<{ $isShowNavBarRedesign?: boolean }>`
     padding-top: 20px;
-    background-color: white;
+    background-color: ${colors.secondary[50]};
     border-radius: ${(props) =>
         props.$isShowNavBarRedesign ? props.theme.styles['border-radius-navbar-redesign'] : '8px'};
     ${(props) =>

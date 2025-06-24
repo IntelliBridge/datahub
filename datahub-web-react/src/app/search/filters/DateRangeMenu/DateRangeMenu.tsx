@@ -6,13 +6,14 @@ import styled from 'styled-components';
 import useDateRangeFilterValues, { Datetime } from '@app/search/filters/DateRangeMenu/useDateRangeFilterValues';
 import { useFilterDisplayName } from '@app/search/filters/utils';
 import { Text } from '@src/alchemy-components';
+import colors from '@src/alchemy-components/theme/foundations/colors';
 import { FacetFilterInput, FacetMetadata, FilterOperator } from '@src/types.generated';
 
 const { RangePicker } = DatePicker;
 
 const Container = styled.div`
     padding: 16px;
-    background-color: #ffffff;
+    background-color: ${colors.secondary[50]};
     box-shadow:
         0 3px 6px -4px rgba(0, 0, 0, 0.12),
         0 6px 16px 0 rgba(0, 0, 0, 0.08),

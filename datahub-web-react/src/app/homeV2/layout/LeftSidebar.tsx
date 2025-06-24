@@ -15,8 +15,10 @@ import { PersonaType } from '@app/homeV2/shared/types';
 import { V2_HOME_PAGE_PERSONAL_SIDEBAR_ID } from '@app/onboarding/configV2/HomePageOnboardingConfig';
 import { useAppConfig } from '@app/useAppConfig';
 import { useShowNavBarRedesign } from '@src/app/useShowNavBarRedesign';
+import { colors } from '@src/alchemy-components/theme';
 
 import { PersonalSidebarSection } from '@types';
+import { REDESIGN_COLORS } from '@app/entityV2/shared/constants';
 
 const Container = styled.div<{ $isShowNavBarRedesign?: boolean }>`
     flex: 1;
@@ -39,7 +41,7 @@ const Container = styled.div<{ $isShowNavBarRedesign?: boolean }>`
 `;
 
 const Content = styled.div<{ $isShowNavBarRedesign?: boolean }>`
-    background-color: #ffffff;
+    background-color: ${props => props.theme.styles['layout-body-background']};
     border-radius: ${(props) =>
         props.$isShowNavBarRedesign ? props.theme.styles['border-radius-navbar-redesign'] : '18px'};
     min-height: 100%;
@@ -159,7 +161,7 @@ export const LeftSidebar = () => {
             <Content $isShowNavBarRedesign={isShowNavBarRedesign}>
                 <UserHeader />
                 <Body $isShowNavBarRedesign={isShowNavBarRedesign}>
-                    {finalSections.length > 0 && <Divider style={{ margin: '0 0 16px 0' }} />}
+                    {finalSections.length > 0 && <Divider style={{ margin: '0 0 16px 0', borderColor: colors.gray[300] }} />}
                     {finalSections.map((section) => (
                         <section.component
                             key={section.id}

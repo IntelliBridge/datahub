@@ -2,13 +2,14 @@ import { Table } from 'antd';
 import styled from 'styled-components';
 
 import { ANTD_GRAY, REDESIGN_COLORS } from '@app/entityV2/shared/constants';
+import colors from '@src/alchemy-components/theme/foundations/colors';
 
 export const StyledTable = styled(Table)`
     overflow: inherit;
     height: inherit;
 
     &&& .ant-table-cell {
-        background-color: #fff;
+        background-color: ${colors.secondary[50]};
     }
     &&& .ant-table-thead .ant-table-cell {
         font-weight: 700;
@@ -44,7 +45,7 @@ export const CompactStyledTable = styled(Table)`
     height: inherit;
 
     &&& .ant-table-cell {
-        background-color: #fff;
+        background-color: ${colors.secondary[50]};
     }
     &&& .ant-table-thead .ant-table-cell {
         font-weight: 600;

@@ -37,12 +37,12 @@ const baseStyles = {
     margin: 0,
 
     '& a': {
-        color: colors.violet[400],
+        color: colors.primary[30],
         textDecoration: 'none',
         transition: 'color 0.15s ease',
 
         '&:hover': {
-            color: colors.violet[500],
+            color: colors.primary[30],
         },
     },
 };

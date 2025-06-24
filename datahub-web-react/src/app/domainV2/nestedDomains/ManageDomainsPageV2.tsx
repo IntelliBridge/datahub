@@ -11,10 +11,11 @@ import { OnboardingTour } from '@app/onboarding/OnboardingTour';
 import { DOMAINS_CREATE_DOMAIN_ID, DOMAINS_INTRO_ID } from '@app/onboarding/config/DomainsOnboardingConfig';
 import { Button } from '@src/alchemy-components';
 import { PageTitle } from '@src/alchemy-components/components/PageTitle';
+import colors from '@src/alchemy-components/theme/foundations/colors';
 import { useShowNavBarRedesign } from '@src/app/useShowNavBarRedesign';
 
 const PageWrapper = styled.div<{ $isShowNavBarRedesign?: boolean }>`
-    background-color: #ffffff;
+    background-color: ${colors.secondary[50]};
     flex: 1;
     display: flex;
     flex-direction: column;

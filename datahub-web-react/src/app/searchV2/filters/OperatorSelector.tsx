@@ -1,7 +1,7 @@
 import { Dropdown } from 'antd';
 import React from 'react';
 import styled from 'styled-components';
-
+import colors from '@src/alchemy-components/theme/foundations/colors';
 import {
     SEARCH_FILTER_CONDITION_TYPE_TO_INFO,
     getOperatorOptionsForPredicate,
@@ -23,10 +23,14 @@ const SelectedOperatorText = styled.div`
     border-radius: 6px;
     border: 1.5px solid transparent;
     padding: 2px;
+    background-color: ${colors.secondary[50]};
+    color: ${colors.primary[10]};
+    padding: 0 6px;
+    margin: 0 6px;
     :hover {
         border: 1.5px solid ${(p) => p.theme.styles['primary-color']};
-        background-color: ${(p) => p.theme.styles['primary-color']};
-        color: #fff;
+        background-color: ${colors.secondary[50]};
+        color: ${colors.primary[10]};
     }
 `;
 

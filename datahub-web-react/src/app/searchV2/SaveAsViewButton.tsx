@@ -9,6 +9,11 @@ const StyledButton = styled(Button)`
         margin: 0px;
         margin-left: 6px;
         padding: 0px;
+        color: black;
+        &:hover {
+            background-color: #EDBD00;
+            color: black;
+        }
     }
 `;
 
@@ -45,7 +50,7 @@ export const SaveAsViewButton = ({ onClick }: Props) => {
         >
             <StyledButton type="link" onClick={onClick}>
                 <StyledFilterOutlined />
-                <SaveAsViewText>Save as View</SaveAsViewText>
+                <SaveAsViewText>Save as View5</SaveAsViewText>
             </StyledButton>
         </Tooltip>
     );

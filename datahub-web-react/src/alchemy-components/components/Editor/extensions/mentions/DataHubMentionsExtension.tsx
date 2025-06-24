@@ -38,7 +38,7 @@ interface DataHubMentionsOptions {
 }
 
 /**
- * The DataHub mentions extensions wraps @-mentions as a prosemirror node. It adds capability to
+ * The Governance mentions extensions wraps @-mentions as a prosemirror node. It adds capability to
  * use and render @-mentions within the editor. The implementation was inspired by Notion where a
  * dedicated search bar is displayed for users to search. Mentions cannot be edited once being inserted
  * into the document.

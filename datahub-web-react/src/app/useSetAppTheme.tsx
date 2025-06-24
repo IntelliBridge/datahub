@@ -1,7 +1,6 @@
 import { useEffect } from 'react';
 
 import { useAppConfig } from '@app/useAppConfig';
-import { useIsThemeV2 } from '@app/useIsThemeV2';
 import { useCustomTheme } from '@src/customThemeContext';
 
 // add new theme ids here
@@ -19,7 +18,7 @@ function useCustomThemeId() {
 }
 
 export function useSetAppTheme() {
-    const isThemeV2 = useIsThemeV2();
+    const isThemeV2 = true;
     const { config } = useAppConfig();
     const { updateTheme } = useCustomTheme();
     const customThemeId = useCustomThemeId();
@@ -32,9 +31,7 @@ export function useSetAppTheme() {
         // here is where we can start adding new custom themes based on customThemeId
 
         if (isThemeV2) {
-            import('../conf/theme/theme_v2.config.json').then((theme) => updateTheme(theme));
-        } else {
-            import('../conf/theme/theme_light.config.json').then((theme) => updateTheme(theme));
+            import('../conf/theme/theme_dark.config.json').then((theme) => updateTheme(theme));
         }
     }, [config, isThemeV2, updateTheme, customThemeId]);
 }

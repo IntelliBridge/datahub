@@ -28,7 +28,7 @@ export const GroupsOnboardingConfig: OnboardingStep[] = [
                     <a
                         target="_blank"
                         rel="noreferrer noopener"
-                        href="https://docs.datahub.com/docs/authorization/groups"
+                        href="https://docs.governance.workforce.ai/docs/authorization/groups"
                     >
                         {' '}
                         here.

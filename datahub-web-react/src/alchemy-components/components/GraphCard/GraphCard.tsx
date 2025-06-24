@@ -72,7 +72,7 @@ export function GraphCard({
                                     </Text>
                                     <Text color="gray">No stats collected for this asset at the moment.</Text>
                                     {moreInfoModalContent && (
-                                        <LinkText color="violet" onClick={() => setShowInfoModal(true)}>
+                                        <LinkText color="yellow" onClick={() => setShowInfoModal(true)}>
                                             More info
                                         </LinkText>
                                     )}

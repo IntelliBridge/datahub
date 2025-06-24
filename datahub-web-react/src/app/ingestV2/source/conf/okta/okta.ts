@@ -36,7 +36,7 @@ const oktaConfig: SourceConfig = {
     type: 'okta',
     placeholderRecipe,
     displayName: 'Okta',
-    docsUrl: 'https://docs.datahub.com/docs/generated/ingestion/sources/okta',
+    docsUrl: 'https://docs.governance.workforce.ai/docs/generated/ingestion/sources/okta',
     logoUrl: oktaLogo,
 };
 

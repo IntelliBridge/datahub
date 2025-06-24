@@ -7,17 +7,22 @@ import { ANTD_GRAY } from '@app/entityV2/shared/constants';
 import { SearchBar } from '@app/searchV2/SearchBar';
 import { useEnterKeyListener } from '@app/shared/useEnterKeyListener';
 import { useEntityRegistry } from '@app/useEntityRegistry';
+import colors from '@src/alchemy-components/theme/foundations/colors';
 
 const StyledButton = styled(Button)`
     width: 100%;
     text-align: center;
     background-color: ${(p) => p.theme.styles['primary-color']};
-    color: white;
+    color: black;
     border-radius: 0;
+    &:hover {
+        background-color: #EDBD00;
+        color: black;
+    }
 `;
 
 export const DropdownMenu = styled.div<{ type: 'card' | 'default' }>`
-    background-color: white;
+    background-color: ${colors.secondary[50]};
     ${(props) => props.type === 'card' && 'border-radius: 5px;'}
     ${(props) =>
         props.type === 'card' &&
@@ -26,10 +31,7 @@ export const DropdownMenu = styled.div<{ type: 'card' | 'default' }>`
     min-width: 200px;
 
     .ant-dropdown-menu-title-content {
-        background-color: white;
-        &:hover {
-            background-color: white;
-        }
+        background-color: ${colors.secondary[90]};
     }
     .ant-dropdown-menu {
         padding: 7px;

@@ -19,12 +19,13 @@ import { useShowNavBarRedesign } from '@app/useShowNavBarRedesign';
 
 import { useGetRootGlossaryNodesQuery, useGetRootGlossaryTermsQuery } from '@graphql/glossary.generated';
 import { EntityType } from '@types';
+import colors from '@src/alchemy-components/theme/foundations/colors';
 
 const GlossaryWrapper = styled.div<{ $isShowNavBarRedesign?: boolean }>`
     display: flex;
     flex: 1;
     height: 100%;
-    background-color: white;
+    background-color: ${colors.secondary[50]};
     border-radius: ${(props) =>
         props.$isShowNavBarRedesign ? props.theme.styles['border-radius-navbar-redesign'] : '8px'};
     ${(props) => props.$isShowNavBarRedesign && `box-shadow: ${props.theme.styles['box-shadow-navbar-redesign']}`}

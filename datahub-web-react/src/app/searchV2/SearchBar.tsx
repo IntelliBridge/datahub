@@ -9,6 +9,7 @@ import { useUserContext } from '@app/context/useUserContext';
 import { ANTD_GRAY_V2 } from '@app/entity/shared/constants';
 import { getEntityPath } from '@app/entity/shared/containers/profile/utils';
 import { REDESIGN_COLORS } from '@app/entityV2/shared/constants';
+import themeColors from '@src/alchemy-components/theme/foundations/colors';
 import { ViewSelect } from '@app/entityV2/view/select/ViewSelect';
 import { V2_SEARCH_BAR_VIEWS } from '@app/onboarding/configV2/HomePageOnboardingConfig';
 import { CommandK } from '@app/searchV2/CommandK';
@@ -32,7 +33,7 @@ import { EntityRegistry } from '@src/entityRegistryContext';
 import { useListRecommendationsQuery } from '@graphql/recommendations.generated';
 import { AutoCompleteResultForEntity, FacetFilterInput, ScenarioType } from '@types';
 
-const StyledAutoComplete = styled(AutoComplete)<{ $isShowNavBarRedesign?: boolean }>`
+const StyledAutoComplete = styled(AutoComplete) <{ $isShowNavBarRedesign?: boolean }>`
     width: 100%;
     max-width: ${(props) => (props.$isShowNavBarRedesign ? '632px' : '540px')};
 `;
@@ -53,7 +54,7 @@ const SkeletonButton = styled(Skeleton.Button)`
 const AutoCompleteContainer = styled.div<{ viewsEnabled?: boolean; $isShowNavBarRedesign?: boolean }>`
     padding: 0 30px;
     align-items: center;
-    border: ${(props) => (props.$isShowNavBarRedesign ? `2px solid ${colors.gray[100]}` : '2px solid transparent')};
+    border: ${(props) => (props.$isShowNavBarRedesign ? `2px solid ${colors.secondary[50]}` : '2px solid transparent')};
     ${(props) => props.$isShowNavBarRedesign && 'box-shadow: 0px 1px 2px 0px rgba(33, 23, 95, 0.07)'};
 
     transition: border-color 0.3s ease;
@@ -63,14 +64,13 @@ const AutoCompleteContainer = styled.div<{ viewsEnabled?: boolean; $isShowNavBar
         `
         border-radius: 8px;
         &:focus-within {
-            border-color: ${
-                props.$isShowNavBarRedesign ? props.theme.styles['primary-color'] : props.theme.styles['primary-color']
-            };
+            border-color: ${props.$isShowNavBarRedesign ? props.theme.styles['primary-color'] : props.theme.styles['primary-color']
+        };
         }
     `}
 `;
 
-const StyledSearchBar = styled(Input)<{
+const StyledSearchBar = styled(Input) <{
     $textColor?: string;
     $placeholderColor?: string;
     viewsEnabled?: boolean;
@@ -80,30 +80,33 @@ const StyledSearchBar = styled(Input)<{
         border-radius: 8px;
         height: 40px;
         font-size: 14px;
-        color: #dcdcdc;
-        background-color: ${ANTD_GRAY_V2[2]};
-        border: 2px solid transparent;
+        color: ${(props) => props.$textColor || props.theme.styles['text-color'] || '#FFFFFF'};
+        background-color: ${(props) => props.theme.styles['component-background'] || '#141B22'};
         padding-right: 2.5px;
+        transition: border-color 0.3s;
         ${(props) =>
-            !props.viewsEnabled &&
-            `
+        !props.viewsEnabled &&
+        `
         &:focus-within {
-            border-color: ${props.theme.styles['primary-color']};
+            border-color: ${props.theme.styles['primary-color'] || '#FFD600'};
         }`}
     }
 
     > .ant-input::placeholder {
         color: ${(props) =>
-            props.$placeholderColor || (props.$isShowNavBarRedesign ? REDESIGN_COLORS.GREY_300 : '#dcdcdc')};
+        props.$placeholderColor || '#A4A4AA'};
+        opacity: 1;
     }
 
     > .ant-input {
-        color: ${(props) => props.$textColor || (props.$isShowNavBarRedesign ? '#000' : '#fff')};
+        color: ${(props) => props.$textColor || props.theme.styles['text-color'] || '#FFFFFF'};
+        background-color: transparent;
     }
 
     .ant-input-clear-icon {
         height: 15px;
         width: 15px;
+        color: ${(props) => props.theme.styles['disabled-color'] || '#A4A4AA'};
     }
 `;
 
@@ -115,7 +118,7 @@ const ClearIcon = styled(CloseCircleFilled)`
 `;
 
 const ViewSelectContainer = styled.div`
-    color: #fff;
+    color: ${themeColors.secondary[50]};
     line-height: 20px;
     padding-right: 5.6px;
 
@@ -124,7 +127,7 @@ const ViewSelectContainer = styled.div`
     }
 `;
 
-const SearchIcon = styled(SearchOutlined)<{ $isShowNavBarRedesign?: boolean }>`
+const SearchIcon = styled(SearchOutlined) <{ $isShowNavBarRedesign?: boolean }>`
     color: ${(props) => (props.$isShowNavBarRedesign ? colors.gray[1800] : '#dcdcdc')};
     ${(props) =>
         props.$isShowNavBarRedesign &&
@@ -132,7 +135,7 @@ const SearchIcon = styled(SearchOutlined)<{ $isShowNavBarRedesign?: boolean }>`
         && svg {
             width: 16px;
             height: 16px;
-        }    
+        }
     `}
 `;
 
@@ -456,6 +459,8 @@ export const SearchBar = ({
                             overflowY: 'visible',
                             position: (fixAutoComplete && 'fixed') || 'relative',
                             ...(isShowNavBarRedesign ? { minWidth: '648px' } : {}),
+                            backgroundColor: colors.secondary[50],
+                            color: colors.primary[10],
                         }}
                         onDropdownVisibleChange={(isOpen) => {
                             if (!isOpen) {
@@ -479,7 +484,7 @@ export const SearchBar = ({
                                     getFiltersWithQuickFilter(selectedQuickFilter),
                                 );
                             }}
-                            style={{ ...inputStyle, color: '#fff' }}
+                            style={{ ...inputStyle, color: themeColors.secondary[50] }}
                             value={searchQuery}
                             onChange={(e) => setSearchQuery(e.target.value)}
                             data-testid="search-input"

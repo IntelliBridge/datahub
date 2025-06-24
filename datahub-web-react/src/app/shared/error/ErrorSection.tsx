@@ -42,18 +42,18 @@ const ResourceListItem = styled.li`
 
 const resources = [
     {
-        label: 'DataHub Project',
-        path: 'https://docs.datahub.com',
+        label: 'Governance Project',
+        path: 'https://docs.governance.workforce.ai',
         shouldOpenInNewTab: true,
-        description: 'DataHub Project website',
+        description: 'Governance Project website',
     },
     {
-        label: 'DataHub Docs',
-        path: 'https://docs.datahub.com/docs',
+        label: 'Governance Docs',
+        path: 'https://docs.governance.workforce.ai/docs',
         shouldOpenInNewTab: true,
     },
     {
-        label: 'DataHub GitHub',
+        label: 'Governance GitHub',
         path: 'https://github.com/datahub-project/datahub',
         shouldOpenInNewTab: true,
     },

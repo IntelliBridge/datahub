@@ -2,6 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
+import colors from '@src/alchemy-components/theme/foundations/colors';
+
 import { ANTD_GRAY } from '@app/entity/shared/constants';
 import { GenericEntityProperties } from '@app/entity/shared/types';
 import { SEARCH_COLORS } from '@app/entityV2/shared/constants';
@@ -16,7 +18,7 @@ const Container = styled.div`
     display: flex;
     flex-direction: row;
     padding: 10px 12px 10px 12px;
-    background-color: #ffffff;
+    background-color: ${colors.secondary[50]};
     border-radius: 10px;
     min-width: 200px;
     max-width: 260px;

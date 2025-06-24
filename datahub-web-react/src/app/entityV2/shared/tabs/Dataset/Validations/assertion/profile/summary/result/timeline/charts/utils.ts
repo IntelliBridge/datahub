@@ -7,13 +7,13 @@ import {
 
 import { AssertionInfo, AssertionResultType, AssertionType, Maybe } from '@types';
 
-export const ACCENT_COLOR_HEX = '#222222';
-export const EXTRA_HIGHLIGHT_COLOR_HEX = '#4050E7';
+export const ACCENT_COLOR_HEX = '#FFFFFF';
+export const EXTRA_HIGHLIGHT_COLOR_HEX = '#FFD600';
 export const SUCCESS_COLOR_HEX = '#52C41A';
 export const FAILURE_COLOR_HEX = '#F5222D';
 export const ERROR_COLOR_HEX = '#FAAD14';
-export const INIT_COLOR_HEX = '#8C8C8C';
-export const EXPECTED_RANGE_SHADE_COLOR = '#11d469';
+export const INIT_COLOR_HEX = '#979CA4';
+export const EXPECTED_RANGE_SHADE_COLOR = '#FFD600';
 
 export const getFillColor = (type: AssertionResultType) => {
     switch (type) {
@@ -145,3 +145,4 @@ export const duplicateDataPointsAcrossBufferedTimeRange = (
     }));
     return points;
 };
+

@@ -49,14 +49,14 @@ ExpandableNode.Header = styled.div<{
 
 ExpandableNode.SelectableHeader = styled(ExpandableNode.Header)<{ $isSelected: boolean }>`
     & {
-        border: 1px solid ${(props) => (props.$isSelected ? SEARCH_COLORS.BACKGROUND_PURPLE : 'transparent')};
-        background-color: ${(props) => (props.$isSelected ? SEARCH_COLORS.BACKGROUND_PURPLE : 'transparent')};
+        border: 1px solid ${(props) => (props.$isSelected ? SEARCH_COLORS.BACKGROUND_GREY : 'transparent')};
+        background-color: ${(props) => (props.$isSelected ? SEARCH_COLORS.BACKGROUND_GREY : 'transparent')};
         border-radius: 8px;
         overflow: hidden;
     }
 
     &:hover {
-        background-color: ${SEARCH_COLORS.BACKGROUND_PURPLE};
+        background-color: ${SEARCH_COLORS.BACKGROUND_GREY};
     }
 `;
 

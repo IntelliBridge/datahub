@@ -24,7 +24,7 @@ const mongoConfig: SourceConfig = {
     type: 'mongodb',
     placeholderRecipe,
     displayName: 'MongoDB',
-    docsUrl: 'https://docs.datahub.com/docs/generated/ingestion/sources/mongodb/',
+    docsUrl: 'https://docs.governance.workforce.ai/docs/generated/ingestion/sources/mongodb/',
     logoUrl: mongodbLogo,
 };
 

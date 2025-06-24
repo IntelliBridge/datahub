@@ -32,7 +32,7 @@ const Body = styled.div`
 `;
 
 const BodyBackground = styled.div<{ $isShowNavBarRedesign?: boolean }>`
-    background-color: ${(props) => (props.$isShowNavBarRedesign ? colors.gray[1600] : REDESIGN_COLORS.BACKGROUND)};
+    background-color: ${REDESIGN_COLORS.BACKGROUND_GRAY_4};
     position: fixed;
     height: 100%;
     width: 100%;

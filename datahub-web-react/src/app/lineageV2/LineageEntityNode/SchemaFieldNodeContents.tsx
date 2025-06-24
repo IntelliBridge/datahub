@@ -386,7 +386,7 @@ export default function SchemaFieldNodeContents({
         const message =
             entity?.status?.removed || entity?.parent?.status?.removed
                 ? 'has been deleted'
-                : 'does not exist in DataHub';
+                : 'does not exist in Governance';
         return (
             <Tooltip title={`This entity ${message}`} mouseEnterDelay={0.3}>
                 {contents}

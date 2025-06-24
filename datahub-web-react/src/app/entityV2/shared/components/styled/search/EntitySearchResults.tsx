@@ -8,6 +8,7 @@ import { MATCHES_CONTAINER_HEIGHT } from '@app/searchV2/SearchResultList';
 import { MatchContextContainer } from '@app/searchV2/matches/MatchContextContainer';
 import { PreviewSection } from '@app/shared/MatchesContext';
 import { useEntityRegistry } from '@app/useEntityRegistry';
+import colors from '@src/alchemy-components/theme/foundations/colors';
 
 import { Entity, EntityPath, EntityType, SearchResult } from '@types';
 
@@ -41,7 +42,7 @@ export const ListItem = styled.div<{ isSelectMode: boolean; areMatchesExpanded; 
     padding: 20px;
     display: flex;
     align-items: center;
-    background-color: #ffffff;
+    background-color: ${colors.secondary[50]};
     border-radius: 10px;
     overflow: hidden;
     margin-bottom: ${({ areMatchesExpanded, compactUserSearchCardStyle }) => {

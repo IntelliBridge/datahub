@@ -5,9 +5,10 @@ import styled from 'styled-components';
 
 import { ANTD_GRAY } from '@app/entity/shared/constants';
 import { SourceConfig } from '@app/ingest/source/builder/types';
+import colors from '@src/alchemy-components/theme/foundations/colors';
 
 const Container = styled.div`
-    background-color: #ffffff;
+    background-color: ${colors.secondary[50]};
     border-radius: 8px;
     padding: 12px 12px 16px 24px;
     border: 1px solid #e0e0e0;

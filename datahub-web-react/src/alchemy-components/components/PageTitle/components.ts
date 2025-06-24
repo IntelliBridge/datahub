@@ -9,12 +9,12 @@ const titleStyles = {
     alignItems: 'center',
     gap: 8,
     fontWeight: typography.fontWeights.bold,
-    color: colors.gray[600],
+    color: colors.gray[100],
 };
 
 const subTitleStyles = {
     fontWeight: typography.fontWeights.normal,
-    color: colors.gray[1700],
+    color: colors.gray[300],
 };
 
 // Default styles
@@ -24,12 +24,12 @@ const baseStyles = {
     maxWidth: '100%',
 
     '& a': {
-        color: colors.violet[400],
+        color: colors.yellow[600],
         textDecoration: 'none',
         transition: 'color 0.15s ease',
 
         '&:hover': {
-            color: colors.violet[500],
+            color: colors.yellow[600],
         },
     },
 };

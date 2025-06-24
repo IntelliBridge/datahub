@@ -4,6 +4,9 @@ import styled from 'styled-components';
 
 const StyledButton = styled(Button)`
     border: 1px solid ${colors.gray[100]};
+    &:disabled {
+        border: 1px solid ${colors.gray[1800]};
+    }
 `;
 
 type Props = {

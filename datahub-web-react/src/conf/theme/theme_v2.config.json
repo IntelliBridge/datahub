@@ -31,7 +31,7 @@
         "logoUrl": "/assets/logo.png"
     },
     "content": {
-        "title": "DataHub",
+        "title": "Governance",
         "homepage": {
             "homepageMessage": "Bring clarity to your data"
         },
@@ -41,13 +41,13 @@
         "menu": {
             "items": [
                 {
-                    "label": "DataHub Project",
-                    "path": "https://docs.datahub.com",
+                    "label": "Governance Project",
+                    "path": "https://docs.governance.workforce.ai",
                     "shouldOpenInNewTab": true,
-                    "description": "Explore DataHub Project website"
+                    "description": "Explore Governance Project website"
                 },
                 {
-                    "label": "DataHub GitHub",
+                    "label": "Governance GitHub",
                     "path": "https://github.com/linkedin/datahub",
                     "shouldOpenInNewTab": true
                 }

@@ -21,7 +21,7 @@ const StyledCard = styled(Card)`
 const Title = styled.div`
     font-size: 16px;
     font-weight: 700;
-    color: ${colors.gray[1700]};
+    color: ${colors.primary[10]};
     display: flex;
     align-items: center;
     gap: 8px;
@@ -29,7 +29,7 @@ const Title = styled.div`
 
 const TitleDescriptionText = styled.div`
     font-size: 14px;
-    color: ${colors.gray[1700]};
+    color: ${colors.gray[1900]};
 `;
 
 const SettingTitle = styled.div`
@@ -71,7 +71,7 @@ const SettingsOptionRow = styled.div`
 `;
 
 const DescriptionText = styled.div`
-    color: ${colors.gray[1700]};
+    color: ${colors.gray[1900]};
     font-size: 12px;
 `;
 
@@ -80,7 +80,7 @@ const OptionTitle = styled.div`
     align-items: center;
     gap: 8px;
     font-size: 14px;
-    color: ${colors.gray[1700]};
+    color: ${colors.primary[10]};
     font-weight: 600;
 `;
 
@@ -139,7 +139,7 @@ export const Feature = ({ key, title, description, settings, options, isNew, lea
                             <OptionTitle>
                                 <span>{option.title}</span>
                                 {!option.isAvailable && (
-                                    <Pill color="violet" size="sm" label="Only available on DataHub Cloud" />
+                                    <Pill color="white" size="sm" label="Only available on Governance Cloud" customStyle={{ backgroundColor: colors.primary[30] }} />
                                 )}
                             </OptionTitle>
                             <div>
@@ -182,11 +182,11 @@ export const Feature = ({ key, title, description, settings, options, isNew, lea
                     <span>
                         <OptionTitle>
                             <span>{option.title}</span>
-                            <Pill color="violet" size="sm" label="DataHub Cloud" />
+                            <Pill color="black" size="sm" label="Governance Cloud" customStyle={{ backgroundColor: colors.primary[30] }} />
                         </OptionTitle>
                     </span>
                     <StructuredPopover
-                        title={option.isAvailable ? '' : 'Only available on DataHub Cloud'}
+                        title={option.isAvailable ? '' : 'Only available on Governance Cloud'}
                         placement="left"
                         showArrow
                         mouseEnterDelay={0.1}

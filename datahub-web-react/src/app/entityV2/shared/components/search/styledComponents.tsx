@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 import { REDESIGN_COLORS } from '@app/entityV2/shared/constants';
 import { Input } from '@src/alchemy-components';
+import colors from '@src/alchemy-components/theme/foundations/colors';
 
 export const StyledInput = styled(Input)`
     width: auto;
@@ -36,7 +37,7 @@ export const SearchContainer = styled.div`
     }
 
     .ant-input-group-wrapper {
-        background-color: #ffffff !important;
+        background-color: ${colors.secondary[50]} !important;
     }
 
     .ant-input-wrapper {

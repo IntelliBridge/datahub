@@ -14,6 +14,7 @@ import {
     TitleWrapper,
 } from '@app/entityV2/shared/containers/profile/sidebar/FormInfo/components';
 import { Button } from '@src/alchemy-components';
+import colors from '@src/alchemy-components/theme/foundations/colors';
 
 import ShieldCheck from '@images/shield-check.svg';
 
@@ -35,7 +36,7 @@ export default function CompletedView({
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <CTAWrapper backgroundColor="#FFF" borderColor="#77B750">
+        <CTAWrapper backgroundColor={colors.secondary[50]} borderColor="#77B750">
             <FlexWrapper>
                 <Content>
                     <TitleWrapper

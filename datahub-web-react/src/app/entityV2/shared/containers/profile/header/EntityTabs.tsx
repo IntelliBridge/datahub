@@ -2,6 +2,8 @@ import { Tabs } from 'antd';
 import React, { useEffect } from 'react';
 import styled from 'styled-components/macro';
 
+import colors from '@src/alchemy-components/theme/foundations/colors';
+
 import { useBaseEntity, useEntityData, useRouteToTab } from '@app/entity/shared/EntityContext';
 import { EntityTab } from '@app/entityV2/shared/types';
 
@@ -62,7 +64,7 @@ const UnborderedTabs = styled(Tabs)`
         display: none;
     }
 
-    background-color: #ffffff;
+    background-color: ${colors.secondary[50]};
 `;
 
 const Tab = styled(Tabs.TabPane)`

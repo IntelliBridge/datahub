@@ -11,13 +11,14 @@ import filterSearchQuery from '@app/search/utils/filterSearchQuery';
 import { Message } from '@app/shared/Message';
 import { useIsThemeV2 } from '@app/useIsThemeV2';
 import { useShowNavBarRedesign } from '@src/app/useShowNavBarRedesign';
+import colors from '@src/alchemy-components/theme/foundations/colors';
 
 import { useGetAnalyticsChartsQuery, useGetMetadataAnalyticsChartsQuery } from '@graphql/analytics.generated';
 import { useListDomainsQuery } from '@graphql/domain.generated';
 import { useGetHighlightsQuery } from '@graphql/highlights.generated';
 
 const PageContainer = styled.div<{ isV2: boolean; $isShowNavBarRedesign?: boolean }>`
-    background-color: ${(props) => (props.isV2 ? '#fff' : 'inherit')};
+    background-color: ${(props) => (props.isV2 ? colors.secondary[50] : 'inherit')};
     ${(props) =>
         props.$isShowNavBarRedesign &&
         `

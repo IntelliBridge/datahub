@@ -43,8 +43,8 @@ export type Props = {
  * Change these to change the chart axis & line colors
  * TODO: Add this to the theme config.
  */
-const DEFAULT_LINE_COLOR = '#20d3bd';
-const DEFAULT_AXIS_COLOR = '#D8D8D8';
+const DEFAULT_LINE_COLOR = '#FFD600';
+const DEFAULT_AXIS_COLOR = '#979CA4';
 const DEFAULT_AXIS_WIDTH = 2;
 
 /**
@@ -96,3 +96,4 @@ export default function StatChart({ title, values, tickInterval: interval, dateR
         </ChartCard>
     );
 }
+

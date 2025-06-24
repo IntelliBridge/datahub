@@ -4,6 +4,8 @@ import { Tabs } from 'antd';
 import React, { useContext } from 'react';
 import styled from 'styled-components/macro';
 
+import colors from '@src/alchemy-components/theme/foundations/colors';
+
 import { useBaseEntity, useEntityData } from '@app/entity/shared/EntityContext';
 import { EntitySidebarTab } from '@app/entityV2/shared/types';
 import EntitySidebarContext from '@app/sharedV2/EntitySidebarContext';
@@ -134,7 +136,7 @@ const UnborderedTabs = styled(Tabs)<{ $isClosed: boolean }>`
     &&& .ant-tabs-content-holder {
         display: none;
     }
-    background-color: #ffffff;
+    background-color: ${colors.secondary[50]};
 `;
 
 const Tab = styled(Tabs.TabPane)`

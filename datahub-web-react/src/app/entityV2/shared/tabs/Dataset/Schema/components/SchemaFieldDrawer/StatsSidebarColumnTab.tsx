@@ -14,7 +14,7 @@ import NoStatsAvailble from '@images/no-stats-available.svg?react';
 
 const CHART_WIDTH = 460;
 const CHART_HEIGHT = 170;
-const DEFAULT_LINE_COLOR = REDESIGN_COLORS.BACKGROUND_PURPLE;
+const DEFAULT_LINE_COLOR = '#FFD600';
 
 const StatSection = styled.div`
     padding: 12px 16px;
@@ -159,3 +159,4 @@ export default function StatsSidebarColumnTab({ properties, lookbackWindow }: Pr
         </StatSection>
     );
 }
+

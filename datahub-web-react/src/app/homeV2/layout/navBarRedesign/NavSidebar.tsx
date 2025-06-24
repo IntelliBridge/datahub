@@ -41,7 +41,7 @@ import AcrylIcon from '@images/acryl-light-mark.svg?react';
 
 const Container = styled.div`
     height: 100vh;
-    background-color: ${colors.gray[1600]};
+    background-color: ${colors.secondary[70]}; // Workforce Base: Secondary 70 (dark sidebar bg)
     display: flex;
     flex: column;
     align-items: center;
@@ -55,6 +55,7 @@ const Content = styled.div<{ isCollapsed: boolean }>`
     width: ${(props) => (props.isCollapsed ? '60px' : '264px')};
     transition: width 250ms ease-in-out;
     overflow-x: hidden;
+    background-color: ${colors.secondary[50]}; // Workforce Base: Secondary 50 (sidebar panel bg)
 `;
 
 const CustomLogo = styled.img`

@@ -1,33 +1,36 @@
 {
     "styles": {
-        "primary-color": "#1890ff",
-        "primary-color-light": "#F0F5FF",
-        "primary-color-dark": "#002766",
-        "layout-header-background": "#333E4C",
-        "layout-header-color": "white",
-        "layout-body-background": "#333E4C",
-        "component-background": "#333E4C",
-        "body-background": "#333E4C",
-        "border-color-base": "white",
-        "text-color": "fade(white, 85%)",
-        "text-color-secondary": "fade(white, 45%)",
-        "heading-color": "fade(white, 85%)",
-        "background-color-light": "#4b5b71",
-        "divider-color": "fade(white, 6%)",
-        "disabled-color": "fade(white, 25%)",
-        "steps-nav-arrow-color": "fade(white, 25%)",
-        "homepage-background-upper-fade": "#FFFFFF",
-        "homepage-background-lower-fade": "#333E4C",
-        "highlight-color": "#E6F4FF",
-        "highlight-border-color": "#BAE0FF",
-        "box-shadow-navbar-redesign": "0 0 6px 0px rgba(93, 102, 139, 0.20)",
+        "primary-color": "#FFD600",
+        "primary-color-light": "#FAF1BA",
+        "primary-color-dark": "#B18F00",
+        "link-color": "#FFD600",
+        "layout-header-background": "#25323F",
+        "layout-header-color": "#FFFFFF",
+        "layout-body-background": "#25323F",
+        "component-background": "#141B22",
+        "body-background": "#25323F",
+        "border-color-base": "#979CA4",
+        "text-color": "#FFFFFF",
+        "text-color-secondary": "#FAF1BA",
+        "heading-color": "#FFD600",
+        "background-color-light": "#25323F",
+        "divider-color": "#979CA4",
+        "disabled-color": "#A4A4AA",
+        "steps-nav-arrow-color": "#FFD600",
+        "homepage-background-upper-fade": "#25323F",
+        "homepage-background-lower-fade": "#141B22",
+        "highlight-color": "#FFD600",
+        "highlight-border-color": "#B18F00",
+        "box-shadow": "0px 0px 30px 0px rgba(20, 27, 34, 0.8)",
+        "box-shadow-hover": "0px 1px 0px 0.5px rgba(20, 27, 34, 0.8)",
+        "box-shadow-navbar-redesign": "0 0 6px 0px rgba(151, 156, 164, 0.20)",
         "border-radius-navbar-redesign": "12px"
     },
     "assets": {
         "logoUrl": "/assets/logo.png"
     },
     "content": {
-        "title": "DataHub",
+        "title": "Governance",
         "homepage": {
             "homepageMessage": "Find data you can count(*) on"
         },
@@ -37,17 +40,17 @@
         "menu": {
             "items": [
                 {
-                    "label": "DataHub Project",
-                    "path": "https://docs.datahub.com",
+                    "label": "Governance Project",
+                    "path": "https://docs.governance.workforce.ai",
                     "shouldOpenInNewTab": true
                 },
                 {
-                    "label": "DataHub Docs",
-                    "path": "https://docs.datahub.com/docs",
+                    "label": "Governance Docs",
+                    "path": "https://docs.governance.workforce.ai/docs",
                     "shouldOpenInNewTab": true
                 },
                 {
-                    "label": "DataHub GitHub",
+                    "label": "Governance GitHub",
                     "path": "https://github.com/datahub-project/datahub",
                     "shouldOpenInNewTab": true
                 }

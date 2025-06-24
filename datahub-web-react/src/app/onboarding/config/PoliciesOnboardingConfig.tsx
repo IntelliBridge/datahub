@@ -27,7 +27,7 @@ export const PoliciesOnboardingConfig: OnboardingStep[] = [
                     <a
                         target="_blank"
                         rel="noreferrer noopener"
-                        href="https://docs.datahub.com/docs/authorization/policies"
+                        href="https://docs.governance.workforce.ai/docs/authorization/policies"
                     >
                         {' '}
                         here.

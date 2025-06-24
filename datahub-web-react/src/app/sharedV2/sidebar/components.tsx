@@ -1,6 +1,7 @@
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import React from 'react';
 import styled from 'styled-components';
+import colors from '@src/alchemy-components/theme/foundations/colors';
 
 import { RotatingButton } from '@app/shared/components';
 
@@ -9,7 +10,7 @@ export const SidebarWrapper = styled.div<{ width: number; $isShowNavBarRedesign?
     width: ${(props) => props.width}px;
     min-width: ${(props) => props.width}px;
     display: ${(props) => (props.width ? 'block' : 'none')};
-    background-color: #fff;
+    background-color: ${colors.secondary[50]};
     border-radius: ${(props) =>
         props.$isShowNavBarRedesign ? props.theme.styles['border-radius-navbar-redesign'] : '8px'};
     ${(props) => !props.$isShowNavBarRedesign && 'margin-bottom: 12px;'}

@@ -1,5 +1,5 @@
 /*
-	Theme Utils that can be used anywhere in the app
+    Theme Utils that can be used anywhere in the app
 */
 import { Theme } from '@conf/theme/types';
 
@@ -9,9 +9,9 @@ import { semanticTokens } from './semantic-tokens';
 
 const { colors, typography, transform } = foundations;
 /*
-	Get the color value for a given color
-	Falls back to `color.black` if the color is not found
-	@param color - the color to get the value for
+    Get the color value for a given color
+    Falls back to `color.black` if the color is not found
+    @param color - the color to get the value for
 */
 export const getColor = (
     color?: MiscColorOptions | ColorOptions,
@@ -27,14 +27,15 @@ export const getColor = (
     if (color === 'inherit' || color === 'transparent' || color === 'current') return finalColors;
     if (color === 'white') return finalColors.white;
     if (color === 'black') return finalColors.black;
+    if (color === 'yellow') return finalColors.primary[30];
     const colorValue = finalColors[color];
     if (!colorValue) return finalColors.black;
     return finalColors[color][value];
 };
 
 /*
-	Get the font size value for a given size
-	@param size - the size of the font
+    Get the font size value for a given size
+    @param size - the size of the font
 */
 export const getFontSize = (size?: FontSizeOptions) => {
     if (size === 'inherit') return 'inherit';
@@ -42,8 +43,8 @@ export const getFontSize = (size?: FontSizeOptions) => {
 };
 
 /*
-	Get the rotation transform value for a given rotation
-	@param r - the rotation to get the transform value for
+    Get the rotation transform value for a given rotation
+    @param r - the rotation to get the transform value for
 */
 export const getRotationTransform = (rotate?: RotationOptions) => {
     if (!rotate) return '';

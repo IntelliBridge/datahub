@@ -30,7 +30,7 @@
         "logoUrl": "/assets/logo.png"
     },
     "content": {
-        "title": "DataHub",
+        "title": "Governance",
         "homepage": {
             "homepageMessage": "Find data you can count on"
         },
@@ -41,17 +41,17 @@
             "items": [
                 {
                     "label": "Project",
-                    "path": "https://docs.datahub.com",
+                    "path": "https://docs.governance.workforce.ai",
                     "shouldOpenInNewTab": true
                 },
                 {
                     "label": "Docs",
-                    "path": "https://docs.datahub.com/docs",
+                    "path": "https://docs.governance.workforce.ai/docs",
                     "shouldOpenInNewTab": true
                 },
                 {
                     "label": "Releases",
-                    "path": "https://docs.datahub.com/docs/releases/",
+                    "path": "https://docs.governance.workforce.ai/docs/releases/",
                     "shouldOpenInNewTab": true
                 },
                 {

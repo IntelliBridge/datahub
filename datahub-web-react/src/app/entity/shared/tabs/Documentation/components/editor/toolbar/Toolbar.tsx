@@ -18,12 +18,13 @@ import { AddLinkButton } from '@app/entity/shared/tabs/Documentation/components/
 import { CommandButton } from '@app/entity/shared/tabs/Documentation/components/editor/toolbar/CommandButton';
 import { HeadingMenu } from '@app/entity/shared/tabs/Documentation/components/editor/toolbar/HeadingMenu';
 import { CodeBlockIcon, CodeIcon } from '@app/entity/shared/tabs/Documentation/components/editor/toolbar/Icons';
+import colors from '@src/alchemy-components/theme/foundations/colors';
 
 const Container = styled.div`
     position: sticky;
     top: 0;
     z-index: 99;
-    background-color: #fff;
+    background-color: ${colors.secondary[50]};
     border-bottom: 1px solid ${ANTD_GRAY[4.5]};
     padding: 4px 20px;
 `;

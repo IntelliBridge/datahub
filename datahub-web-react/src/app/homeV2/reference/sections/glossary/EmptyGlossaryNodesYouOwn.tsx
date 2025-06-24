@@ -15,7 +15,7 @@ export const EmptyGlossaryNodesYouOwn = () => {
             <a
                 target="_blank"
                 rel="noreferrer noopener"
-                href="https://docs.datahub.com/docs/glossary/business-glossary/"
+                href="https://docs.governance.workforce.ai/docs/glossary/business-glossary/"
             >
                 Learn more
             </a>{' '}

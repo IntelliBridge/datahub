@@ -5,6 +5,7 @@ import { getColor } from '@components/theme/utils';
 
 import { ANTD_GRAY } from '@app/entity/shared/constants';
 import { REDESIGN_COLORS } from '@app/entityV2/shared/constants';
+import colors from '@src/alchemy-components/theme/foundations/colors';
 
 export const SearchFilterLabel = styled(Button)<{ $isActive: boolean }>`
     font-size: 14px;
@@ -15,13 +16,20 @@ export const SearchFilterLabel = styled(Button)<{ $isActive: boolean }>`
     align-items: center;
     box-shadow: none;
     color: ${REDESIGN_COLORS.TEXT_HEADING};
-    ${(props) =>
-        props.$isActive &&
-        `
-        background-color: ${props.theme.styles['primary-color']};
-        border: 1px solid ${getColor('primary', 0, props.theme)};
-        color: white;
-    `}
+    background-color: ${colors.secondary[90]};
+    color: ${colors.primary[10]};
+    &:hover {
+        background-color: ${colors.secondary[90]};
+        color: ${colors.primary[10]};
+    }
+    &:active {
+        background-color: ${colors.secondary[90]};
+        color: ${colors.primary[10]};
+    }
+    &:focus {
+        background-color: ${colors.secondary[90]};
+        color: ${colors.primary[10]};
+    }
 `;
 
 export const MoreFilterOptionLabel = styled.div<{ $isActive: boolean; isOpen?: boolean }>`

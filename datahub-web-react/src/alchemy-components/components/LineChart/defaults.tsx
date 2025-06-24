@@ -14,7 +14,7 @@ import { colors } from '@src/alchemy-components/theme';
 const commonTickLabelProps: TickLabelProps<Datum> = {
     fontSize: 10,
     fontFamily: 'Mulish',
-    fill: colors.gray[1700],
+    fill: colors.primary[10],
 };
 
 export const lineChartDefault: LineChartProps = {
@@ -24,7 +24,7 @@ export const lineChartDefault: LineChartProps = {
     xScale: { type: 'time' },
     yScale: { type: 'linear', nice: true, round: true, zero: true },
 
-    lineColor: colors.violet[500],
+    lineColor: colors.primary[30],
     areaColor: 'url(#line-gradient)',
     margin: { top: 0, right: 0, bottom: 0, left: 0 },
 
@@ -67,7 +67,7 @@ export const lineChartDefault: LineChartProps = {
     },
 
     renderGradients: () => (
-        <LinearGradient id="line-gradient" from={colors.violet[200]} to={colors.white} toOpacity={0.6} />
+        <LinearGradient id="line-gradient" from={colors.primary[30]} to={colors.secondary[50]} toOpacity={0.6} />
     ),
     toolbarVerticalCrosshairStyle: {
         stroke: colors.white,

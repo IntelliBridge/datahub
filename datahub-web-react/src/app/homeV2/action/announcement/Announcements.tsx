@@ -12,11 +12,12 @@ import { useGetUnseenAnnouncements } from '@app/homeV2/action/announcement/useGe
 import AnnouncementsSkeleton from '@app/homeV2/content/tabs/announcements/AnnouncementsSkeleton';
 import { useUpdateLastViewedAnnouncementTime } from '@app/homeV2/shared/updateLastViewedAnnouncementTime';
 import OnboardingContext from '@app/onboarding/OnboardingContext';
+import colors from '@src/alchemy-components/theme/foundations/colors';
 
 const Card = styled.div`
     border: 1px solid ${ANTD_GRAY[4]};
     border-radius: 11px;
-    background-color: #ffffff;
+    background-color: ${colors.secondary[50]};
     overflow: hidden;
     padding: 16px 20px 8px 20px;
     width: 380px;

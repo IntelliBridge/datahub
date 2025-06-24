@@ -2,10 +2,11 @@ import React from 'react';
 import styled from 'styled-components';
 
 import { ANTD_GRAY } from '@app/entity/shared/constants';
+import colors from '@src/alchemy-components/theme/foundations/colors';
 
 const Container = styled.div`
     color: ${ANTD_GRAY[6]};
-    background-color: #ffffff;
+    background-color: ${colors.secondary[50]};
     opacity: 0.9;
     border-color: black;
     border-radius: 6px;

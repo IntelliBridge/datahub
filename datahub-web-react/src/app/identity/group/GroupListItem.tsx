@@ -44,7 +44,7 @@ export default function GroupListItem({ group, onDelete, selectRoleOptions, refe
     const entityRegistry = useEntityRegistry();
     const displayName = entityRegistry.getDisplayName(EntityType.CorpGroup, group);
     const isExternalGroup: boolean = group.origin?.type === OriginType.External;
-    const externalGroupType: string = group.origin?.externalType || 'outside DataHub';
+    const externalGroupType: string = group.origin?.externalType || 'outside Governance';
     const castedCorpUser = group as any;
     const groupRelationships = castedCorpUser?.roles?.relationships;
     const userRole =

@@ -83,8 +83,7 @@ export const Features = () => {
                 },
             ],
             isNew: true,
-            learnMoreLink:
-                'https://docs.datahub.com/docs/automations/docs-propagation?utm_source=datahub_core&utm_medium=docs&utm_campaign=features',
+            learnMoreLink: undefined,
         },
     ];
 

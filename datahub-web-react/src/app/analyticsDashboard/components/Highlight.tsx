@@ -1,6 +1,7 @@
 import { Card, Typography } from 'antd';
 import React from 'react';
 import styled from 'styled-components';
+import colors from '@src/alchemy-components/theme/foundations/colors';
 
 import { formatNumber } from '@app/shared/formatNumber';
 
@@ -21,6 +22,7 @@ const HighlightCard = styled(Card)`
     line-height: 0;
     margin: 10px;
     box-shadow: ${(props) => props.theme.styles['box-shadow']};
+    background-color: ${colors.secondary[90]};
 `;
 
 const TitleText = styled(Typography.Text)`

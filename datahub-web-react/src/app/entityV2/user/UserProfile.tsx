@@ -56,7 +56,7 @@ const UserProfileWrapper = styled.div<{ $isShowNavBarRedesign?: boolean }>`
     &&& .ant-tabs-nav {
         margin: 0;
     }
-    background-color: #fff;
+    background-color: ${colors.secondary[50]};
     height: 100%;
     overflow: hidden;
     display: flex;

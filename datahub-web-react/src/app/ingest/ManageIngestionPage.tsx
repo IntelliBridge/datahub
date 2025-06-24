@@ -14,11 +14,12 @@ import { INGESTION_CREATE_SOURCE_ID } from '@app/onboarding/config/IngestionOnbo
 import { NoPageFound } from '@app/shared/NoPageFound';
 import { useAppConfig } from '@app/useAppConfig';
 import { useShowNavBarRedesign } from '@app/useShowNavBarRedesign';
+import colors from '@src/alchemy-components/theme/foundations/colors';
 
 const PageContainer = styled.div<{ $isShowNavBarRedesign?: boolean }>`
     padding-top: 16px;
     padding-right: 16px;
-    background-color: white;
+    background-color: ${colors.secondary[50]};
     height: 100%;
     display: flex;
     flex-direction: column;

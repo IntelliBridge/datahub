@@ -172,7 +172,7 @@ export default function VersionsDrawer({ versionSetUrn, open }: Props) {
                             content: moment(versionProperties?.createdInSource?.time).format('MMMM D, YYYY h:mm A'),
                         },
                         {
-                            title: 'Synced to DataHub',
+                            title: 'Synced to Governance',
                             content: moment(versionProperties?.created?.time).format('MMMM D, YYYY h:mm A'),
                         },
                     ]}

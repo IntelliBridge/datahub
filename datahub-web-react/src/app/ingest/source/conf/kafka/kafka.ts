@@ -21,7 +21,7 @@ const kafkaConfig: SourceConfig = {
     type: KAFKA,
     placeholderRecipe,
     displayName: 'Kafka',
-    docsUrl: 'https://docs.datahub.com/docs/generated/ingestion/sources/kafka/',
+    docsUrl: 'https://docs.governance.workforce.ai/docs/generated/ingestion/sources/kafka/',
     logoUrl: kafkaLogo,
 };
 

@@ -17,14 +17,14 @@ const Container = styled.div`
 const Title = styled.div`
     max-width: 240px;
     margin-bottom: 30px;
-    color: #374066;
+    color: #FFF;
     font: 700 35px/44px Mulish;
 `;
 
 const Subtitle = styled.div`
     width: 371px;
-    color: #5f6685;
-    font: 400 16px/24px Mulish;
+    color: #FAF1BA;
+    font: 500 16px/24px Mulish;
 `;
 
 const AcrylTitle = styled.div`
@@ -45,7 +45,7 @@ export const IntroduceYourselfLeftSidebar = () => {
             <div>
                 <Title>Start your data journey</Title>
                 <Subtitle>
-                    Thousands of data professionals use DataHub to discover trusted data, ensure data quality and
+                    Thousands of data professionals use Workforce Governance to discover trusted data, ensure data quality and
                     collaborate with their colleagues
                 </Subtitle>
             </div>

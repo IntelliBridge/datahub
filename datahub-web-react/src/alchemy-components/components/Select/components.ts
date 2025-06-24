@@ -90,7 +90,7 @@ export const Container = styled.div<ContainerProps>(({ size, width, $selectLabel
 
 export const DropdownContainer = styled.div<{ ignoreMaxHeight?: boolean }>(({ ignoreMaxHeight }) => ({
     borderRadius: radius.md,
-    background: colors.white,
+    background: colors.secondary[50],
     zIndex: zIndices.dropdown,
     transition: sharedTransition,
     boxShadow: shadows.dropdown,
@@ -200,7 +200,7 @@ export const StyledClearButton = styled(Button).attrs({
     '&:focus': {
         border: 'none',
         backgroundColor: colors.transparent,
-        boxShadow: `0 0 0 2px ${colors.white}, 0 0 0 4px ${colors.violet[50]}`,
+        boxShadow: `0 0 0 2px ${colors.white}, 0 0 0 4px ${colors.primary[30]}`,
     },
 });
 
@@ -220,8 +220,8 @@ export const ArrowIcon = styled.span<{ isOpen: boolean }>(({ isOpen }) => ({
 
 export const StyledCheckbox = styled(Checkbox)({
     '.ant-checkbox-checked:not(.ant-checkbox-disabled) .ant-checkbox-inner': {
-        backgroundColor: colors.violet[500],
-        borderColor: `${colors.violet[500]} !important`,
+        backgroundColor: colors.primary[30],
+        borderColor: `${colors.primary[30]} !important`,
     },
 });
 

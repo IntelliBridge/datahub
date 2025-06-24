@@ -22,7 +22,7 @@ export const OnboardingTour = ({ stepIds }: Props) => {
     const [isOpen, setIsOpen] = useState(true);
     const [reshow, setReshow] = useState(false);
     const isThemeV2 = useIsThemeV2();
-    const accentColor = isThemeV2 ? REDESIGN_COLORS.BACKGROUND_PURPLE : '#5cb7b7';
+    const accentColor = isThemeV2 ? REDESIGN_COLORS.BACKGROUND_GRAY : '#5cb7b7';
 
     useEffect(() => {
         function handleKeyDown(e) {
@@ -73,6 +73,7 @@ export const OnboardingTour = ({ stepIds }: Props) => {
             scrollDuration={500}
             accentColor={accentColor}
             lastStepNextButton={<Button>Let&apos;s go!</Button>}
+            className="onboarding-tour"
         />
     );
 };

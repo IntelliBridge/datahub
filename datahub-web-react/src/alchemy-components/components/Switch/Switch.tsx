@@ -15,7 +15,7 @@ import { SwitchProps } from '@components/components/Switch/types';
 export const switchDefaults: SwitchProps = {
     label: 'Label',
     labelPosition: 'left',
-    colorScheme: 'primary',
+    colorScheme: 'yellow',
     size: 'md',
     isSquare: false,
     isChecked: false,
@@ -59,7 +59,7 @@ export const Switch = ({
                 onChange={() => setChecked(!checked)}
                 customSize={size}
                 disabled={isDisabled}
-                colorScheme={colorScheme || 'violet'}
+                colorScheme={colorScheme || 'yellow'}
                 aria-labelledby={id}
                 aria-checked={checked}
                 {...props}
@@ -70,7 +70,7 @@ export const Switch = ({
                         {icon && (
                             <StyledIcon
                                 icon={icon}
-                                color={checked ? colorScheme || 'violet' : 'inherit'}
+                                color={checked ? colorScheme || 'yellow' : 'inherit'}
                                 size={size || 'md'}
                                 checked={checked}
                             />

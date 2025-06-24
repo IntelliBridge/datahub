@@ -31,7 +31,7 @@ const bigqueryConfig: SourceConfig = {
     type: BIGQUERY,
     placeholderRecipe,
     displayName: 'BigQuery',
-    docsUrl: 'https://docs.datahub.com/docs/generated/ingestion/sources/bigquery/',
+    docsUrl: 'https://docs.governance.workforce.ai/docs/generated/ingestion/sources/bigquery/',
     logoUrl: bigqueryLogo,
 };
 

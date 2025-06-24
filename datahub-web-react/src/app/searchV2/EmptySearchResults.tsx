@@ -10,7 +10,7 @@ import { ANTD_GRAY_V2 } from '@app/entity/shared/constants';
 import { SuggestedText } from '@app/searchV2/suggestions/SearchQuerySugggester';
 import useGetSearchQueryInputs from '@app/searchV2/useGetSearchQueryInputs';
 import { navigateToSearchUrl } from '@app/searchV2/utils/navigateToSearchUrl';
-
+import colors from '@src/alchemy-components/theme/foundations/colors';
 import { FacetFilterInput, SearchSuggestion } from '@types';
 
 const NoDataContainer = styled.div`
@@ -21,6 +21,24 @@ const NoDataContainer = styled.div`
 
 const Section = styled.div`
     margin-bottom: 16px;
+`;
+
+const StyledButton = styled(Button)`
+    background-color: ${colors.primary[30]};
+    color: black;
+    border: none;
+    &:hover {
+        background-color: ${colors.primary[30]};
+        color: black;
+    }
+    &:active {
+        background-color: ${colors.primary[30]};
+        color: black;
+    }
+    &:focus {
+        background-color: ${colors.primary[30]};
+        color: black;
+    }
 `;
 
 function getRefineSearchText(filters: FacetFilterInput[], viewUrn?: string | null) {
@@ -83,9 +101,9 @@ export default function EmptySearchResults({ suggestions }: Props) {
                 </>
             )}
             {!refineSearchText && !suggestText && (
-                <Button onClick={onClickExploreAll}>
+                <StyledButton onClick={onClickExploreAll}>
                     <RocketOutlined /> Explore all
-                </Button>
+                </StyledButton>
             )}
         </NoDataContainer>
     );

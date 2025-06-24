@@ -56,8 +56,8 @@ export default function NavBarHeader({ logotype }: Props) {
 
     return (
         <Container>
-            <StyledLink to="/">
-                <Logotype>{logotype}</Logotype>
+            <StyledLink to="/" style={{ marginLeft: isCollapsed ? '0' : '10px' }}>
+                {isCollapsed && <Logotype>{logotype}</Logotype>}
                 {!isCollapsed && <DatahubCoreLogo />}
             </StyledLink>
             {!isCollapsed && <NavBarToggler />}

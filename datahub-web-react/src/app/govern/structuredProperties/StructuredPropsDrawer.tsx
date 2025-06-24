@@ -321,7 +321,7 @@ const StructuredPropsDrawer = ({
                             </Text>
                         </TitleContainer>
                     ) : (
-                        <Text color="gray" weight="bold" size="lg">
+                        <Text color="white" weight="bold" size="lg">
                             {`${isEditMode ? 'Edit' : 'Create'} Structured Property`}
                         </Text>
                     )}
@@ -333,7 +333,7 @@ const StructuredPropsDrawer = ({
                     showArrow={false}
                     title={
                         !canEditProps
-                            ? 'Must have permission to manage structured properties. Ask your DataHub administrator.'
+                            ? 'Must have permission to manage structured properties. Ask your Governance administrator.'
                             : null
                     }
                 >

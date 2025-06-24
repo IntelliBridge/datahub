@@ -31,7 +31,7 @@ export const InputWrapper = styled.div({
 export const InputContainer = styled.div(
     ({ isSuccess, warning, isDisabled, isInvalid }: InputProps) => ({
         border: `${borders['1px']} ${getStatusColors(isSuccess, warning, isInvalid)}`,
-        backgroundColor: isDisabled ? colors.gray[100] : colors.white,
+        backgroundColor: isDisabled ? colors.gray[100] : colors.secondary[50],
         paddingRight: spacing.md,
     }),
     {
@@ -41,11 +41,11 @@ export const InputContainer = styled.div(
         overflow: 'hidden',
         borderRadius: radius.md,
         flex: 1,
-        color: colors.gray[400], // 1st icon color
+        color: colors.primary[10], // 1st icon color
 
         '&:focus-within': {
-            borderColor: colors.violet[200],
-            outline: `${borders['1px']} ${colors.violet[200]}`,
+            borderColor: colors.primary[30],
+            outline: `${borders['1px']} ${colors.primary[30]}`,
         },
     },
 );
@@ -56,6 +56,7 @@ export const InputField = styled.input({
     maxHeight: INPUT_MAX_HEIGHT,
     border: borders.none,
     width: '100%',
+    backgroundColor: colors.secondary[50],
 
     // Shared common input text styles
     ...inputValueTextStyles(),

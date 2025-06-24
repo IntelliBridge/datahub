@@ -23,7 +23,7 @@ const snowflakeConfig: SourceConfig = {
     type: SNOWFLAKE,
     placeholderRecipe,
     displayName: 'Snowflake',
-    docsUrl: 'https://docs.datahub.com/docs/generated/ingestion/sources/snowflake/',
+    docsUrl: 'https://docs.governance.workforce.ai/docs/generated/ingestion/sources/snowflake/',
     logoUrl: snowflakeLogo,
 };
 

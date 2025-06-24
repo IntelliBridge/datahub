@@ -2,6 +2,7 @@ import { Icon } from '@components';
 import { Typography } from 'antd';
 import React from 'react';
 import styled from 'styled-components/macro';
+import colors from '@src/alchemy-components/theme/foundations/colors';
 
 const ExploreForEntity = styled.span`
     font-weight: light;
@@ -18,6 +19,7 @@ const ViewAllContainer = styled.div`
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    color: ${colors.primary[10]};
 `;
 
 const ReturnKey = styled(Typography.Text)`
@@ -33,10 +35,10 @@ function ViewAllSearchItem({ searchTarget: searchText }: { searchTarget?: string
             <ExploreForEntity>
                 <Icon icon="MagnifyingGlass" source="phosphor" />
                 <ExploreForEntityText>
-                    View all results for <Typography.Text strong>{searchText}</Typography.Text>
+                    View all results for <Typography.Text strong style={{ color: colors.primary[10] }}>{searchText}</Typography.Text>
                 </ExploreForEntityText>
             </ExploreForEntity>
-            <ReturnKey keyboard disabled>
+            <ReturnKey keyboard disabled style={{ color: colors.primary[10] }}>
                 ⮐ return
             </ReturnKey>
         </ViewAllContainer>

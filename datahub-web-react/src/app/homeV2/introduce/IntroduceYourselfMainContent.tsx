@@ -34,7 +34,7 @@ const Container = styled.div`
 `;
 
 const Content = styled.div`
-    background-color: #ffffff;
+    background-color: ${colors.secondary[60]};
     padding: 20px;
 
     .ant-select-selection-item {
@@ -45,7 +45,7 @@ const Content = styled.div`
 
     .ant-select-selection-overflow-item-rest {
         .ant-select-selection-item {
-            background-color: #fff !important;
+            background-color: ${colors.secondary[60]} !important;
             border: none !important;
             padding: 0 0 0 5px !important;
             height: auto !important;
@@ -56,7 +56,7 @@ const Content = styled.div`
 `;
 
 const Title = styled.div`
-    color: #374066;
+    color: ${colors.gray[0]};
     text-align: center;
     font: 700 35px Mulish;
     line-height: 44px;
@@ -64,7 +64,7 @@ const Title = styled.div`
 `;
 
 const Subtitle = styled.div`
-    color: #5f6685;
+    color: ${colors.gray[100]};
     width: 268px;
     text-align: center;
     font: 400 13px Mulish;
@@ -76,9 +76,15 @@ const DoneButton = styled(Button)`
     width: 290px;
     height: 45px;
     flex-shrink: 0;
-    background-color: #3f54d1;
-    color: #fff;
+    background-color: ${colors.primary[30]};
+    color: #181616;
+    font-weight: 700;
+    border: none;
     margin-top: 12px;
+    &:hover, &:focus {
+        background-color: ${colors.button[34]};
+        color: #181616;
+    }
 `;
 
 const PsuedoCheckBox = styled.div<{ checked?: boolean }>`
@@ -92,7 +98,7 @@ const PsuedoCheckBox = styled.div<{ checked?: boolean }>`
     height: 12px;
     border-radius: 4px;
     border: 1px solid #cfd1da;
-    background: #fff;
+    background: ${colors.secondary[50]};
     color: #fff;
 
     ${(props) =>
@@ -122,25 +128,47 @@ const SelectWrapper = styled.div`
         position: absolute;
         left: 10px;
         z-index: 99;
-        fill: #a9adbd;
+        fill: ${colors.gray[100]};
     }
 
+    .ant-select {
+        background-color: ${colors.secondary[50]};
+        border: 1px solid ${colors.gray[500]};
+        border-radius: 8px;
+    }
+    .ant-select-selector {
+        background-color: ${colors.secondary[50]} !important;
+        border: 1px solid ${colors.gray[500]} !important;
+        color: ${colors.gray[100]} !important;
+    }
+    .ant-select-selection-item,
+    .ant-select-selection-placeholder,
+    .ant-select-selection-search {
+        color: ${colors.gray[100]} !important;
+        padding-left: 30px !important;
+    }
     .ant-select-arrow {
         & svg {
             position: relative;
             margin-right: 5px;
+            fill: ${colors.gray[100]};
         }
     }
-
-    .ant-select-selection-item,
-    .ant-select-selection-placeholder,
-    .ant-select-selection-search {
-        padding-left: 30px !important;
+    .ant-select-dropdown {
+        background-color: ${colors.secondary[50]};
+        color: ${colors.gray[100]};
     }
-
+    .ant-select-item {
+        background-color: ${colors.secondary[50]};
+        color: ${colors.gray[100]};
+    }
+    .ant-select-item-option-active:not(.ant-select-item-option-disabled),
+    .ant-select-item-option-selected {
+        background-color: ${colors.secondary[70]} !important;
+        color: ${colors.gray[0]} !important;
+    }
     .ant-select-selection-overflow {
         padding-left: 30px !important;
-
         .ant-select-selection-search {
             padding-left: 0px !important;
         }
@@ -163,23 +191,23 @@ const SelectGrid = styled.div`
         &:hover,
         &:focus,
         &:active {
-            background-color: #fff !important;
+            background-color: ${colors.secondary[50]} !important;
         }
     }
 
     .ant-select-item-option-active:not(.ant-select-item-option-disabled) {
-        background-color: #fff !important;
+        background-color: ${colors.secondary[50]} !important;
     }
 
     .ant-select-item-option-content {
         display: flex;
         justify-content: center;
-        background-color: #fff !important;
+        background-color: ${colors.secondary[50]} !important;
 
         &:hover,
         &:focus,
         &:active {
-            background-color: #fff !important;
+            background-color: ${colors.secondary[50]} !important;
         }
     }
 `;
@@ -204,10 +232,11 @@ const Footer = styled.div`
 `;
 
 const SkipButton = styled.div`
-    color: ${colors.gray[400]};
+    color: ${colors.primary[30]};
     font-weight: 700;
     :hover {
         cursor: pointer;
+        text-decoration: underline;
     }
 `;
 
@@ -542,7 +571,7 @@ export const IntroduceYourselfMainContent = () => {
                     Get Started
                 </DoneButton>
                 <Footer>
-                    <Tooltip placement="bottom" title="Continue to DataHub">
+                    <Tooltip placement="bottom" title="Continue to Governance">
                         <SkipButton onClick={onSkip}>Skip</SkipButton>
                     </Tooltip>
                 </Footer>

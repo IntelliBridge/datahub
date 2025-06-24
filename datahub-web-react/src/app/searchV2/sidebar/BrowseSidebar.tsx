@@ -1,4 +1,5 @@
 import { Button, colors } from '@components';
+import alchemyColors from '@src/alchemy-components/theme/foundations/colors';
 import { Divider, Typography } from 'antd';
 import React, { useCallback, useState } from 'react';
 import styled from 'styled-components';
@@ -41,7 +42,7 @@ const StyledEntitySidebarContainer = styled.div<{
         max-width ${PLATFORM_BROWSE_TRANSITION_MS}ms ease-in-out,
         min-width ${PLATFORM_BROWSE_TRANSITION_MS}ms ease-in-out;
 
-    background-color: #ffffff;
+    background-color: ${alchemyColors.secondary[50]};
     border-radius: ${(props) =>
         props.$isShowNavBarRedesign ? props.theme.styles['border-radius-navbar-redesign'] : '8px'};
     box-shadow: ${(props) =>

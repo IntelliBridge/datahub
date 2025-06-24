@@ -12,19 +12,19 @@ import { Divider } from 'antd';
 import React from 'react';
 import styled from 'styled-components';
 
-import { REDESIGN_COLORS } from '@app/entityV2/shared/constants';
 import { AddImageButton } from '@app/entityV2/shared/tabs/Documentation/components/editor/toolbar/AddImageButton';
 import { AddLinkButton } from '@app/entityV2/shared/tabs/Documentation/components/editor/toolbar/AddLinkButton';
 import { CommandButton } from '@app/entityV2/shared/tabs/Documentation/components/editor/toolbar/CommandButton';
 import { HeadingMenu } from '@app/entityV2/shared/tabs/Documentation/components/editor/toolbar/HeadingMenu';
 import { CodeBlockIcon, CodeIcon } from '@app/entityV2/shared/tabs/Documentation/components/editor/toolbar/Icons';
 import InfoPopover from '@app/sharedV2/icons/InfoPopover';
+import colors from '@src/alchemy-components/theme/foundations/colors';
 
 const Container = styled.div`
     position: sticky;
     top: 0;
     z-index: 99;
-    background-color: ${REDESIGN_COLORS.LIGHT_GREY};
+    background-color: ${colors.secondary[50]};
     border-top-left-radius: 4px;
     border-bottom-left-radius: 4px;
     border-left: 2px solid ${(props) => props.theme.styles['primary-color']};

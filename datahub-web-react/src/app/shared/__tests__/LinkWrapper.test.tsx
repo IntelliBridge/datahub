@@ -6,11 +6,11 @@ import { LinkWrapper } from '@app/shared/LinkWrapper';
 
 describe('LinkWrapper', () => {
     it('renders absolute URLs', () => {
-        const { getByRole } = render(<LinkWrapper to="https://docs.datahub.com/" />);
+        const { getByRole } = render(<LinkWrapper to="https://docs.governance.workforce.ai/" />);
 
         const link = getByRole('link');
         expect(link).toBeInTheDocument();
-        expect(link).toHaveAttribute('href', 'https://docs.datahub.com/');
+        expect(link).toHaveAttribute('href', 'https://docs.governance.workforce.ai/');
     });
 
     it('renders relative URLs', () => {

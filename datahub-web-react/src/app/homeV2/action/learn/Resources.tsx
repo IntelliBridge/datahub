@@ -11,6 +11,7 @@ import { useUserPersona } from '@app/homeV2/persona/useUserPersona';
 import { PersonaType } from '@app/homeV2/shared/types';
 import OnboardingContext from '@app/onboarding/OnboardingContext';
 import { useAppConfig } from '@app/useAppConfig';
+import colors from '@src/alchemy-components/theme/foundations/colors';
 
 const Header = styled.div`
     display: flex;
@@ -44,7 +45,7 @@ const Section = styled.div`
 const Card = styled.div`
     border: 1px solid ${ANTD_GRAY[4]};
     border-radius: 8px;
-    background-color: #ffffff;
+    background-color: ${colors.secondary[50]};
     overflow: hidden;
     padding: 12px 20px 20px 20px;
 `;
@@ -109,14 +110,14 @@ const ALL_GUIDES = [
     {
         id: 'integrations',
         title: 'Connect Sources',
-        url: 'https://docs.datahub.com/docs/ui-ingestion',
+        url: 'https://docs.governance.workforce.ai/docs/ui-ingestion',
         icon: ApiOutlined,
         personas: [PersonaType.TECHNICAL_USER, PersonaType.DATA_ENGINEER],
     },
     {
         id: 'features',
         title: 'Feature Guides',
-        url: 'https://docs.datahub.com/docs/category/features?utm_source=acryl_datahub_app',
+        url: 'https://docs.governance.workforce.ai/docs/category/features?utm_source=acryl_datahub_app',
         icon: HelpCenterOutlined,
         personas: [
             PersonaType.TECHNICAL_USER,

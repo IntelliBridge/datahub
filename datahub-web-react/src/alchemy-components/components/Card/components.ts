@@ -5,14 +5,14 @@ import { IconAlignmentOptions } from '@src/alchemy-components/theme/config';
 
 export const CardContainer = styled.div<{ hasButton?: boolean; width?: string; maxWidth?: string; height?: string }>(
     ({ hasButton, width, maxWidth, height }) => ({
-        border: `1px solid ${colors.gray[100]}`,
+        border: `1px solid ${colors.gray[1400]}`,
         borderRadius: radius.lg,
         padding: spacing.md,
         display: 'flex',
         flex: `1 1 ${maxWidth}`,
         minWidth: '150px',
-        boxShadow: '0px 1px 2px 0px rgba(33, 23, 95, 0.07)',
-        backgroundColor: colors.white,
+        boxShadow: '0px 1px 2px 0px rgba(33, 23, 95, 0.12)',
+        backgroundColor: colors.gray[2000],
         flexDirection: 'column',
         gap: spacing.md,
         maxWidth,
@@ -21,7 +21,7 @@ export const CardContainer = styled.div<{ hasButton?: boolean; width?: string; m
 
         '&:hover': hasButton
             ? {
-                  border: `1px solid ${({ theme }) => theme.styles['primary-color']}`,
+                  border: `1px solid ${colors.violet[600]}`,
                   cursor: 'pointer',
               }
             : {},
@@ -46,7 +46,7 @@ export const TitleContainer = styled.div({
 export const Title = styled.div<{ $isEmpty?: boolean }>(({ $isEmpty }) => ({
     fontSize: typography.fontSizes.lg,
     fontWeight: typography.fontWeights.bold,
-    color: $isEmpty ? colors.gray[1800] : colors.gray[600],
+    color: $isEmpty ? colors.gray[0] : colors.gray[100],
     display: 'flex',
     alignItems: 'center',
     gap: spacing.xsm,
@@ -61,5 +61,5 @@ export const SubTitleContainer = styled.div({
 export const SubTitle = styled.div({
     fontSize: typography.fontSizes.md,
     fontWeight: typography.fontWeights.normal,
-    color: colors.gray[1700],
+    color: colors.gray[1800],
 });

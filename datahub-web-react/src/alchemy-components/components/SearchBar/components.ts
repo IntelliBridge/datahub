@@ -11,9 +11,12 @@ export const StyledSearchBar = styled(Input)<{ $width?: string; $height?: string
     display: flex;
     align-items: center;
     border-radius: 8px;
+    background-color: ${colors.secondary[50]};
+    border: 1px solid ${colors.gray[1800]};
 
     input {
-        color: ${colors.gray[600]};
+        color: ${colors.primary[10]};
+        background-color: ${colors.secondary[50]};
         font-size: ${typography.fontSizes.md} !important;
     }
 
@@ -30,7 +33,7 @@ export const StyledSearchBar = styled(Input)<{ $width?: string; $height?: string
     &:hover,
     &:focus,
     &:focus-within {
-        border-color: ${({ theme }) => getColor('primary', 300, theme)} !important;
+        border-color: ${colors.primary[30]} !important;
         box-shadow: none !important;
     }
 `;

@@ -1,5 +1,5 @@
-#!/bin/bash
 
+#!/bin/bash
 MONITORING_COMPOSE=""
 if [[ $MONITORING == true ]]; then
   MONITORING_COMPOSE="-f quickstart/docker-compose.monitoring.quickstart.yml"
@@ -23,6 +23,7 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 TAG_VERSION=$(cd $DIR && git name-rev --name-only --tags HEAD)
 DEFAULT_VERSION=$(echo $TAG_VERSION | sed 's/undefined/head/')
 export DATAHUB_VERSION=${DATAHUB_VERSION:-${DEFAULT_VERSION}}
+export DATAHUB_CONFLUENT_VERSION="7.5.0"
 
 M1_COMPOSE=""
 if [[ $(uname -m) == 'arm64' && $(uname) == 'Darwin' ]]; then
@@ -37,7 +38,7 @@ then
 else
   echo "No Datahub Neo4j volume found, starting with elasticsearch as graph service"
   cd $DIR && \
-  DOCKER_DEFAULT_PLATFORM="$(uname -m)" docker compose -p datahub \
+  DOCKER_DEFAULT_PLATFORM="linux/arm64" docker compose -p datahub \
     -f quickstart/docker-compose-without-neo4j.quickstart.yml \
     $MONITORING_COMPOSE $CONSUMERS_COMPOSE $M1_COMPOSE up $@
 fi

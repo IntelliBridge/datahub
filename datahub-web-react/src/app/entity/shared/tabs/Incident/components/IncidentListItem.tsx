@@ -13,6 +13,7 @@ import { MenuItemStyle } from '@app/entity/view/menu/item/styledComponent';
 import handleGraphQLError from '@app/shared/handleGraphQLError';
 import { toLocalDateTimeString, toRelativeTimeString } from '@app/shared/time/timeUtils';
 import { useEntityRegistry } from '@app/useEntityRegistry';
+import colors from '@src/alchemy-components/theme/foundations/colors';
 
 import { useUpdateIncidentStatusMutation } from '@graphql/mutations.generated';
 import { useGetUserQuery } from '@graphql/user.generated';
@@ -125,7 +126,7 @@ const IncidentResolvedContainer = styled.div`
 `;
 
 const IncidentResolvedButton = styled(Button)`
-    background: #ffffff;
+    background: ${colors.secondary[50]};
     border: 1px solid #d9d9d9;
     box-sizing: border-box;
     box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);

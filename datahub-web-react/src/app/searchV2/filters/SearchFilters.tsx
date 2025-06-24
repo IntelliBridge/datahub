@@ -33,11 +33,11 @@ import { useShowNavBarRedesign } from '@src/app/useShowNavBarRedesign';
 import { FacetFilterInput, FacetMetadata } from '@types';
 
 const Container = styled.div<{ $isShowNavBarRedesign?: boolean }>`
-    background-color: ${colors.white};
+    background-color: ${colors.secondary[50]};
     border-radius: ${(props) =>
         props.$isShowNavBarRedesign ? props.theme.styles['border-radius-navbar-redesign'] : '8px'};
     padding: 16px 0px 8px 0px;
-    border: 1px solid ${colors.gray[100]};
+    // border: 1px solid ${colors.secondary[50]};
     box-shadow: ${(props) =>
         props.$isShowNavBarRedesign ? props.theme.styles['box-shadow-navbar-redesign'] : '0px 4px 10px 0px #a8a8a840'};
 `;

@@ -101,7 +101,7 @@ export const MenuItem = styled.div`
     padding: 5px 100px 5px 5px;
     font-size: 14px;
     font-weight: 400;
-    color: ${colors.gray[600]};
+    color: ${colors.white};
     font-family: ${typography.fonts.body};
 `;
 

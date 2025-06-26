@@ -6,6 +6,7 @@ import { ColorOptions, PillVariantOptions, SizeOptions } from '@components/theme
 import { Theme } from '@conf/theme/types';
 import { typography } from '@src/alchemy-components/theme';
 import { getColor, getFontSize } from '@src/alchemy-components/theme/utils';
+import colors from '@src/alchemy-components/theme/foundations/colors';
 
 interface ColorStyles {
     primaryColor: string;
@@ -25,9 +26,9 @@ function getPillColorStyles(variant: PillVariantOptions, color: ColorOptions, th
     }
 
     return {
-        primaryColor: getColor(color, 500, theme),
-        bgColor: color === 'gray' ? getColor(color, 100, theme) : getColor(color, 0, theme),
-        hoverColor: color === 'gray' ? getColor(color, 100, theme) : getColor(color, 1100, theme),
+        primaryColor: color === 'gray' ? colors.white : getColor(color, 500, theme),
+        bgColor: color === 'gray' ? colors.secondary[90] : getColor(color, 0, theme),
+        hoverColor: color === 'gray' ? colors.secondary[70] : getColor(color, 1100, theme),
         borderColor: getColor('gray', 1800, theme),
     };
 }

@@ -8,30 +8,48 @@ import { clearSecretListCache } from '@app/ingest/secret/cacheUtils';
 import CreateSecretButton from '@app/ingest/source/builder/RecipeForm/SecretField/CreateSecretButton';
 import { RecipeField } from '@app/ingest/source/builder/RecipeForm/common';
 
+import { colors } from '@src/alchemy-components/theme';
 import { Secret } from '@types';
 
 const StyledDivider = styled(Divider)`
     margin: 0;
 `;
 
-export const StyledFormItem = styled(Form.Item)<{
+export const StyledFormItem = styled(Form.Item) <{
     $alignLeft?: boolean;
     $removeMargin?: boolean;
     $isSecretField?: boolean;
 }>`
     margin-bottom: ${(props) => (props.$removeMargin ? '0' : '16px')};
+        .ant-form-item-row {
+            .ant-form-item-label {
+                label {
+                    color: white;
+                    span {
+                        color: ${colors.primary[30]};
+                    }
+                }
+            }
+        }
+
 
     ${(props) =>
         props.$alignLeft &&
         `
         .ant-form-item {
             flex-direction: row;
-
         }
+
 
         .ant-form-item-label {
             padding: 0;
             margin-right: 10px;
+            label {
+                color: white;
+                span {
+                    color: ${colors.primary[30]};
+                }
+            }
         }
     `}
 
@@ -48,6 +66,14 @@ export const StyledFormItem = styled(Form.Item)<{
                 font-size: 10px;
             }
         }
+        .ant-form-item-row {
+            .ant-form-item-label {
+                label {
+                    color: white;
+                }
+            }
+        }
+
     `}
 `;
 

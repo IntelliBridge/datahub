@@ -3,6 +3,8 @@ import { SkeletonButtonProps } from 'antd/lib/skeleton/Button';
 import React from 'react';
 import styled from 'styled-components';
 
+import colors from '@src/alchemy-components/theme/foundations/colors';
+
 const SkeletonContainer = styled.div`
     && {
         display: flex;
@@ -26,7 +28,7 @@ const SectionHeader = styled.div`
     .ant-skeleton-button {
         height: 100%;
         border-radius: 12px;
-        background-color: #f8f9fa;
+        background-color: ${colors.secondary[90]};
     }
 `;
 
@@ -67,3 +69,4 @@ export const HorizontalListSkeletons = ({ Component, showHeader = true, count = 
         </SkeletonContainer>
     );
 };
+

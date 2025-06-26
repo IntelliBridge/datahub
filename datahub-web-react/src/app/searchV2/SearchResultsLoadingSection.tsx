@@ -2,7 +2,7 @@ import { Skeleton } from 'antd';
 import * as React from 'react';
 import styled from 'styled-components';
 
-import { ANTD_GRAY } from '@app/entity/shared/constants';
+import colors from '@src/alchemy-components/theme/foundations/colors';
 
 const Container = styled.div`
     width: 100%;
@@ -14,7 +14,7 @@ const Container = styled.div`
 `;
 
 const cardStyle = {
-    backgroundColor: ANTD_GRAY[2],
+    backgroundColor: colors.secondary[90],
     height: 120,
     minWidth: '98%',
     borderRadius: 8,
@@ -32,3 +32,4 @@ export default function SearchResultsLoadingSection() {
         </Container>
     );
 }
+

@@ -1,7 +1,8 @@
 import { blue } from '@ant-design/colors';
 import { CodeOutlined, CopyOutlined, DeleteOutlined } from '@ant-design/icons';
 import { Tooltip } from '@components';
-import { Button, Image, Typography } from 'antd';
+import { Image, Typography } from 'antd';
+import { Button } from '@src/alchemy-components/components/Button/Button';
 import cronstrue from 'cronstrue';
 import React from 'react';
 import styled from 'styled-components/macro';
@@ -144,7 +145,7 @@ export function LastStatusColumn({ status, record, setFocusExecutionUrn }: LastS
                 {Icon && <Icon style={{ color, fontSize: 14 }} />}
                 <StatusButton
                     data-testid="ingestion-source-table-status"
-                    type="link"
+                    variant="text"
                     onClick={() => setFocusExecutionUrn(lastExecUrn)}
                 >
                     <StatusText color={color}>{text || 'Pending...'}</StatusText>
@@ -178,7 +179,7 @@ export function ActionsColumn({
                 <Tooltip title="Copy Ingestion Source URN">
                     <Button
                         style={{ marginRight: 16 }}
-                        icon={<CopyOutlined />}
+                        icon={{ icon: 'Copy', source: 'phosphor' }}
                         onClick={() => {
                             navigator.clipboard.writeText(record.urn);
                         }}
@@ -201,7 +202,7 @@ export function ActionsColumn({
             )}
             {record.lastExecStatus !== RUNNING && (
                 <Button
-                    disabled={record.cliIngestion}
+                    isDisabled={record.cliIngestion}
                     style={{ marginRight: 16 }}
                     onClick={() => onExecute(record.urn)}
                 >
@@ -216,12 +217,11 @@ export function ActionsColumn({
             <Button
                 data-testid={`delete-ingestion-source-${record.name}`}
                 onClick={() => onDelete(record.urn)}
-                type="text"
-                shape="circle"
-                danger
-            >
-                <DeleteOutlined />
-            </Button>
+                variant="text"
+                isCircle
+                color="destructive"
+                icon={{ icon: 'Trash', source: 'phosphor' }}
+            />
         </ActionButtonContainer>
     );
 }

@@ -621,6 +621,7 @@ a {
   .ant-tabs-tab {
     background-color: transparent !important;
     border: none !important;
+    padding: 6px 0 !important;
     
     .ant-tabs-tab-btn {
       color: #FFFFFF !important; // text-color
@@ -858,6 +859,57 @@ a {
   color: #FFD600 !important; // primary-color
 }
 
+// Standalone pagination component styles (not in tables)
+.ant-pagination {
+  .ant-pagination-item {
+    background-color: #25323F !important; // layout-body-background
+    border-color: #979CA4 !important; // border-color-base
+    
+    a {
+      color: #FFFFFF !important; // text-color
+    }
+
+    &:hover {
+      border-color: #FFD600 !important; // primary-color
+      
+      a {
+        color: #FFD600 !important; // primary-color
+      }
+    }
+  }
+
+  .ant-pagination-item-active {
+    background-color: #FFD600 !important; // primary-color
+    border-color: #FFD600 !important; // primary-color
+    
+    a {
+      color: #141B22 !important; // Dark text on bright background
+    }
+  }
+
+  .ant-pagination-prev,
+  .ant-pagination-next {
+    .ant-pagination-item-link {
+      background-color: #25323F !important; // layout-body-background
+      border-color: #979CA4 !important; // border-color-base
+      color: #FFFFFF !important; // text-color
+
+      &:hover {
+        border-color: #FFD600 !important; // primary-color
+        color: #FFD600 !important; // primary-color
+      }
+    }
+  }
+
+  .ant-pagination-disabled {
+    .ant-pagination-item-link {
+      background-color: #25323F !important;
+      border-color: #979CA4 !important;
+      color: #A4A4AA !important; // disabled-color
+    }
+  }
+}
+
 .ant-drawer-content {
   background-color: #25323F !important; // layout-body-background
   color: #FFFFFF !important; // text-color
@@ -880,6 +932,7 @@ a {
 
 .ant-select-single.ant-select-show-arrow .ant-select-selection-item, .ant-select-single.ant-select-show-arrow .ant-select-selection-placeholder {
   display: flex !important;
+  align-items: center !important;
 }
 
 .ant-select-focused:not(.ant-select-disabled).ant-select:not(.ant-select-customize-input) .ant-select-selector {
@@ -901,4 +954,144 @@ a {
 
 .anticon-loading {
   color: #FFD600 !important; // primary-color
+}
+
+// Steps component dark theme overrides
+.ant-steps {
+  .ant-steps-item {
+    .ant-steps-item-icon {
+      background-color: #25323F !important; // layout-body-background
+      border-color: #979CA4 !important; // border-color-base
+      color: #FFFFFF !important; // text-color
+      
+      .ant-steps-icon {
+        color: #FFFFFF !important; // text-color
+      }
+    }
+
+    .ant-steps-item-title {
+      color: #FFFFFF !important; // text-color
+    }
+
+    .ant-steps-item-description {
+      color: #A4A4AA !important; // disabled-color
+    }
+
+    &.ant-steps-item-active {
+      .ant-steps-item-icon {
+        background-color: #FFD600 !important; // primary-color
+        border-color: #FFD600 !important; // primary-color
+        color: #141B22 !important; // Dark text on bright background
+        
+        .ant-steps-icon {
+          color: #141B22 !important; // Dark text on bright background
+        }
+      }
+
+      .ant-steps-item-title {
+        color: #FFD600 !important; // primary-color
+      }
+    }
+
+    &.ant-steps-item-finish {
+      .ant-steps-item-icon {
+        background-color: #FFD600 !important; // primary-color
+        border-color: #FFD600 !important; // primary-color
+        color: #141B22 !important; // Dark text on bright background
+        
+        .anticon {
+          color: #141B22 !important; // Dark text on bright background
+        }
+      }
+
+      .ant-steps-item-title {
+        color: #FFD600 !important; // primary-color
+        
+        &::after {
+          background-color: #FFD600 !important; // primary-color
+        }
+      }
+    }
+
+    &.ant-steps-item-wait {
+      .ant-steps-item-icon {
+        background-color: #25323F !important; // layout-body-background
+        border-color: #979CA4 !important; // border-color-base
+        color: #A4A4AA !important; // disabled-color
+        
+        .ant-steps-icon {
+          color: #A4A4AA !important; // disabled-color
+        }
+      }
+
+      .ant-steps-item-title {
+        color: #A4A4AA !important; // disabled-color
+      }
+    }
+
+    &.ant-steps-item-error {
+      .ant-steps-item-icon {
+        background-color: #FF6A52 !important; // error-color
+        border-color: #FF6A52 !important; // error-color
+        color: #FFFFFF !important; // text-color
+      }
+
+      .ant-steps-item-title {
+        color: #FF6A52 !important; // error-color
+      }
+    }
+  }
+
+  .ant-steps-item-tail::after {
+    background-color: #979CA4 !important; // border-color-base
+  }
+
+  .ant-steps-item-finish .ant-steps-item-tail::after {
+    background-color: #FFD600 !important; // primary-color
+  }
+
+  &.ant-steps-horizontal .ant-steps-item-tail::after {
+    background-color: #979CA4 !important; // border-color-base
+  }
+
+  &.ant-steps-horizontal .ant-steps-item-finish .ant-steps-item-tail::after {
+    background-color: #FFD600 !important; // primary-color
+  }
+
+  &.ant-steps-vertical .ant-steps-item-tail::after {
+    background-color: #979CA4 !important; // border-color-base
+  }
+
+  &.ant-steps-vertical .ant-steps-item-finish .ant-steps-item-tail::after {
+    background-color: #FFD600 !important; // primary-color
+  }
+}
+
+.ant-collapse > .ant-collapse-item > .ant-collapse-header .ant-collapse-header-text {
+  color: #FFFFFF !important; // text-color
+}
+
+.ant-collapse-content {
+  background-color: #25323F !important; // layout-body-background
+  color: #FFFFFF !important; // text-color
+}
+
+.ant-checkbox:not(.ant-checkbox-disabled).ant-checkbox-checked .ant-checkbox-inner {
+  background-color: #FFD600 !important; // primary-color
+  border-color: #FFD600 !important; // primary-color
+}
+
+.ant-btn-dashed {
+  background-color: transparent !important; // layout-body-background
+  border: 1px dashed #fff !important; // primary-color
+  color: #fff !important; // primary-color
+}
+
+.ant-btn-dashed:hover, .ant-btn-dashed:focus {
+  border-color: #FFD600 !important; // primary-color
+  color: #FFD600 !important; // primary-color
+}
+
+.ant-switch-checked {
+  background-color: #FFD600 !important; // primary-color
 }

@@ -2,6 +2,8 @@ import { Skeleton } from 'antd';
 import React from 'react';
 import styled from 'styled-components';
 
+import colors from '@src/alchemy-components/theme/foundations/colors';
+
 const CardHeader = styled.div`
     display: flex;
     gap: 16px;
@@ -14,7 +16,7 @@ const CardHeader = styled.div`
 
     .ant-skeleton-button {
         height: 16px;
-        background-color: #ebecf0;
+        background-color: ${colors.secondary[90]};
     }
 `;
 
@@ -25,7 +27,7 @@ const CardContent = styled.div`
 
     .ant-skeleton-button {
         height: 16px;
-        background-color: #ebecf0;
+        background-color: ${colors.secondary[90]};
     }
 
     .ant-skeleton-avatar-square {
@@ -47,7 +49,7 @@ const CardSkeleton = styled.div`
     flex-direction: column;
     gap: 16px;
     border-radius: 12px;
-    background-color: #f8f9fa;
+    background-color: ${colors.secondary[90]};
     padding: 16px;
     width: 340px;
     height: 275px;
@@ -90,3 +92,4 @@ const InsightCardSkeleton = () => {
 };
 
 export default InsightCardSkeleton;
+

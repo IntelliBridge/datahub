@@ -19,6 +19,7 @@ import { jsonToYaml } from '@app/ingest/source/utils';
 import { RequiredFieldForm } from '@app/shared/form/RequiredFieldForm';
 
 import { useListSecretsQuery } from '@graphql/ingestion.generated';
+import colors from '@src/alchemy-components/theme/foundations/colors';
 
 export const ControlsContainer = styled.div`
     display: flex;
@@ -28,6 +29,7 @@ export const ControlsContainer = styled.div`
 
 const StyledCollapse = styled(Collapse)`
     margin-bottom: 16px;
+    background-color: ${colors.secondary[90]};
 
     .ant-collapse-header {
         font-size: 14px;
@@ -38,6 +40,7 @@ const StyledCollapse = styled(Collapse)`
 
 const HeaderTitle = styled.span`
     margin-left: 8px;
+    color: white;
 `;
 
 const MarginWrapper = styled.div`

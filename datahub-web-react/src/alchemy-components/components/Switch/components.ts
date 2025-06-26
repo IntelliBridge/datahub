@@ -53,17 +53,18 @@ export const Slider = styled.div<{ size?: SizeOptions; isSquare?: boolean; isDis
         minWidth: getToggleSize(size || 'md', 'input'),
         minHeight: getInputHeight(size || 'md'),
     }),
-    {
+    ({ isDisabled }) => ({
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
         position: 'relative',
-
-        backgroundColor: colors.gray[100],
+        // border: `${borders['1px']} ${colors.white}`,
+        border: !isDisabled ? `${borders['1px']} ${colors.white}` : `${borders['1px']} ${colors.gray[200]}`,
+        backgroundColor: colors.secondary[50],
         padding: spacing.xxsm,
         transition: `${transition.duration.normal} all`,
         boxSizing: 'content-box',
-    },
+    }),
 );
 
 export const Required = styled.span({
@@ -82,7 +83,7 @@ export const StyledInput = styled.input<{
 
     &:checked + ${Slider} {
         background-color: ${(props) =>
-            !props.disabled ? getColor(props.colorScheme, 500, props.theme) : colors.gray[100]};
+        !props.disabled ? getColor(props.colorScheme, 500, props.theme) : colors.gray[100]};
 
         &:before {
             transform: ${({ customSize }) => getSliderTransformPosition(customSize || 'md')};
@@ -90,9 +91,7 @@ export const StyledInput = styled.input<{
     }
 
     &:focus-within + ${Slider} {
-        border-color: ${(props) => (props.checked ? getColor(props.colorScheme, 200, props.theme) : 'transparent')};
-        outline: ${(props) =>
-            props.checked ? `${borders['2px']} ${getColor(props.colorScheme, 200, props.theme)}` : 'none'};
+        // border-color: ${(props) => (props.checked ? getColor(props.colorScheme, 200, props.theme) : 'transparent')};
         box-shadow: ${(props) => (props.checked ? shadows.xs : 'none')};
     }
 `;

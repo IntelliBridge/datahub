@@ -13,6 +13,7 @@ import { YamlEditor } from '@app/ingest/source/builder/YamlEditor';
 import { CSV, LOOKER, LOOK_ML } from '@app/ingest/source/builder/constants';
 import { SourceBuilderState, SourceConfig } from '@app/ingest/source/builder/types';
 import { Button } from '@src/alchemy-components';
+import colors from '@src/alchemy-components/theme/foundations/colors';
 
 export const ControlsContainer = styled.div`
     display: flex;
@@ -27,13 +28,13 @@ const BorderedSection = styled.div`
     border: solid ${ANTD_GRAY[4]} 0.5px;
 `;
 
-const StyledButton = styled(Button)<{ $isSelected: boolean }>`
+const StyledButton = styled(Button) <{ $isSelected: boolean }>`
     ${(props) =>
         props.$isSelected &&
         `
-        color: #1890ff;
+        color: ${colors.primary[30]};
         &:focus {
-            color: #1890ff;
+            color: ${colors.primary[30]};
         }    
     `}
 `;

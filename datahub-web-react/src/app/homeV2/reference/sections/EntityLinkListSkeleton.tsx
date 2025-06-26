@@ -2,10 +2,12 @@ import { Col, Row, Skeleton } from 'antd';
 import React from 'react';
 import styled from 'styled-components';
 
+import colors from '@src/alchemy-components/theme/foundations/colors';
+
 const SkeletonContainer = styled(Row)`
     && {
         margin-bottom: 20px;
-        border-bottom: 1px solid #ebecf0;
+        border-bottom: 1px solid ${colors.secondary[90]};
         .ant-skeleton-button-sm {
             height: 16px;
         }
@@ -48,3 +50,5 @@ export const EntityLinkListSkeleton = () => {
         </SkeletonContainer>
     );
 };
+
+

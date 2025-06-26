@@ -1,4 +1,5 @@
-import { Button, Typography } from 'antd';
+import { Typography } from 'antd';
+import { Button } from '@src/alchemy-components/components/Button/Button';
 import React from 'react';
 import styled from 'styled-components';
 
@@ -54,7 +55,7 @@ export function NameColumn({ name, record, onEditView }: NameColumnProps) {
                 {isUserDefault && <UserDefaultViewIcon title="Your default View." />}
                 {isGlobalDefault && <GlobalDefaultViewIcon title="Your organization's default View." />}
             </IconPlaceholder>
-            <Button type="text" onClick={() => onEditView(record.urn)}>
+            <Button variant="text" onClick={() => onEditView(record.urn)}>
                 <Typography.Text strong>{name}</Typography.Text>
             </Button>
         </NameContainer>

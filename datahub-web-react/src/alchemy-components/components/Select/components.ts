@@ -29,7 +29,7 @@ export const SelectBase = styled.div<SelectStyleProps>(
         alignItems: 'center',
         overflow: 'auto',
         textWrapMode: 'nowrap',
-        backgroundColor: isDisabled ? colors.gray[1500] : colors.secondary[50],
+        backgroundColor: isDisabled ? colors.secondary[90] : colors.secondary[50],
         width: width === 'full' ? '100%' : 'max-content',
     }),
 );

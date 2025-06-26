@@ -114,7 +114,7 @@ export const getSelectStyle = (props: SelectStyleProps) => {
         fontFamily: typography.fonts.body,
         color: isDisabled ? colors.gray[300] : colors.gray[600],
         cursor: isDisabled || isReadOnly ? 'not-allowed' : 'pointer',
-        backgroundColor: isDisabled ? colors.gray[1500] : 'initial',
+        backgroundColor: isDisabled ? colors.secondary[50] : 'initial',
         boxShadow: '0px 1px 2px 0px rgba(33, 23, 95, 0.07)',
         textWrap: 'nowrap',
 

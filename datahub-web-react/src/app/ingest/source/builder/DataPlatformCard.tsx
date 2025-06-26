@@ -16,7 +16,7 @@ const Container = styled(Button)`
     border: 1px solid #e0e0e0;
     background-color: ${colors.secondary[50]};
     &&:hover {
-        border: 1px solid ${REDESIGN_COLORS.BLUE};
+        border: 1px solid ${colors.primary[30]};
         background-color: ${colors.secondary[50]};
     }
     white-space: unset;
@@ -36,7 +36,7 @@ const LogoContainer = styled.div`
 
 const Title = styled.div`
     word-break: break-word;
-    color: #464646;
+    color: ${colors.primary[10]};
     font-weight: bold;
     font-size: 16px;
     margin-bottom: 8px;
@@ -45,7 +45,7 @@ const Title = styled.div`
 const Description = styled.div`
     word-break: break-word;
     text-align: left;
-    color: #7c7c7c;
+    color: ${colors.gray[1900]};
 `;
 
 type Props = {

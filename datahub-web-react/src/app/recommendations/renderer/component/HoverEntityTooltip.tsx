@@ -41,7 +41,7 @@ export const HoverEntityTooltip = ({
             <Tooltip
                 showArrow={showArrow}
                 open={canOpen ? undefined : false}
-                color="white"
+                // color="white"
                 placement={placement || 'bottom'}
                 overlayStyle={{ minWidth: width, maxWidth, zIndex: 1100 }}
                 overlayInnerStyle={{ padding: 20, borderRadius: 20, overflow: 'hidden', position: 'relative' }}

@@ -35,7 +35,6 @@ const SearchBarContainer = styled.div`
 const StyledSearchBar = styled(Input)`
     background-color: ${colors.secondary[50]};
     border-radius: 8px;
-    box-shadow: 0px 0px 30px 0px rgb(239 239 239);
     border: 1px solid #e0e0e0;
     margin: 0 0 15px 0px;
     max-width: 300px;

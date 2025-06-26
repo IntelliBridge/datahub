@@ -29,7 +29,7 @@ export const BaseTable = styled.table({
 });
 
 export const TableHeader = styled.thead({
-    backgroundColor: colors.gray[1500],
+    backgroundColor: colors.secondary[90],
     boxShadow: '0px 1px 1px rgba(0, 0, 0, 0.1)',
     borderRadius: radius.lg,
     borderBottom: `1px solid ${colors.gray[1400]}`,
@@ -45,7 +45,7 @@ export const TableHeaderCell = styled.th<{
     shouldAddRightBorder?: boolean;
 }>(({ width, maxWidth, minWidth, shouldAddRightBorder }) => ({
     padding: `${spacing.sm} ${spacing.md}`,
-    color: colors.gray[1700],
+    color: colors.white,
     fontSize: typography.fontSizes.sm,
     fontWeight: typography.fontWeights.medium,
     textAlign: 'start',
@@ -73,10 +73,10 @@ export const TableRow = styled.tr<{
     background: canExpand ? colors.gray[100] : 'transparent',
     ...(isFocused
         ? {
-              background: `linear-gradient(180deg, rgba(83,63,209,0.04) -3.99%, rgba(112,94,228,0.04) 53.04%, rgba(112,94,228,0.04) 100%)`,
-          }
+            background: `linear-gradient(180deg, rgba(83,63,209,0.04) -3.99%, rgba(112,94,228,0.04) 53.04%, rgba(112,94,228,0.04) 100%)`,
+        }
         : {}),
-    '&:hover': canHover ? { backgroundColor: colors.gray[1500] } : {},
+    // '&:hover': canHover ? { backgroundColor: colors.gray[1500] } : {},
     cursor: isRowClickable ? 'pointer' : 'normal',
     '&:last-child': {
         '& td': {

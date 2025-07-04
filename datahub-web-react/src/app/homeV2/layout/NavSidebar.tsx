@@ -39,8 +39,8 @@ const Icon = styled.div`
     width: 44px;
     height: 44px;
     border-radius: 38px;
-    border: 1px solid #32267d;
-    background: #4c39be;
+    border: 1px solid #1F1F1F;
+    background: #1F1F1F;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     margin-bottom: 10px;
 

@@ -54,7 +54,7 @@ const MenuItem = styled.div`
     font-size: 13px;
     font-weight: 400;
     padding: 0 12px;
-    color: #46507b;
+    color: ${(props) => props.theme.styles['text-color']};
     line-height: 24px;
     display: flex;
     align-items: center;
@@ -73,6 +73,7 @@ const StyledMoreIcon = styled(MoreVertOutlinedIcon)`
         display: flex;
         font-size: 20px;
         padding: 2px;
+        color: ${(props) => props.theme.styles['text-color']};
 
         :hover {
             color: ${(p) => p.theme.styles['primary-color']};

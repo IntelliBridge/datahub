@@ -52,16 +52,16 @@ const StyledSearchBar = styled(Input)`
         border-radius: 70px;
         height: 40px;
         font-size: 14px;
-        color: ${ANTD_GRAY[7]};
-        background-color: ${ANTD_GRAY_V2[2]};
-        border: 2px solid transparent;
+        color: #FFFFFF !important;
+        background-color: #25323F !important;
+        border: 2px solid #979CA4;
 
         &:focus-within {
-            border: 2px solid ${REDESIGN_COLORS.BLUE};
+            border: 2px solid #FFD600;
         }
     }
     > .ant-input::placeholder {
-        color: ${ANTD_GRAY_V2[10]};
+        color: #B2B8BD !important;
     }
     .ant-input-clear-icon {
         height: 15px;
@@ -74,6 +74,10 @@ const ClearIcon = styled(CloseCircleFilled)`
         height: 15px;
         width: 15px;
     }
+    color: #B2B8BD !important;
+    &:hover {
+        color: #FFFFFF !important;
+    }
 `;
 
 const ViewSelectContainer = styled.div`
@@ -83,7 +87,10 @@ const ViewSelectContainer = styled.div`
 `;
 
 const SearchIcon = styled(SearchOutlined)`
-    color: ${ANTD_GRAY_V2[8]};
+    color: #B2B8BD !important;
+    &:hover {
+        color: #FFFFFF !important;
+    }
 `;
 
 const EXACT_AUTOCOMPLETE_OPTION_TYPE = 'exact_query';
@@ -403,7 +410,7 @@ export const SearchBar = ({
                             getFiltersWithQuickFilter(selectedQuickFilter),
                         );
                     }}
-                    style={{ ...inputStyle, color: 'red' }}
+                    style={inputStyle}
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
                     data-testid="search-input"

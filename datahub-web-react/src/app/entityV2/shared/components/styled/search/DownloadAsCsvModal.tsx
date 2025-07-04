@@ -1,6 +1,6 @@
 import { ExclamationCircleFilled, LoadingOutlined } from '@ant-design/icons';
-import { Text, colors } from '@components';
-import { Button, Input, Modal, Spin, notification } from 'antd';
+import { Text, colors, Button } from '@components';
+import { Input, Modal, Spin, notification } from 'antd';
 import React, { useContext, useState } from 'react';
 import { useLocation } from 'react-router';
 import styled from 'styled-components';
@@ -192,8 +192,8 @@ export default function DownloadAsCsvModal({
             title="Download as..."
             visible={showDownloadAsCsvModal}
             footer={
-                <>
-                    <Button onClick={() => setShowDownloadAsCsvModal(false)} type="text">
+                <div style={{ display: 'flex', justifyContent: 'flex-end', gap: '8px' }}>
+                    <Button onClick={() => setShowDownloadAsCsvModal(false)} variant="text">
                         Close
                     </Button>
                     <Button
@@ -202,11 +202,11 @@ export default function DownloadAsCsvModal({
                             setShowDownloadAsCsvModal(false);
                             triggerCsvDownload(saveAsTitle);
                         }}
-                        disabled={saveAsTitle.length === 0}
+                        isDisabled={saveAsTitle.length === 0}
                     >
                         Download
                     </Button>
-                </>
+                </div>
             }
         >
             {lineageSearchPath === LineageSearchPath.Lightning && (

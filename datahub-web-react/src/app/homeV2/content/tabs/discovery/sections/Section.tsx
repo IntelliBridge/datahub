@@ -11,7 +11,7 @@ const Header = styled.div`
 `;
 
 const Title = styled.div`
-    color: #403d5c;
+    color: ${(props) => props.theme.styles['text-color']};
     margin: 0px;
     font-size: 18px;
     font-weight: 600;
@@ -29,12 +29,13 @@ const Content = styled.div`
 `;
 
 const Action = styled.div`
-    color: ${ANTD_GRAY[8]};
+    color: ${(props) => props.theme.styles['text-color-secondary']};
     font-size: 12px;
     font-weight: 700;
     :hover {
         cursor: pointer;
         text-decoration: underline;
+        color: ${(props) => props.theme.styles['primary-color']};
     }
     white-space: nowrap;
 `;

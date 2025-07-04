@@ -1,4 +1,5 @@
 import { Modal } from 'antd';
+import { ExclamationCircleOutlined } from '@ant-design/icons';
 import React, { useState } from 'react';
 import styled from 'styled-components';
 
@@ -46,59 +47,85 @@ export const SearchSelectModal = ({
     hideToolbar,
 }: Props) => {
     const [selectedEntities, setSelectedEntities] = useState<EntityAndType[]>([]);
+    const [showExitConfirm, setShowExitConfirm] = useState(false);
 
     const onCancelSelect = () => {
         if (selectedEntities.length > 0) {
-            Modal.confirm({
-                title: `Exit Selection`,
-                content: `Are you sure you want to exit? ${selectedEntities.length} selection(s) will be cleared.`,
-                onOk() {
-                    onCancel?.();
-                },
-                onCancel() {},
-                okText: 'Yes',
-                maskClosable: true,
-                closable: true,
-            });
+            setShowExitConfirm(true);
         } else {
             onCancel?.();
         }
     };
 
+    const handleExitConfirm = () => {
+        setShowExitConfirm(false);
+        onCancel?.();
+    };
+
+    const handleExitCancel = () => {
+        setShowExitConfirm(false);
+    };
+
     return (
-        <ClickOutside onClickOutside={onCancelSelect} wrapperClassName="search-select-modal">
-            <StyledModal
-                wrapClassName="search-select-modal"
-                bodyStyle={MODAL_BODY_STYLE}
-                title={titleText || 'Select entities'}
-                width={MODAL_WIDTH_PX}
-                open
-                onCancel={onCancelSelect}
+        <>
+            <ClickOutside onClickOutside={onCancelSelect} wrapperClassName="search-select-modal">
+                <StyledModal
+                    wrapClassName="search-select-modal"
+                    bodyStyle={MODAL_BODY_STYLE}
+                    title={titleText || 'Select entities'}
+                    width={MODAL_WIDTH_PX}
+                    open
+                    onCancel={onCancelSelect}
+                    footer={
+                        <ModalButtonContainer>
+                            <Button onClick={onCancel} variant="text" color="gray">
+                                Cancel
+                            </Button>
+                            <Button
+                                id="continueButton"
+                                data-testid="search-select-continue-button"
+                                onClick={() => onContinue(selectedEntities.map((entity) => entity.urn))}
+                                disabled={selectedEntities.length === 0}
+                            >
+                                {continueText || 'Done'}
+                            </Button>
+                        </ModalButtonContainer>
+                    }
+                >
+                    <SearchSelect
+                        fixedEntityTypes={fixedEntityTypes}
+                        placeholderText={placeholderText}
+                        selectedEntities={selectedEntities}
+                        setSelectedEntities={setSelectedEntities}
+                        singleSelect={singleSelect}
+                        hideToolbar={hideToolbar}
+                    />
+                </StyledModal>
+            </ClickOutside>
+            <Modal
+                title={
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                        <ExclamationCircleOutlined style={{ color: '#faad14' }} />
+                        Exit Selection
+                    </div>
+                }
+                open={showExitConfirm}
+                onCancel={handleExitCancel}
                 footer={
                     <ModalButtonContainer>
-                        <Button onClick={onCancel} variant="text" color="gray">
+                        <Button onClick={handleExitCancel} variant="text" color="gray">
                             Cancel
                         </Button>
-                        <Button
-                            id="continueButton"
-                            data-testid="search-select-continue-button"
-                            onClick={() => onContinue(selectedEntities.map((entity) => entity.urn))}
-                            disabled={selectedEntities.length === 0}
-                        >
-                            {continueText || 'Done'}
+                        <Button onClick={handleExitConfirm} color="yellow">
+                            Yes
                         </Button>
                     </ModalButtonContainer>
                 }
             >
-                <SearchSelect
-                    fixedEntityTypes={fixedEntityTypes}
-                    placeholderText={placeholderText}
-                    selectedEntities={selectedEntities}
-                    setSelectedEntities={setSelectedEntities}
-                    singleSelect={singleSelect}
-                    hideToolbar={hideToolbar}
-                />
-            </StyledModal>
-        </ClickOutside>
+                <div style={{ fontSize: '16px', lineHeight: '1.5' }}>
+                    Are you sure you want to exit? {selectedEntities.length} selection(s) will be cleared.
+                </div>
+            </Modal>
+        </>
     );
 };

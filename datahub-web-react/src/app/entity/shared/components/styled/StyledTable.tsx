@@ -8,7 +8,7 @@ export const StyledTable = styled(Table)`
     height: inherit;
 
     &&& .ant-table-cell {
-        background-color: #fff;
+        color: ${props => props.theme.styles['text-color']};
     }
     &&& .ant-table-thead .ant-table-cell {
         font-weight: 600;

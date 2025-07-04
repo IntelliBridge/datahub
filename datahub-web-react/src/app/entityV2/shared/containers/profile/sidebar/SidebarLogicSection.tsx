@@ -1,7 +1,8 @@
 import { Modal } from 'antd';
 import React, { useContext, useMemo, useState } from 'react';
-import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import styled from 'styled-components/macro';
+
+import { StyledSyntaxHighlighter } from '@app/entityV2/shared/StyledSyntaxHighlighter';
 
 import { useBaseEntity } from '@app/entity/shared/EntityContext';
 import { SidebarSection } from '@app/entityV2/shared/containers/profile/sidebar/SidebarSection';
@@ -17,7 +18,7 @@ import { GetDataJobQuery } from '@src/graphql/dataJob.generated';
 import { GetDatasetQuery } from '@graphql/dataset.generated';
 import { EntityType, QueryEntity } from '@types';
 
-const PreviewSyntax = styled(SyntaxHighlighter)`
+const PreviewSyntax = styled(StyledSyntaxHighlighter)`
     max-width: 100%;
     max-height: 600px;
     overflow: hidden;
@@ -136,9 +137,9 @@ export function SidebarLogicSection({ title, statement, highlightedStrings, exte
                                 )}
                                 <CopyQuery query={showFormatted ? formattedLogic || '' : statement} showCopyText />
                             </ViewHeader>
-                            <SyntaxHighlighter language="sql" showLineNumbers lineProps={lineProps}>
+                            <StyledSyntaxHighlighter language="sql" showLineNumbers lineProps={lineProps}>
                                 {showFormatted ? formattedLogic : statement}
-                            </SyntaxHighlighter>
+                            </StyledSyntaxHighlighter>
                         </ModalSyntaxContainer>
                     </Modal>
                     {canShowFormatted && (

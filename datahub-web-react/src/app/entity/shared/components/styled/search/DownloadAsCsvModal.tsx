@@ -1,5 +1,6 @@
 import { LoadingOutlined } from '@ant-design/icons';
-import { Button, Input, Modal, Spin, notification } from 'antd';
+import { Button } from '@components';
+import { Input, Modal, Spin, notification } from 'antd';
 import React, { useState } from 'react';
 import { useLocation } from 'react-router';
 
@@ -130,8 +131,8 @@ export default function DownloadAsCsvModal({
             title="Download as..."
             open={showDownloadAsCsvModal}
             footer={
-                <>
-                    <Button onClick={() => setShowDownloadAsCsvModal(false)} type="text">
+                <div style={{ display: 'flex', justifyContent: 'flex-end', gap: '8px' }}>
+                    <Button onClick={() => setShowDownloadAsCsvModal(false)} variant="text">
                         Close
                     </Button>
                     <Button
@@ -140,11 +141,11 @@ export default function DownloadAsCsvModal({
                             setShowDownloadAsCsvModal(false);
                             triggerCsvDownload(saveAsTitle);
                         }}
-                        disabled={saveAsTitle.length === 0}
+                        isDisabled={saveAsTitle.length === 0}
                     >
                         Download
                     </Button>
-                </>
+                </div>
             }
         >
             <Input

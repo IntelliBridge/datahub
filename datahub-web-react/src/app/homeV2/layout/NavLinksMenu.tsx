@@ -14,7 +14,6 @@ import { HelpLinkRoutes, PageRoutes } from '@conf/Global';
 
 import AnalyticsMenuIcon from '@images/analyticsMenuIcon.svg?react';
 import GovernMenuIcon from '@images/governMenuIcon.svg?react';
-import HelpMenuIcon from '@images/help-icon.svg?react';
 import IngestionMenuIcon from '@images/ingestionMenuIcon.svg?react';
 import SettingsMenuIcon from '@images/settingsMenuIcon.svg?react';
 
@@ -103,7 +102,6 @@ export function NavLinksMenu(props: Props) {
 
     // Submenu states
     const [showGovernMenu, setShowGovernMenu] = useState(false);
-    const [showHelpMenu, setShowHelpMenu] = useState(false);
 
     // Flags to show/hide menu items
     const isAnalyticsEnabled = config?.analyticsConfig?.enabled;
@@ -123,15 +121,6 @@ export function NavLinksMenu(props: Props) {
 
     const { showOnboardingTour } = useHandleOnboardingTour();
 
-    // Help menu options
-    const HelpContentMenuItems = themeConfig.content.menu.items.map((value) => ({
-        title: value.label,
-        description: value.description || '',
-        link: value.path || null,
-        isHidden: false,
-        target: '_blank',
-        rel: 'noopener noreferrer',
-    })) as NavSubMenuItem[];
 
     // Menu Items
     const menuItems: Array<NavMenuItem> = [
@@ -193,50 +182,6 @@ export function NavLinksMenu(props: Props) {
             description: 'Manage your account and preferences',
             link: PageRoutes.SETTINGS,
             isHidden: !showSettings,
-        },
-        {
-            icon: HelpMenuIcon,
-            title: 'Help',
-            description: 'Explore help resources and documentation',
-            link: null,
-            isHidden: false,
-            subMenu: {
-                isOpen: showHelpMenu,
-                open: () => setShowHelpMenu(true),
-                close: () => setShowHelpMenu(false),
-                items: [
-                    {
-                        title: 'Product Tour',
-                        description: 'Take a quick tour of this page',
-                        isHidden: false,
-                        rel: 'noopener noreferrer',
-                        onClick: showOnboardingTour,
-                    },
-                    {
-                        title: 'GraphiQL',
-                        description: 'Explore the GraphQL API',
-                        link: HelpLinkRoutes.GRAPHIQL || null,
-                        isHidden: false,
-                        target: '_blank',
-                        rel: 'noopener noreferrer',
-                    },
-                    {
-                        title: 'OpenAPI',
-                        description: 'Explore the OpenAPI endpoints',
-                        link: HelpLinkRoutes.OPENAPI,
-                        isHidden: false,
-                        target: '_blank',
-                        rel: 'noopener noreferrer',
-                    },
-                    ...HelpContentMenuItems,
-                    {
-                        title: version || '',
-                        description: '',
-                        link: null,
-                        isHidden: !version,
-                    },
-                ],
-            },
         },
     ];
 

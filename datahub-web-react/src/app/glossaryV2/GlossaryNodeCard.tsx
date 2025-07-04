@@ -43,7 +43,7 @@ const GlossaryItemCardWrapper = styled.div`
 
     &:hover {
         transition: 0.15s;
-        background-color: ${colors.gray[100]};
+        background-color: ${colors.gray[500]};
     }
 `;
 
@@ -51,8 +51,8 @@ const GlossaryItemCard = styled.div`
     display: flex;
     flex-direction: column;
     border-radius: 13px;
-    border: 1px solid ${REDESIGN_COLORS.LIGHT_GREY_BORDER};
-    background: ${ANTD_GRAY[1]};
+    border: 1px solid ${colors.gray[500]};
+    background: ${colors.gray[600]};
     transition: 0.15s;
     height: 100%;
     width: 100%;
@@ -73,15 +73,15 @@ const GlossaryItemCount = styled.span<{ count: number }>`
     align-items: center;
     gap: 5px;
     border-radius: 20px;
-    background: ${(props) => (props.count > 0 ? ANTD_GRAY_V2[14] : ANTD_GRAY_V2[14])};
-    color: ${(props) => (props.count > 0 ? REDESIGN_COLORS.SUB_TEXT : DISABLED_TEXT_COLOR)};
+    background: ${colors.gray[500]};
+    color: ${colors.gray[100]};
     padding: 5px 10px;
     width: max-content;
     svg {
         height: 14px;
         width: 14px;
         path {
-            fill: ${(props) => (props.count > 0 ? REDESIGN_COLORS.SUB_TEXT : DISABLED_TEXT_COLOR)};
+            fill: ${colors.gray[100]};
         }
     }
     border: 1px solid transparent;

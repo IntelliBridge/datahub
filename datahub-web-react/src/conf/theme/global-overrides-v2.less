@@ -62,7 +62,8 @@ a {
   color:#FFD600 !important;
 }
 
-.ant-dropdown-menu {
+.ant-dropdown-menu,
+.ant-dropdown-menu-light {
   background-color: #3E4550 !important;
 }
 
@@ -71,6 +72,12 @@ a {
 }
 
 .ant-dropdown-menu-title-content {
+  color: #fff !important;
+  
+  div {
+    color: #fff !important;
+  }
+  
   div:hover {
     background-color: #2A2F38 !important;
   }
@@ -316,7 +323,19 @@ a {
   }
   .ant-modal-footer {
     background-color: #25323F !important;
-    border-bottom: 1px solid #979CA4 !important;
+    border-top: 1px solid #666B73 !important; // darker gray border
+  }
+  .ant-modal-close {
+    color: #FFFFFF !important;
+    &:hover {
+      color: #FFD600 !important;
+    }
+  }
+  .ant-modal-close-x {
+    color: #FFFFFF !important;
+    &:hover {
+      color: #FFD600 !important;
+    }
   }
 }
 
@@ -404,7 +423,7 @@ a {
   .ant-table-footer {
     background-color: #141B22 !important; // component-background
     color: #FFFFFF !important; // text-color
-    border-top: 1px solid #979CA4 !important; // border-color-base
+    border-top: 1px solid #666B73 !important; // darker gray border
   }
 
   .ant-table-pagination {
@@ -529,7 +548,7 @@ a {
   .ant-table-footer {
     background-color: #141B22 !important; // component-background
     color: #FFFFFF !important; // text-color
-    border-top: 1px solid #979CA4 !important; // border-color-base
+    border-top: 1px solid #666B73 !important; // darker gray border
   }
 
   .ant-table-pagination {
@@ -1094,4 +1113,82 @@ a {
 
 .ant-switch-checked {
   background-color: #FFD600 !important; // primary-color
+}
+
+// Override for ExpandedOwner tag styling
+.ant-tag.ExpandedOwner__OwnerTag-sc-co930w-0 {
+  border-color: #979CA4 !important; // Override the yellow border with gray
+  color: #FFFFFF !important; // White text
+  
+  // Target the link and text content with higher specificity
+  a, a:hover, a:focus, a:active {
+    color: #FFFFFF !important;
+  }
+  
+  .OwnerContent__ContentWrapper-sc-45acxp-1,
+  .OwnerContent__TextWrapper-sc-45acxp-0 {
+    color: #FFFFFF !important;
+  }
+  
+  &:hover {
+    border-color: #FFD600 !important; // Yellow border on hover
+  }
+}
+
+.ant-modal-content {
+  overflow: hidden;
+}
+
+// Tooltip dark theme overrides
+.ant-tooltip {
+  .ant-tooltip-inner {
+    background-color: #141B22 !important;
+    color: #E8E8E8 !important;
+    border: 1px solid #979CA4 !important;
+    border-radius: 6px !important;
+    font-size: 12px !important;
+    font-weight: 500 !important;
+    
+    // Override any styled-component colors
+    * {
+      color: #E8E8E8 !important;
+    }
+    
+    div, span, p {
+      color: #E8E8E8 !important;
+    }
+  }
+  
+  .ant-tooltip-arrow {
+    &::before {
+      background-color: #141B22 !important;
+      border-color: #979CA4 !important;
+    }
+  }
+}
+
+// Popover dark theme overrides (used by some tooltip variants)
+.ant-popover {
+  .ant-popover-inner {
+    background-color: #141B22 !important;
+    border: 1px solid #979CA4 !important;
+    border-radius: 6px !important;
+  }
+  
+  .ant-popover-inner-content {
+    background-color: #141B22 !important;
+    color: #FFFFFF !important;
+  }
+  
+  .ant-popover-arrow {
+    &::before {
+      background-color: #141B22 !important;
+      border-color: #979CA4 !important;
+    }
+  }
+}
+
+.ant-message-notice-content {
+  background-color: #141C22 !important; // layout-body-background
+  color: #FFFFFF !important; // text-color
 }

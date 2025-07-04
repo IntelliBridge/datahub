@@ -18,13 +18,18 @@ const DownArrow = styled(CaretDownOutlined)`
 
 const ActionButton = styled(Button)`
     font-weight: normal;
+    color: #fff !important;
+    
+    &:hover {
+        color: #fff !important;
+    }
 `;
 
 const DropdownWrapper = styled.div<{
     disabled: boolean;
 }>`
     cursor: ${(props) => (props.disabled ? 'normal' : 'pointer')};
-    color: ${(props) => (props.disabled ? ANTD_GRAY[7] : 'none')};
+    color: ${(props) => (props.disabled ? ANTD_GRAY[7] : '#fff')};
     display: flex;
     margin-left: 12px;
     margin-right: 12px;

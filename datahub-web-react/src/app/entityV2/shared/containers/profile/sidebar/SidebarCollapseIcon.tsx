@@ -31,15 +31,16 @@ const CloseButton = styled.div<{ $isClosed: boolean }>`
     width: 40px;
     border-radius: 6px;
     justify-content: center;
-    color: ${(p) => p.theme.styles['primary-color']};
+    color: ${REDESIGN_COLORS.WHITE};
+    background-color: ${REDESIGN_COLORS.SIDE_BAR};
     ${(props) =>
         props.$isClosed &&
         `
-        background-color: ${getColor('primary', 600, props.theme)};
+        background-color: ${REDESIGN_COLORS.DARK_GREY};
         color: ${REDESIGN_COLORS.WHITE};  
     `}
     :hover {
-        background-color: ${(p) => getColor('primary', 600, p.theme)};
+        background-color: ${REDESIGN_COLORS.DARK_GREY};
         color: ${REDESIGN_COLORS.WHITE};
     }
 `;

@@ -19,19 +19,39 @@ const DownArrow = styled(CaretDownOutlined)`
 
 const StyledMenuItem = styled(MenuItem)`
     && {
-        padding: 0px;
+        padding: 8px 12px;
+        
+        .ant-btn {
+            padding: 0;
+            height: auto;
+            width: 100%;
+            text-align: left;
+            border: none;
+            background: none;
+            color: #fff;
+            
+            &:hover {
+                color: #fff;
+                background: none;
+            }
+        }
     }
 `;
 
 const ActionButton = styled(Button)`
     font-weight: normal;
+    color: #fff !important;
+    
+    &:hover {
+        color: #fff !important;
+    }
 `;
 
 const DropdownWrapper = styled.div<{
     disabled: boolean;
 }>`
     cursor: ${(props) => (props.disabled ? 'normal' : 'pointer')};
-    color: ${(props) => (props.disabled ? ANTD_GRAY[7] : 'none')};
+    color: ${(props) => (props.disabled ? ANTD_GRAY[7] : '#fff')};
     display: flex;
     margin-left: 12px;
     margin-right: 12px;

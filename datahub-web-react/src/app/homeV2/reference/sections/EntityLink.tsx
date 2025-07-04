@@ -27,7 +27,7 @@ const Container = styled.div<{ showHover: boolean; entity: GenericEntityProperti
     border: ${(props) => (props.entity.type === EntityType.GlossaryTerm ? '1px solid #C1C4D0' : 'none')};
 
     :hover {
-        ${(props) => props.showHover && 'background-color: #f5f7fa;'}
+        ${(props) => props.showHover && 'background-color: rgba(255, 255, 255, 0.1);'}
     }
 
     > a {
@@ -39,7 +39,7 @@ const IconWrapper = styled.div`
     padding-right: 8px;
 `;
 
-const LinkButton = styled(Link)<{ includePadding: boolean }>`
+const LinkButton = styled(Link) <{ includePadding: boolean }>`
     padding: ${(props) => (props.includePadding ? '2px 4px' : '0px')};
     height: auto;
     margin: 4px 0px 4px 0px;
@@ -55,7 +55,7 @@ const LinkButton = styled(Link)<{ includePadding: boolean }>`
 `;
 
 const DisplayNameText = styled.span<{ entity: GenericEntityProperties }>`
-    color: #52596c;
+    color: #ffffff;
     font-family: Mulish;
     font-size: 12px;
     font-style: normal;

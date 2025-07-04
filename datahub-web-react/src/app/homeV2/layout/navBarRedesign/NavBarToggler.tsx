@@ -4,6 +4,7 @@ import styled from 'styled-components';
 
 import { useNavBarContext } from '@app/homeV2/layout/navBarRedesign/NavBarContext';
 import { colors } from '@src/alchemy-components';
+import { REDESIGN_COLORS } from '@app/entityV2/shared/constants';
 
 const Toggler = styled.button<{ $isCollapsed?: boolean }>`
     cursor: pointer;
@@ -14,16 +15,16 @@ const Toggler = styled.button<{ $isCollapsed?: boolean }>`
     display: flex;
     transition: left 250ms ease-in-out;
     transition: background 300ms ease-in;
-    background: ${colors.gray[1600]};
+    background: ${REDESIGN_COLORS.SIDE_BAR};
 
     &: hover {
-        background: #ebecf080;
+        background: ${REDESIGN_COLORS.DARK_GREY};
     }
 
     & svg {
         height: 20px;
         width: 20px;
-        color: ${colors.gray[1800]};
+        color: ${REDESIGN_COLORS.WHITE};
     }
 `;
 

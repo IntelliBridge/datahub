@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
-import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import styled from 'styled-components';
+
+import { StyledSyntaxHighlighter } from '@app/entityV2/shared/StyledSyntaxHighlighter';
 
 import { REDESIGN_COLORS } from '@app/entityV2/shared/constants';
 import { SidebarSection } from '@app/entityV2/shared/containers/profile/sidebar/SidebarSection';
@@ -65,7 +66,7 @@ const TextColumn = styled.td`
     font-family: 'Roboto Mono', monospace;
 `;
 
-const PreviewSyntax = styled(SyntaxHighlighter)`
+const PreviewSyntax = styled(StyledSyntaxHighlighter)`
     max-width: 100%;
     max-height: 150px;
     overflow: hidden;

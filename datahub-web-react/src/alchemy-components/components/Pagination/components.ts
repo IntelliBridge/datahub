@@ -15,7 +15,8 @@ export const PaginationContainer = styled.div`
     }
 
     .ant-pagination-item {
-        border: none;
+        border: 1px solid ${colors.gray[100]};
+        border-radius: 4px;
 
         a {
             color: ${colors.gray[1800]};
@@ -23,11 +24,12 @@ export const PaginationContainer = styled.div`
     }
 
     .ant-pagination-item-active {
-        border-radius: 200px;
-        background: ${colors.violet[0]};
+        border-radius: 4px;
+        background: ${colors.primary[30]};
+        border: 1px solid ${colors.primary[30]};
 
         a {
-            color: ${({ theme }) => theme.styles['primary-color']};
+            color: ${colors.secondary[50]};
             font-weight: 700;
         }
     }
@@ -35,6 +37,7 @@ export const PaginationContainer = styled.div`
     button {
         color: ${colors.gray[1800]};
         border: 1px solid ${colors.gray[100]};
+        border-radius: 4px;
     }
 
     .ant-pagination-options {

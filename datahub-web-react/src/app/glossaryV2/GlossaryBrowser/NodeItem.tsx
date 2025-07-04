@@ -45,11 +45,11 @@ const NodeWrapper = styled.div<{ $isSelected: boolean; $depth: number }>`
     display: flex;
     font-size: 16px;
     padding: 13px 0;
-    background-color: ${(props) => props.$isSelected && REDESIGN_COLORS.HIGHLIGHT_PURPLE};
+    background-color: ${(props) => props.$isSelected && REDESIGN_COLORS.HIGHLIGHT_YELLOW};
     padding-left: calc(${(props) => (props.$depth ? props.$depth * 18 + 12 : 12)}px);
 `;
 
-const StyledRightOutlined = styled(KeyboardArrowRightRounded)<{ isSelected: boolean }>`
+const StyledRightOutlined = styled(KeyboardArrowRightRounded) <{ isSelected: boolean }>`
     color: ${(props) =>
         props.isSelected ? `${props.theme.styles['primary-color']}` : `${REDESIGN_COLORS.SECONDARY_LIGHT_GREY}`};
     cursor: pointer;
@@ -57,11 +57,11 @@ const StyledRightOutlined = styled(KeyboardArrowRightRounded)<{ isSelected: bool
     line-height: 0;
     :hover {
         stroke: ${(props) =>
-            props.isSelected ? `${props.theme.styles['primary-color']}` : `${REDESIGN_COLORS.SECONDARY_LIGHT_GREY}`};
+        props.isSelected ? `${props.theme.styles['primary-color']}` : `${REDESIGN_COLORS.SECONDARY_LIGHT_GREY}`};
     }
 `;
 
-const StyledDownOutlined = styled(KeyboardArrowDownRounded)<{ isSelected: boolean }>`
+const StyledDownOutlined = styled(KeyboardArrowDownRounded) <{ isSelected: boolean }>`
     color: ${(props) =>
         props.isSelected ? `${props.theme.styles['primary-color']}` : `${REDESIGN_COLORS.HOVER_PURPLE_2}`};
     cursor: pointer;
@@ -69,7 +69,7 @@ const StyledDownOutlined = styled(KeyboardArrowDownRounded)<{ isSelected: boolea
     line-height: 0;
     :hover {
         stroke: ${(props) =>
-            props.isSelected ? `${props.theme.styles['primary-color']}` : `${REDESIGN_COLORS.HOVER_PURPLE_2}`};
+        props.isSelected ? `${props.theme.styles['primary-color']}` : `${REDESIGN_COLORS.HOVER_PURPLE_2}`};
     }
 `;
 

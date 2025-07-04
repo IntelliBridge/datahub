@@ -10,6 +10,7 @@ import { Button, Divider } from 'antd';
 import React, { useContext, useEffect, useState } from 'react';
 import { Panel, useReactFlow } from 'reactflow';
 import styled from 'styled-components';
+import colors from '@src/alchemy-components/theme/foundations/colors';
 
 import { REDESIGN_COLORS } from '@app/entityV2/shared/constants';
 import { useGetLineageTimeParams } from '@app/lineage/utils/useGetLineageTimeParams';
@@ -33,6 +34,8 @@ const StyledControlsPanel = styled(ControlPanel)<{ isExpanded: boolean }>`
     padding: 2px;
     width: ${({ isExpanded }) => (isExpanded ? '150px' : '50px')};
     transition: width ${TRANSITION_DURATION_MS}ms ease-in-out;
+    background: ${colors.secondary[90]};
+    border: 1px solid ${colors.secondary[50]};
 `;
 
 const StyledExpandContractButton = styled(Button)`
@@ -44,6 +47,15 @@ const StyledExpandContractButton = styled(Button)`
     justify-content: center;
     align-items: center;
     display: flex;
+    background: ${colors.secondary[90]};
+    border: 1px solid ${colors.secondary[50]};
+    color: #FFFFFF;
+    
+    &:hover {
+        background: ${colors.secondary[70]} !important;
+        border: 1px solid ${colors.secondary[50]} !important;
+        color: #FFFFFF !important;
+    }
 `;
 
 const StyledDivider = styled(Divider)`

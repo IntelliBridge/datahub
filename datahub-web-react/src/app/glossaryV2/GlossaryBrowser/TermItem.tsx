@@ -6,13 +6,14 @@ import { useGlossaryEntityData } from '@app/entityV2/shared/GlossaryEntityContex
 import { ANTD_GRAY, EDITING_DOCUMENTATION_URL_PARAM, REDESIGN_COLORS } from '@app/entityV2/shared/constants';
 import { useGlossaryActiveTabPath } from '@app/entityV2/shared/containers/profile/utils';
 import { useEntityRegistry } from '@app/useEntityRegistry';
+import colors from '@src/alchemy-components/theme/foundations/colors';
 
 import { ChildGlossaryTermFragment } from '@graphql/glossaryNode.generated';
 
 const TermWrapper = styled.div<{ $isSelected: boolean; $depth: number }>`
     padding: 13px 0;
     padding-left: calc(${(props) => (props.$depth ? props.$depth * 18 + 12 : 18)}px);
-    background-color: ${(props) => props.$isSelected && REDESIGN_COLORS.HIGHLIGHT_PURPLE};
+    background-color: ${(props) => props.$isSelected && REDESIGN_COLORS.HIGHLIGHT_YELLOW};
     display: flex;
 `;
 
@@ -41,12 +42,12 @@ interface TermLinkProps {
     $entityType?: string;
 }
 
-export const TermLink = styled(Link)<TermLinkProps>`
+export const TermLink = styled(Link) <TermLinkProps>`
     ${nameStyles}
 
     ${(props) => props.$isChildNode && `opacity: 1;`}
-    ${(props) => props.$areChildrenVisible && `color: ${REDESIGN_COLORS.HOVER_PURPLE_2}; font-weight: 500; opacity: 1;`}
-    ${(props) => props.$isSelected && `color: ${REDESIGN_COLORS.HOVER_PURPLE}; font-weight: 700; opacity: 1;`}
+    ${(props) => props.$areChildrenVisible && `color: ${colors.primary[30]} !important; font-weight: 500; opacity: 1;`}
+    ${(props) => props.$isSelected && `color: ${colors.black} !important; font-weight: 700; opacity: 1;`}
 `;
 
 export const NameWrapper = styled.span<{ showSelectStyles?: boolean }>`
@@ -54,8 +55,8 @@ export const NameWrapper = styled.span<{ showSelectStyles?: boolean }>`
 
     &:hover {
         ${(props) =>
-            props.showSelectStyles &&
-            `
+        props.showSelectStyles &&
+        `
         background-color: ${ANTD_GRAY[3]};
         cursor: pointer;
         `}
@@ -93,9 +94,8 @@ function TermItem(props: Props) {
         <TermWrapper $isSelected={entityData?.urn === term.urn} $depth={props.depth}>
             {!isSelecting && (
                 <TermLink
-                    to={`${entityRegistry.getEntityUrl(term.type, term.urn)}${
-                        includeActiveTabPath && !isActivelyEditing ? `/${activeTabPath}` : ''
-                    }`}
+                    to={`${entityRegistry.getEntityUrl(term.type, term.urn)}${includeActiveTabPath && !isActivelyEditing ? `/${activeTabPath}` : ''
+                        }`}
                     $isSelected={entityData?.urn === term.urn}
                     $areChildrenVisible={areChildrenVisible}
                     $entityType={term.type}

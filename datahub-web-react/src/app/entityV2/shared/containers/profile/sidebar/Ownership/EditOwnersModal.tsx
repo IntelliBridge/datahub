@@ -352,7 +352,7 @@ export const EditOwnersModal = ({
                     <Button color="gray" variant="text" onClick={onModalClose}>
                         Cancel
                     </Button>
-                    <Button id="addOwnerButton" disabled={selectedOwners.length === 0} onClick={onOk}>
+                    <Button id="addOwnerButton" variant="filled" color="yellow" disabled={selectedOwners.length === 0} onClick={onOk}>
                         Add
                     </Button>
                 </ModalButtonContainer>

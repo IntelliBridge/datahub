@@ -30,7 +30,7 @@ const UnborderedTabs = styled(Tabs)`
     }
 
     &&& .ant-tabs-nav-wrap {
-        background-color: #f6f7fa;
+        background-color: ${colors.secondary[70]};
         border-radius: 4px;
         gap: 3px;
         padding: 2px;

@@ -25,7 +25,7 @@ const LineageTabWrapper = styled.div`
 `;
 
 const LineageSwitchWrapper = styled.div`
-    border: 1px solid ${colors.violet[600]};
+    border: 1px solid ${({ theme }) => getColor('secondary', 45, theme)};
     border-radius: 4.5px;
     display: flex;
     margin: 13px 11px;
@@ -33,9 +33,9 @@ const LineageSwitchWrapper = styled.div`
 `;
 
 const LineageViewSwitch = styled.div<{ selected: boolean }>`
-    background: ${({ selected, theme }) => (selected ? `${getColor('primary', 600, theme)}` : colorsFoundation.secondary[50])};
+    background: ${({ selected, theme }) => (selected ? `${getColor('primary', 30, theme)}` : `${getColor('secondary', 70, theme)}`)};
     border-radius: 3px;
-    color: ${({ selected, theme }) => (selected ? '#fff' : `${getColor('primary', 600, theme)}`)};
+    color: ${({ selected, theme }) => (selected ? `${getColor('secondary', 80, theme)}` : `${getColor('primary', 10, theme)}`)};
     cursor: pointer;
     display: flex;
     font-size: 10px;

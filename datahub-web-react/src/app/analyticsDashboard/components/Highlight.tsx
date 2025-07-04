@@ -20,18 +20,28 @@ const HighlightCard = styled(Card)`
     justify-content: center;
     text-align: center;
     line-height: 0;
-    margin: 10px;
     box-shadow: ${(props) => props.theme.styles['box-shadow']};
     background-color: ${colors.secondary[90]};
+    border: 1px solid ${colors.secondary[80]};
+    border-radius: 8px;
+    transition: all 0.2s ease;
+    
+    &:hover {
+        box-shadow: ${(props) => props.theme.styles['box-shadow-hover']} || '0 4px 12px rgba(0, 0, 0, 0.15)';
+        transform: translateY(-2px);
+    }
 `;
 
 const TitleText = styled(Typography.Text)`
     line-height: 1.4em;
     margin-top: -6px;
+    font-weight: 600;
+    color: ${colors.primary[600]};
 `;
 const BodyText = styled(Typography.Text)`
-    font-size: 8px;
+    font-size: 10px;
     line-height: 1.4em;
+    color: ${colors.secondary[600]};
 `;
 
 const TitleContainer = styled.div`

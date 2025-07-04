@@ -10,12 +10,13 @@ import {
 } from '@app/entityV2/shared/containers/profile/sidebar/Ownership/ownershipUtils';
 import { CustomAvatar } from '@app/shared/avatar';
 import { useEntityRegistry } from '@app/useEntityRegistry';
+import colors from '@src/alchemy-components/theme/foundations/colors';
 
 import { Owner } from '@types';
 
 const TextWrapper = styled.span<{ fontSize?: number }>`
     ${(props) => props.fontSize && `font-size: ${props.fontSize}px;`}
-    color: ${REDESIGN_COLORS.DARK_GREY};
+    color: ${colors.white};
 
     max-width: 150px;
     text-overflow: ellipsis;

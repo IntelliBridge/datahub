@@ -1,6 +1,7 @@
 import React from 'react';
-import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import styled from 'styled-components';
+
+import { StyledSyntaxHighlighter } from '@app/entityV2/shared/StyledSyntaxHighlighter';
 
 import { ANTD_GRAY } from '@app/entity/shared/constants';
 
@@ -14,15 +15,15 @@ const Statement = styled.div<{ fullHeight?: boolean }>`
     }
 `;
 
-const NestedSyntax = styled(SyntaxHighlighter)`
-    background-color: transparent !important;
-    border: none !important;
-    margin: 0px !important;
-    height: 100% !important;
-    overflow: auto !important;
+const NestedSyntax = styled(StyledSyntaxHighlighter)`
+    background-color: transparent;
+    border: none;
+    margin: 0px;
+    height: 100%;
+    overflow: auto;
     ::-webkit-scrollbar {
         display: none;
-    } !important;
+    }
 `;
 
 export type Props = {

@@ -237,6 +237,7 @@ function EntityActions(props: Props) {
                     <Tooltip title="Add Glossary Term to Assets" showArrow={false} placement="bottom">
                         <Button
                             variant="outline"
+                            color="primary"
                             onClick={() => setIsBatchAddGlossaryTermModalVisible(true)}
                             data-testid="glossary-batch-add"
                         >

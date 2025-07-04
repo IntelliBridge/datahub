@@ -389,7 +389,7 @@ export const ShowMoreButton = styled.div`
     ${showMoreStyles}
     :hover {
         cursor: pointer;
-        color: ${ANTD_GRAY[8]};
+        color: ${colors.primary[500]};
         text-decoration: underline;
     }
 `;

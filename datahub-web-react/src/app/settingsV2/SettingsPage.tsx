@@ -8,7 +8,6 @@ import {
     ToggleRight,
     Users,
     UsersThree,
-    Wrench,
 } from '@phosphor-icons/react';
 import React from 'react';
 import { Redirect, Route, Switch, useHistory, useLocation, useRouteMatch } from 'react-router';
@@ -215,21 +214,6 @@ export const SettingsPage = () => {
                         link: `${url}/ownership`,
                         isHidden: !showOwnershipTypes,
                         icon: <Users />,
-                    },
-                ],
-            },
-            // Preferences Section
-            {
-                type: NavBarMenuItemTypes.Group,
-                title: 'Preferences',
-                key: 'preferences',
-                items: [
-                    {
-                        type: NavBarMenuItemTypes.Item,
-                        title: 'Appearance',
-                        key: 'preferences',
-                        link: `${url}/preferences`,
-                        icon: <Wrench />,
                     },
                 ],
             },

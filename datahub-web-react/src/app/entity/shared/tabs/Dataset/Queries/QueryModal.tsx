@@ -1,11 +1,11 @@
 import { Button, Modal, Typography } from 'antd';
 import React from 'react';
-import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import styled from 'styled-components';
 
 import { ANTD_GRAY } from '@app/entity/shared/constants';
 import CopyQuery from '@app/entity/shared/tabs/Dataset/Queries/CopyQuery';
 import { Editor as MarkdownEditor } from '@app/entity/shared/tabs/Documentation/components/editor/Editor';
+import { StyledSyntaxHighlighter } from '@app/entityV2/shared/StyledSyntaxHighlighter';
 
 const StyledModal = styled(Modal)`
     top: 4vh;
@@ -54,12 +54,12 @@ const QueryContainer = styled.div`
     border-radius: 4px;
 `;
 
-const NestedSyntax = styled(SyntaxHighlighter)`
-    background-color: transparent !important;
-    border: none !important;
-    height: 100% !important;
-    margin: 0px !important;
-    padding: 12px !important;
+const NestedSyntax = styled(StyledSyntaxHighlighter)`
+    background-color: transparent;
+    border: none;
+    height: 100%;
+    margin: 0px;
+    padding: 12px;
 `;
 
 type Props = {

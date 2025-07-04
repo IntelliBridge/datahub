@@ -32,10 +32,10 @@ const AddButton = styled.div<{ isThemeV2: boolean; isV1Drawer?: boolean }>`
     }
 `;
 
-const DropdownContainer = styled.div`
+const DropdownContainer = styled.div<{ isThemeV2: boolean }>`
     border-radius: 12px;
     box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.15);
-    background-color: ${colors.white};
+    background-color: ${(props) => (props.isThemeV2 ? '#141B22' : colors.white)};
     padding-bottom: 8px;
     width: 300px;
 `;
@@ -179,7 +179,7 @@ const AddPropertyButton = ({ fieldUrn, refetch, fieldProperties, isV1Drawer }: P
                 trigger={['click']}
                 menu={{ items: filteredItems }}
                 dropdownRender={(menuNode) => (
-                    <DropdownContainer>
+                    <DropdownContainer isThemeV2={isThemeV2}>
                         <SearchContainer>
                             <InputComponent
                                 label=""
@@ -191,16 +191,16 @@ const AddPropertyButton = ({ fieldUrn, refetch, fieldProperties, isV1Drawer }: P
                         {loading ? (
                             <LoadingContainer>
                                 <LoadingOutlined />
-                                <Text size="sm">Loading...</Text>
+                                <Text size="sm" color={isThemeV2 ? "white" : undefined}>Loading...</Text>
                             </LoadingContainer>
                         ) : (
                             <>
                                 {filteredItems?.length === 0 && (
                                     <EmptyContainer>
-                                        <Text color="gray" weight="medium">
+                                        <Text color={isThemeV2 ? "white" : "gray"} weight="medium">
                                             No results found
                                         </Text>
-                                        <Text size="sm" color="gray">
+                                        <Text size="sm" color={isThemeV2 ? "gray" : "gray"} colorLevel={isThemeV2 ? 1800 : undefined}>
                                             {noDataText}
                                         </Text>
                                     </EmptyContainer>

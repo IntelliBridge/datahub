@@ -142,6 +142,7 @@ function CreateGlossaryEntityModal(props: Props) {
                         data-testid="glossary-entity-modal-create-button"
                         onClick={createGlossaryEntity}
                         disabled={createButtonDisabled || !canCreateGlossaryEntity}
+                        color="yellow"
                     >
                         Create
                     </Button>

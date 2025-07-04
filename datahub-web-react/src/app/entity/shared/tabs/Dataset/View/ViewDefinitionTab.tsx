@@ -1,12 +1,12 @@
 import { Radio, Typography } from 'antd';
 import React, { useState } from 'react';
-import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import styled from 'styled-components';
 
 import { useBaseEntity } from '@app/entity/shared/EntityContext';
 import { InfoItem } from '@app/entity/shared/components/styled/InfoItem';
 import { ANTD_GRAY } from '@app/entity/shared/constants';
 import { DBT_URN } from '@app/ingest/source/builder/constants';
+import { StyledSyntaxHighlighter } from '@app/entityV2/shared/StyledSyntaxHighlighter';
 
 import { GetDatasetQuery } from '@graphql/dataset.generated';
 
@@ -36,11 +36,9 @@ const QueryText = styled(Typography.Paragraph)`
     border-radius: 5px;
 `;
 
-// NOTE: Yes, using `!important` is a shame. However, the SyntaxHighlighter is applying styles directly
-// to the component, so there's no way around this
-const NestedSyntax = styled(SyntaxHighlighter)`
-    background-color: transparent !important;
-    border: none !important;
+const NestedSyntax = styled(StyledSyntaxHighlighter)`
+    background-color: transparent;
+    border: none;
 `;
 
 export default function ViewDefinitionTab() {

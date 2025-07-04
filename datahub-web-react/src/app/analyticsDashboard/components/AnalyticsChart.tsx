@@ -42,7 +42,6 @@ export const AnalyticsChart = ({ chartData, width, height }: Props) => {
                     <Typography.Title level={4}>{chartData.title}</Typography.Title>
                 </div>
                 {chartSection}
-                <div>{chartData.__typename}</div>
             </ChartContainer>
         </ChartCard>
     );

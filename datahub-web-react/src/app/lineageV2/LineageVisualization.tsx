@@ -21,8 +21,9 @@ import SearchControl from '@app/lineageV2/controls/SearchControl';
 import ZoomControls from '@app/lineageV2/controls/ZoomControls';
 import { getLineageUrl } from '@app/lineageV2/lineageUtils';
 import { useEntityRegistry } from '@app/useEntityRegistry';
+import colors from '@src/alchemy-components/theme/foundations/colors';
 
-const StyledReactFlow = styled(ReactFlow)<{ $edgesOnTop: boolean }>`
+const StyledReactFlow = styled(ReactFlow) <{ $edgesOnTop: boolean }>`
     .react-flow__node-lineage-entity:not(.dragging) {
         transition: transform ${TRANSITION_DURATION_MS}ms ease-in-out;
     }
@@ -32,6 +33,64 @@ const StyledReactFlow = styled(ReactFlow)<{ $edgesOnTop: boolean }>`
         `.react-flow__node-lineage-entity:not(.selected) {
             z-index: -1 !important;
         }`}
+
+    /* Dark theme overrides for React Flow */
+    .react-flow__background {
+        background-color: #25323F;
+    }
+    
+    .react-flow__background svg {
+        .react-flow__background-pattern {
+            stroke: #3E4550;
+            stroke-width: 1;
+        }
+    }
+
+    svg.react-flow__background pattern path {
+        stroke: ${colors.gray[2100]};
+        stroke-width: 1;
+    }
+    
+    .react-flow__controls {
+        background: #141B22;
+        border: 1px solid #3E4550;
+        border-radius: 4px;
+        
+        button {
+            background: #141B22;
+            border: none;
+            border-bottom: 1px solid #3E4550;
+            color: #FFFFFF;
+            
+            &:hover {
+                background: #3E4550;
+            }
+            
+            &:last-child {
+                border-bottom: none;
+            }
+        }
+    }
+    
+    .react-flow__minimap {
+        background: #141B22;
+        border: 1px solid #3E4550;
+        border-radius: 4px;
+        
+        .react-flow__minimap-mask {
+            fill: rgba(255, 214, 0, 0.1);
+            stroke: #FFD600;
+            stroke-width: 2;
+        }
+        
+        .react-flow__minimap-node {
+            fill: #3E4550;
+        }
+    }
+    
+    .react-flow__panel {
+        border-radius: 4px;
+    }
 `;
 
 const nodeTypes: NodeTypes = {
@@ -129,7 +188,7 @@ function useHandleKeyboardDeselect(setSelectedColumn: (value: string | null) => 
                 const timeout = setTimeout(() => setSelectedColumn(null), 0);
                 return () => clearTimeout(timeout);
             }
-            return () => {};
+            return () => { };
         }
 
         document.addEventListener('keydown', handleKeyPress);

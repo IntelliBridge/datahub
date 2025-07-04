@@ -19,7 +19,7 @@ const Content = styled.div`
         padding-bottom: 12px;
         &:not(:last-child) {
             border-bottom: 1px solid;
-            border-color: ${colors.gray[100]};
+            border-color: ${colors.gray[500]};
             border-radius: 0px;
         }
     }

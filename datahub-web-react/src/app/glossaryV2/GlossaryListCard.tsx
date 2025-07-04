@@ -74,12 +74,13 @@ const EntityDetailsWrapper = styled.div<{ type: EntityType }>`
 
     &:hover {
         transition: 0.15s;
-        background-color: ${colors.gray[100]};
+        background-color: ${colors.gray[700]};
+        border-color: #fadb14;
     }
 `;
 
 const EntityName = styled.div`
-    color: ${REDESIGN_COLORS.SUBTITLE};
+    color: white;
     font-size: 14px;
     font-weight: 400;
     font-weight: bold;

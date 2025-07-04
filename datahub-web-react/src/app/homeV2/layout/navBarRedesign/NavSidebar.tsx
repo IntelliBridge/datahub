@@ -3,7 +3,6 @@ import {
     Gear,
     Globe,
     Plugs,
-    Question,
     SignOut,
     SquaresFour,
     Tag,
@@ -109,14 +108,6 @@ export const NavSidebar = () => {
     const hasCustomLogo = customLogoUrl && customLogoUrl !== DEFAULT_LOGO;
     const logoComponent = hasCustomLogo ? <CustomLogo alt="logo" src={customLogoUrl} /> : <AcrylIcon />;
 
-    const HelpContentMenuItems = themeConfig.content.menu.items.map((value) => ({
-        title: value.label,
-        description: value.description || '',
-        link: value.path,
-        isHidden: false,
-        isExternalLink: true,
-        key: `helpMenu${value.label}`,
-    })) as NavBarMenuDropdownItemElement[];
 
     const mainMenu: NavBarMenuItems = {
         items: [
@@ -218,47 +209,6 @@ export const NavSidebar = () => {
                 selectedIcon: <Gear weight="fill" />,
                 key: 'settings',
                 link: '/settings',
-            },
-            {
-                type: NavBarMenuItemTypes.Dropdown,
-                title: 'Help',
-                icon: <Question />,
-                selectedIcon: <Question weight="fill" />,
-                key: 'help',
-                items: [
-                    {
-                        type: NavBarMenuItemTypes.DropdownElement,
-                        title: 'Product Tour',
-                        description: 'Take a quick tour of this page',
-                        key: 'helpProductTour',
-                        onClick: showOnboardingTour,
-                    },
-                    {
-                        type: NavBarMenuItemTypes.DropdownElement,
-                        title: 'GraphQL',
-                        description: 'Explore the GraphQL API',
-                        link: HelpLinkRoutes.GRAPHIQL || null,
-                        isExternalLink: true,
-                        key: 'helpGraphQL',
-                    },
-                    {
-                        type: NavBarMenuItemTypes.DropdownElement,
-                        title: 'OpenAPI',
-                        description: 'Explore the OpenAPI endpoints',
-                        link: HelpLinkRoutes.OPENAPI,
-                        isExternalLink: true,
-                        key: 'helpOpenAPI',
-                    },
-                    ...HelpContentMenuItems,
-                    {
-                        type: NavBarMenuItemTypes.DropdownElement,
-                        title: config?.appVersion || '',
-                        isHidden: !config?.appVersion,
-                        isExternalLink: true,
-                        key: 'helpAppVersion',
-                        disabled: true,
-                    },
-                ],
             },
             {
                 type: NavBarMenuItemTypes.Item,

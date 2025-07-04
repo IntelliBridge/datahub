@@ -8,7 +8,8 @@ import { colors } from '@components/theme';
 const StyledCard = styled(Card)`
     && {
         border-radius: 12px;
-        border: 1px solid ${colors.gray[100]};
+        overflow: hidden;
+        border: 1px solid ${colors.gray[1900]};
         box-shadow: 0px 1px 2px 0px rgba(33, 23, 95, 0.07);
         margin-bottom: 24px;
 

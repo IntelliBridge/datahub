@@ -13,7 +13,7 @@ export const ShowMoreButton = styled.div`
     font-family: 'Mulish';
     :hover {
         cursor: pointer;
-        color: ${ANTD_GRAY[8]};
+        color: ${colors.primary[500]};
         text-decoration: underline;
     }
 `;

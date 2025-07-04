@@ -19,7 +19,7 @@ import { Entity, EntityType } from '@src/types.generated';
 const TagName = styled.div`
     font-size: 14px;
     font-weight: 600;
-    color: ${colors.gray[600]};
+    color: ${colors.primary[10]};
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -28,7 +28,7 @@ const TagName = styled.div`
 const TagDescription = styled.div`
     font-size: 14px;
     font-weight: 400;
-    color: ${colors.gray[1700]};
+    color: ${colors.gray[100]};
     white-space: normal;
     line-height: 1.4;
 `;
@@ -206,7 +206,7 @@ export const TagAppliedToColumn = React.memo(({ tagUrn }: { tagUrn: string }) =>
                     }
                 }}
             >
-                <Text style={{ color: colors.violet[500] }}>
+                <Text style={{ color: colors.primary[30] }}>
                     {totalCount} {totalCount === 1 ? 'entity' : 'entities'}
                 </Text>
             </div>
@@ -226,7 +226,7 @@ export const TagAppliedToColumn = React.memo(({ tagUrn }: { tagUrn: string }) =>
                             }
                         }}
                     >
-                        <Text style={{ color: colors.violet[500] }}>
+                        <Text style={{ color: colors.primary[30] }}>
                             {agg.count} {entityRegistry.getCollectionName(agg.value as unknown as EntityType)}
                         </Text>
                     </div>

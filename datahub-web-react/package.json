@@ -85,7 +85,7 @@
         "react-js-cron": "^2.1.0",
         "react-router": "^5.3",
         "react-router-dom": "^5.3",
-        "react-syntax-highlighter": "^15.4.4",
+        "react-use": "^17.6.0",
         "react-vertical-timeline-component": "^3.6.0",
         "react-visibility-sensor": "^5.1.1",
         "react-window": "^1.8.10",
@@ -180,7 +180,6 @@
     },
     "resolutions": {
         "@ant-design/colors": "6.0.0",
-        "refractor": "3.3.1",
         "json-schema": "0.4.0",
         "@babel/traverse": ">=7.23.2",
         "ansi-regex": "3.0.1",

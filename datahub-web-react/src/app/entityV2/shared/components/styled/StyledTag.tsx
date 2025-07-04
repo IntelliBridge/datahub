@@ -46,8 +46,18 @@ export const StyledTag = styled(Tag)<{
                 margin-right: 4px;
             }
         `};
-    color: ${REDESIGN_COLORS.DARK_GREY};
+    color: ${REDESIGN_COLORS.BODY_TEXT};
     font-weight: 400;
+    
+    .ant-tag-close-icon {
+        color: ${REDESIGN_COLORS.BODY_TEXT};
+        opacity: 0.7;
+        
+        &:hover {
+            color: ${REDESIGN_COLORS.BODY_TEXT};
+            opacity: 1;
+        }
+    }
     ${(props) =>
         props.$showOneAndCount &&
         `

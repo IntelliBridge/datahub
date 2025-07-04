@@ -17,7 +17,7 @@ const Controls = styled.div<{ isCollapsed: boolean }>`
     justify-content: ${(props) => (props.isCollapsed ? 'center' : 'space-between')};
     height: 56px;
     padding: 8px 20px 5px 20px;
-    border-bottom: 1px solid ${colors.gray[100]};
+    border-bottom: 1px solid ${colors.gray[500]};
 `;
 
 const Title = styled.div`

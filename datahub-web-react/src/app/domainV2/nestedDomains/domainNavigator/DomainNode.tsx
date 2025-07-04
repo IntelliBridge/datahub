@@ -50,7 +50,8 @@ const DisplayName = styled.span<{ $isSelected: boolean }>`
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    color: ${(props) => (props.$isSelected ? props.theme.styles['primary-color'] : REDESIGN_COLORS.BODY_TEXT_GREY)};
+    color: ${(props) => (props.$isSelected ? colors.black : REDESIGN_COLORS.BODY_TEXT_GREY)};
+    font-weight: ${(props) => (props.$isSelected ? 700 : 400)};
 `;
 
 const ButtonWrapper = styled.span<{ $addLeftPadding: boolean; $isSelected: boolean }>`
@@ -60,7 +61,7 @@ const ButtonWrapper = styled.span<{ $addLeftPadding: boolean; $isSelected: boole
     svg {
         font-size: 16px !important;
         color: ${(props) =>
-            props.$isSelected ? props.theme.styles['primary-color'] : REDESIGN_COLORS.BODY_TEXT_GREY} !important;
+            props.$isSelected ? colors.black : REDESIGN_COLORS.BODY_TEXT_GREY} !important;
     }
 
     .ant-btn {
@@ -76,7 +77,7 @@ const RowWrapper = styled.div<{ $isSelected: boolean; isOpen?: boolean }>`
     border-bottom: 1px solid ${REDESIGN_COLORS.COLD_GREY_TEXT_BLUE_1};
     padding: 12px;
     ${(props) => props.isOpen && `background-color: ${REDESIGN_COLORS.SECTION_BACKGROUND};`}
-    ${(props) => props.$isSelected && `background-color: ${REDESIGN_COLORS.LIGHT_TEXT_DARK_BACKGROUND};`}
+    ${(props) => props.$isSelected && `background-color: ${REDESIGN_COLORS.HIGHLIGHT_YELLOW};`}
     &:hover {
         background-color: ${REDESIGN_COLORS.COLD_GREY_TEXT_BLUE_1};
         ${ButtonWrapper} {

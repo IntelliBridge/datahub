@@ -5,14 +5,14 @@ import { REDESIGN_COLORS } from '@app/entityV2/shared/constants';
 
 export const StyledMenuItem = styled(Menu.Item)`
     min-width: 120px;
-    background-color: #fff !important;
+    background-color: ${(props) => props.theme.styles['body-background']} !important;
     height: 28px;
     font-size: 12px;
     font-weight: 300;
     padding: 12px;
-    color: #46507b;
+    color: ${(props) => props.theme.styles['text-color']};
     :hover {
-        background-color: transparent;
+        background-color: ${(props) => props.theme.styles['primary-color-hover']};
     }
 `;
 

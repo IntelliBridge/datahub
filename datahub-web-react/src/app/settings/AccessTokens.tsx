@@ -1,6 +1,6 @@
 import { red } from '@ant-design/colors';
 import { DeleteOutlined, InfoCircleOutlined, PlusOutlined } from '@ant-design/icons';
-import { Alert, Button, Divider, Empty, Modal, Pagination, Select, Typography, message } from 'antd';
+import { Alert, Divider, Empty, Modal, Pagination, Select, Typography, message } from 'antd';
 import React, { useEffect, useMemo, useState } from 'react';
 import styled from 'styled-components';
 
@@ -18,6 +18,7 @@ import { useEntityRegistry } from '@app/useEntityRegistry';
 
 import { useListAccessTokensQuery, useRevokeAccessTokenMutation } from '@graphql/auth.generated';
 import { useListUsersQuery } from '@graphql/user.generated';
+import { Button } from '@components';
 import { EntityType, FacetFilterInput } from '@types';
 
 const SourceContainer = styled.div`
@@ -349,7 +350,8 @@ export const AccessTokens = () => {
             <TabToolbar>
                 <div>
                     <Button
-                        type="text"
+                        variant="text"
+                        color="primary"
                         onClick={() => setIsCreatingToken(true)}
                         data-testid="add-token-button"
                         disabled={!canGeneratePersonalAccessTokens}

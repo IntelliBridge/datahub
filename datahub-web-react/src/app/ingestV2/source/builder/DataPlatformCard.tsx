@@ -13,11 +13,11 @@ const Container = styled(Button)`
     border-radius: 8px;
     align-items: start;
     flex-direction: column;
-    border: 1px solid #e0e0e0;
-    background-color: ${colors.secondary[50]};
+    border: 1px solid ${REDESIGN_COLORS.GREY[2]};
+    background-color: ${REDESIGN_COLORS.GREY[0]};
     &&:hover {
         border: 1px solid ${colors.primary[30]};
-        background-color: ${colors.secondary[50]};
+        background-color: ${REDESIGN_COLORS.GREY[0]};
     }
     white-space: unset;
 `;
@@ -36,7 +36,7 @@ const LogoContainer = styled.div`
 
 const Title = styled.div`
     word-break: break-word;
-    color: ${colors.primary[10]};
+    color: ${colors.white};
     font-weight: bold;
     font-size: 16px;
     margin-bottom: 8px;
@@ -45,7 +45,7 @@ const Title = styled.div`
 const Description = styled.div`
     word-break: break-word;
     text-align: left;
-    color: ${colors.gray[1900]};
+    color: ${REDESIGN_COLORS.GREY[5]};
 `;
 
 type Props = {

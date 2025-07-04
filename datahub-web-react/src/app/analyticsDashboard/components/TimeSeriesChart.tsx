@@ -149,7 +149,7 @@ export const TimeSeriesChart = ({
                     orientation="bottom"
                     stroke={style?.axisColor}
                     strokeWidth={style?.axisWidth}
-                    tickLabelProps={{ fill: 'black', fontFamily: 'inherit', fontSize: 10 }}
+                    tickLabelProps={{ fill: 'white', fontFamily: 'inherit', fontSize: 10 }}
                     numTicks={3}
                     tickFormat={(value) => formatAxisDate(value, chartData)}
                 />
@@ -158,7 +158,7 @@ export const TimeSeriesChart = ({
                     stroke={style?.axisColor}
                     strokeWidth={style?.axisWidth}
                     tickFormat={(tick) => (yAxis?.formatter ? yAxis.formatter(tick) : formatNumber(tick))}
-                    tickLabelProps={{ fill: 'black', fontFamily: 'inherit', fontSize: 10 }}
+                    tickLabelProps={{ fill: 'white', fontFamily: 'inherit', fontSize: 10 }}
                     numTicks={3}
                 />
                 {lines.map((line, i) => (

@@ -42,11 +42,13 @@ const PageContainer = styled.div<{ isV2: boolean; $isShowNavBarRedesign?: boolea
 const HighlightGroup = styled.div`
     margin-top: 20px;
     padding: 0 20px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     display: grid;
     grid-template-rows: auto auto;
     grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
+    gap: 60px;
+    max-width: 100%;
+    box-sizing: border-box;
 `;
 
 const MetadataAnalyticsInput = styled.div`

@@ -3,13 +3,15 @@ import { Button } from 'antd';
 import React from 'react';
 import { Panel, useReactFlow } from 'reactflow';
 import styled from 'styled-components';
+import colors from '@src/alchemy-components/theme/foundations/colors';
 
+import { REDESIGN_COLORS } from '@app/entityV2/shared/constants';
 import { TRANSITION_DURATION_MS } from '@app/lineageV2/common';
 
 const StyledZoomButton = styled(Button)`
     border-radius: 8px;
-    border: 1px solid #00000015;
-    box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, 0.02);
+    border: 1px solid ${colors.secondary[50]};
+    box-shadow: 0 4px 4px 0 ${REDESIGN_COLORS.BOX_SHADOW};
     height: 40px;
     width: 40px;
     margin-bottom: 8px;
@@ -17,9 +19,19 @@ const StyledZoomButton = styled(Button)`
     justify-content: center;
     align-items: center;
     display: flex;
+    background: ${colors.secondary[90]};
+    color: #FFFFFF;
+    
     &:focus {
-        color: unset;
-        border-color: #00000015;
+        color: #FFFFFF !important;
+        border-color: ${colors.secondary[50]} !important;
+        background: ${colors.secondary[70]} !important;
+    }
+    
+    &:hover {
+        background: ${colors.secondary[70]} !important;
+        border: 1px solid ${colors.secondary[50]} !important;
+        color: #FFFFFF !important;
     }
 `;
 
@@ -39,3 +51,4 @@ const ZoomControls: React.FC = () => {
 };
 
 export default ZoomControls;
+

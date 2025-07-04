@@ -31,7 +31,7 @@ const Title = styled.div`
     display: flex;
     align-items: center;
     justify-content: start;
-    color: ${ANTD_GRAY[9]};
+    color: ${(props) => props.theme.styles['text-color']};
     white-space: nowrap;
     margin-right: 20px;
 `;
@@ -42,13 +42,14 @@ const Icon = styled.div`
 `;
 
 const ShowAll = styled.div`
-    color: ${ANTD_GRAY[8]};
+    color: ${(props) => props.theme.styles['text-color-secondary']};
     font-size: 12px;
     font-weight: 700;
 
     :hover {
         cursor: pointer;
         text-decoration: underline;
+        color: ${(props) => props.theme.styles['primary-color']};
     }
 
     white-space: nowrap;

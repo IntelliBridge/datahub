@@ -9,6 +9,7 @@ import { getNameFromType } from '@app/entityV2/shared/containers/profile/sidebar
 import { useEmbeddedProfileLinkProps } from '@app/shared/useEmbeddedProfileLinkProps';
 import { useEntityRegistry } from '@app/useEntityRegistry';
 import { StyledLink } from '@src/app/previewV2/EntityHeader';
+import colors from '@src/alchemy-components/theme/foundations/colors';
 
 import { useRemoveOwnerMutation } from '@graphql/mutations.generated';
 import { EntityType, Owner } from '@types';
@@ -20,10 +21,20 @@ const OwnerTag = styled(Tag)`
     display: inline-flex;
     align-items: center;
     font-weight: 600;
-    border-color: #9da7c0 !important;
+    background-color: ${colors.secondary[50]} !important;
+    border-color: ${colors.gray[500]} !important;
+    color: ${colors.white} !important;
     padding: 2px 6px 2px 3px;
 
     max-width: inherit;
+    
+    .anticon-close {
+        color: ${colors.gray[500]} !important;
+        
+        &:hover {
+            color: ${colors.white} !important;
+        }
+    }
 `;
 
 type Props = {
@@ -106,6 +117,7 @@ export const ExpandedOwner = ({ entityUrn, owner, hidePopOver, refetch, readOnly
                 <StyledLink
                     to={`${entityRegistry.getEntityUrl(owner.owner.type, owner.owner.urn)}/owner of`}
                     {...linkProps}
+                    style={{ color: 'inherit', textDecoration: 'none' }}
                 >
                     <OwnerContent
                         name={name}

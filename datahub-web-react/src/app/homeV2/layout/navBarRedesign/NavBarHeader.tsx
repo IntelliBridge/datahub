@@ -25,6 +25,7 @@ const Logotype = styled.div`
     min-height: 24px;
     max-height: 24px;
     max-width: 42px;
+    background-color: #292929;
     border-radius: 4px;
     position: relative;
     object-fit: contain;

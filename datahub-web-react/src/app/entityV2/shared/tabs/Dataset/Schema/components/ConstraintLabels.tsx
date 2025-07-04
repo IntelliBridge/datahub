@@ -15,8 +15,9 @@ const Pill = styled.div`
 `;
 
 const PrimaryKeyPill = styled(Pill)`
-    color: ${blue[5]} !important;
-    border-color: ${blue[2]};
+    background-color: ${ANTD_GRAY[8]} !important;
+    color: #ffffff !important;
+    border-color: ${ANTD_GRAY[6]};
 `;
 
 const ForeignKeyPill = styled(Pill)`

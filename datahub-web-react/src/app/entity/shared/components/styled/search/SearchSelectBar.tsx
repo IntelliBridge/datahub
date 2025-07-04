@@ -1,10 +1,13 @@
-import { Button, Checkbox, Modal, Typography } from 'antd';
-import React from 'react';
+import { Checkbox, Modal, Typography } from 'antd';
+import { ExclamationCircleOutlined } from '@ant-design/icons';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 
 import { SearchSelectActions } from '@app/entity/shared/components/styled/search/SearchSelectActions';
 import { ANTD_GRAY } from '@app/entity/shared/constants';
 import { EntityAndType } from '@app/entity/shared/types';
+import { Button } from '@src/alchemy-components';
+import { ModalButtonContainer } from '@src/app/shared/button/styledComponents';
 
 const CheckboxContainer = styled.div`
     display: flex;
@@ -54,23 +57,24 @@ export const SearchSelectBar = ({
     onCancel,
     refetch,
 }: Props) => {
+    const [showExitConfirm, setShowExitConfirm] = useState(false);
     const selectedEntityCount = selectedEntities.length;
+    
     const onClickCancel = () => {
         if (selectedEntityCount > 0) {
-            Modal.confirm({
-                title: `Exit Selection`,
-                content: `Are you sure you want to exit? ${selectedEntityCount} selection(s) will be cleared.`,
-                onOk() {
-                    onCancel?.();
-                },
-                onCancel() {},
-                okText: 'Yes',
-                maskClosable: true,
-                closable: true,
-            });
+            setShowExitConfirm(true);
         } else {
             onCancel?.();
         }
+    };
+
+    const handleExitConfirm = () => {
+        setShowExitConfirm(false);
+        onCancel?.();
+    };
+
+    const handleExitCancel = () => {
+        setShowExitConfirm(false);
     };
 
     return (
@@ -87,11 +91,35 @@ export const SearchSelectBar = ({
             <ActionsContainer>
                 {showActions && <SearchSelectActions selectedEntities={selectedEntities} refetch={refetch} />}
                 {showCancel && (
-                    <CancelButton onClick={onClickCancel} type="link">
+                    <CancelButton onClick={onClickCancel} variant="text">
                         Done
                     </CancelButton>
                 )}
             </ActionsContainer>
+            <Modal
+                title={
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                        <ExclamationCircleOutlined style={{ color: '#faad14' }} />
+                        Exit Selection
+                    </div>
+                }
+                open={showExitConfirm}
+                onCancel={handleExitCancel}
+                footer={
+                    <ModalButtonContainer>
+                        <Button onClick={handleExitCancel} variant="text" color="gray">
+                            Cancel
+                        </Button>
+                        <Button onClick={handleExitConfirm} color="yellow">
+                            Yes
+                        </Button>
+                    </ModalButtonContainer>
+                }
+            >
+                <div style={{ fontSize: '16px', lineHeight: '1.5' }}>
+                    Are you sure you want to exit? {selectedEntityCount} selection(s) will be cleared.
+                </div>
+            </Modal>
         </>
     );
 };

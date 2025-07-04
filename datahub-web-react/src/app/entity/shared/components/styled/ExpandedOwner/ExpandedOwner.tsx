@@ -3,6 +3,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components/macro';
 
+import { colors } from '@components';
+
 import analytics, { EntityActionType, EventType } from '@app/analytics';
 import { useEntityData } from '@app/entity/shared/EntityContext';
 import OwnerContent from '@app/entity/shared/components/styled/ExpandedOwner/OwnerContent';
@@ -19,6 +21,19 @@ const OwnerTag = styled(Tag)`
     padding-right: 6px;
     display: inline-flex;
     align-items: center;
+    background: ${colors.secondary[50]};
+    border: 1px solid ${colors.gray[500]};
+    color: ${colors.primary[10]};
+
+    .ant-tag-close-icon {
+        color: ${colors.primary[10]};
+        margin-left: 4px;
+        opacity: 0.8;
+        
+        &:hover {
+            opacity: 1;
+        }
+    }
 `;
 
 type Props = {
